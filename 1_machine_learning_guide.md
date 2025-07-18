@@ -12,9 +12,6 @@ Think of it like teaching a child to recognize animals. Instead of describing ev
 
 Building a machine learning model involves several key stages that work together to create an intelligent system:
 
-![Machine Learning Process](pictures/machine-learning-process.png)
-
-
 ### 1. Data Collection and Preparation
 
 The machine learning process starts with collecting and processing training data. There's a famous saying in the ML community: "garbage in, garbage out." This means that an ML model is only as good as the data used to train it. Data preparation and processing might seem routine, but it's arguably the most critical stage that can make or break your model's performance.
@@ -44,6 +41,9 @@ The machine learning process starts with collecting and processing training data
 ### 2. Algorithm Selection
 
 Once your data is prepared, you need to choose an appropriate machine learning algorithm. The choice depends on several factors:
+
+![Machine Learning Process](pictures/machine-learning-process.png)
+
 
 - **Problem type:** Classification, regression, clustering, or other tasks.
 - **Data size:** Some algorithms work better with large datasets, others with smaller ones.
