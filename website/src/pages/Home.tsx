@@ -37,22 +37,27 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden neuron-bg">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-bg/50 to-primary-bg"></div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 text-center max-w-4xl mx-auto px-4"
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-5xl md:text-7xl font-poppins font-bold mb-6"
-          >
-            <span className="glow-text">Neural Hive</span>
+  <section className="relative h-screen flex items-center justify-center overflow-hidden neuron-bg">
+    {/* Background Image Layer */}
+    <div 
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
+      }}
+    ></div>
+    
+    {/* Dark Overlay for Text Readability */}
+    <div className="absolute inset-0 bg-black/60"></div>
+    
+    {/* Gradient Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-bg/50 to-primary-bg"></div>
+    
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative z-10 text-center max-w-4xl mx-auto px-4"
+    >
             
           </motion.h1>
           
