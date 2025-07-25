@@ -11,7 +11,7 @@ const Team = () => {
     {
       name: 'Kshirin Shetty',
       role: 'President / ML Lead',
-      image: {Nh1},
+      image: Nh1,
       bio: 'Leading neural network research and club operations. Passionate about deep learning applications in robotics.',
       links: {
         github: 'https://github.com/rithvikmatta',
@@ -23,7 +23,7 @@ const Team = () => {
     {
       name: 'Sarayu',
       role: 'Vice President / Research Head',
-      image: {Nh2},
+      image: Nh2,
       bio: 'Spearheading ethical AI initiatives and research publications. Expert in natural language processing.',
       links: {
         github: 'https://github.com/ananyasharma',
