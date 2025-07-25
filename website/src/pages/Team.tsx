@@ -2,13 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Github, Linkedin, Mail, Users } from 'lucide-react';
+import Nh1 from './kshirin.png';
+import Nh2 from './sarayu.png';
+
 
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Rithvik Matta',
+      name: 'Kshirin Shetty',
       role: 'President / ML Lead',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: {Nh1},
       bio: 'Leading neural network research and club operations. Passionate about deep learning applications in robotics.',
       links: {
         github: 'https://github.com/rithvikmatta',
@@ -18,9 +21,9 @@ const Team = () => {
       specialties: ['Deep Learning', 'Computer Vision', 'Team Leadership']
     },
     {
-      name: 'Ananya Sharma',
+      name: 'Sarayu',
       role: 'Vice President / Research Head',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: {Nh2},
       bio: 'Spearheading ethical AI initiatives and research publications. Expert in natural language processing.',
       links: {
         github: 'https://github.com/ananyasharma',
@@ -30,7 +33,7 @@ const Team = () => {
       specialties: ['NLP', 'Ethical AI', 'Research']
     },
     {
-      name: 'Karthik Venkat',
+      name: 'Rithvik Matta',
       role: 'Technical Lead / Robotics',
       image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
       bio: 'Building autonomous systems and leading hardware integration projects. IoT and embedded systems specialist.',
