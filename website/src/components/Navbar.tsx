@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X, Brain } from 'lucide-react';
+// Import the image
+import logoImage from './Darker_Shade.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,10 +40,10 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo - Image Version */}
+          {/* Logo - Image Version with Import */}
           <Link to="/" className="flex items-center space-x-2 group">
             <img 
-              src="Darker_Shade.png" 
+              src={logoImage}
               alt="Neural Hive Logo" 
               className="h-10 w-auto group-hover:scale-105 transition-transform"
             />
