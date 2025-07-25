@@ -9,7 +9,7 @@ const Team = () => {
     {
       name: 'Kshirin Shetty',
       role: 'President / ML Lead',
-      image: 'https://pictures-for-websites.vercel.app/kshirin.png',
+      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
       bio: 'Leading neural network research and club operations. Passionate about deep learning applications in robotics.',
       links: {
         github: 'https://github.com/rithvikmatta',
@@ -21,7 +21,7 @@ const Team = () => {
     {
       name: 'Sarayu',
       role: 'Vice President / Research Head',
-      image: 'https://pictures-for-websites.vercel.app/sarayu.png',
+      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
       bio: 'Spearheading ethical AI initiatives and research publications. Expert in natural language processing.',
       links: {
         github: 'https://github.com/ananyasharma',
