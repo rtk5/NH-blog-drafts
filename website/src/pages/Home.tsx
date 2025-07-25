@@ -16,7 +16,7 @@ const Home = () => {
       date: 'Sep 15, 2024',
       type: '24h Hackathon',
       description: '40 teams competed with healthcare AI problem statements',
-      image: 'https://images.pexels.com/photos/7664747/pexels-photo-7664747.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     {
       title: 'Visionary Talks: Dr. Ananya Rao',
