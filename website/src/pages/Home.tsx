@@ -106,7 +106,7 @@ const Home = () => {
           >
             <Link to="/join" className="btn-primary group">
               Join the Hive
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              {/* <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> */}
             </Link>
             <Link to="/projects" className="btn-secondary">
               Explore Projects
