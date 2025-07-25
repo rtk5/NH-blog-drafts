@@ -104,11 +104,11 @@ const Home = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link to="/join" className="btn-primary group">
+            <Link to="/events" className="btn-primary group">
               Our Events
               {/* <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> */}
             </Link>
-            <Link to="/events" className="btn-secondary">
+            <Link to="/projects" className="btn-secondary">
               Explore Projects
             </Link>
           </motion.div>
