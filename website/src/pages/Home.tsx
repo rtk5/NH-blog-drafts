@@ -105,10 +105,10 @@ const Home = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link to="/join" className="btn-primary group">
-              Join the Hive
+              Our Events
               {/* <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" /> */}
             </Link>
-            <Link to="/projects" className="btn-secondary">
+            <Link to="/events" className="btn-secondary">
               Explore Projects
             </Link>
           </motion.div>
