@@ -37,27 +37,55 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-  <section className="relative h-screen flex items-center justify-center overflow-hidden neuron-bg">
-    {/* Background Image Layer */}
-    <div 
-      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
-      }}
-    ></div>
-    
-    {/* Dark Overlay for Text Readability */}
-    <div className="absolute inset-0 bg-black/60"></div>
-    
-    {/* Gradient Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-bg/50 to-primary-bg"></div>
-    
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative z-10 text-center max-w-4xl mx-auto px-4"
-    >
+      <section className="relative h-screen flex items-center justify-center overflow-hidden neuron-bg">
+        {/* Tech Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=2000&q=80")'
+          }}
+        ></div>
+        
+        {/* Circuit Pattern Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=2000&q=80")'
+          }}
+        ></div>
+        
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-bg/50 to-primary-bg"></div>
+        
+        {/* AI Neural Network Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <svg width="100%" height="100%" viewBox="0 0 800 600" className="w-full h-full">
+            <defs>
+              <pattern id="neuralPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                <circle cx="20" cy="20" r="2" fill="currentColor" className="text-primary-accent"/>
+                <circle cx="80" cy="40" r="2" fill="currentColor" className="text-primary-accent"/>
+                <circle cx="50" cy="70" r="2" fill="currentColor" className="text-primary-accent"/>
+                <line x1="20" y1="20" x2="80" y2="40" stroke="currentColor" strokeWidth="0.5" className="text-primary-accent"/>
+                <line x1="80" y1="40" x2="50" y2="70" stroke="currentColor" strokeWidth="0.5" className="text-primary-accent"/>
+                <line x1="50" y1="70" x2="20" y2="20" stroke="currentColor" strokeWidth="0.5" className="text-primary-accent"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#neuralPattern)"/>
+          </svg>
+        </div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-center max-w-4xl mx-auto px-4"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-5xl md:text-7xl font-poppins font-bold mb-6"
+          >
+            <span className="glow-text">Neural Hive</span>
             
           </motion.h1>
           
