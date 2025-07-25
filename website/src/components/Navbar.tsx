@@ -38,11 +38,13 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Logo - Image Version */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="p-2 rounded-lg bg-gradient-to-r from-primary-accent to-primary-magenta">
-              <Brain className="h-6 w-6 text-primary-bg" />
-            </div>
+            <img 
+              src="Darker_Shade.png" 
+              alt="Neural Hive Logo" 
+              className="h-10 w-auto group-hover:scale-105 transition-transform"
+            />
             <span className="text-xl font-poppins font-bold glow-text group-hover:text-primary-magenta transition-colors">
               Neural Hive
             </span>
