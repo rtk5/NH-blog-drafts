@@ -2,8 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Github, Linkedin, Mail, Users } from 'lucide-react';
-import Nh1 from './kshirin.png';
-import Nh2 from './sarayu.png';
 
 
 const Team = () => {
@@ -11,7 +9,7 @@ const Team = () => {
     {
       name: 'Kshirin Shetty',
       role: 'President / ML Lead',
-      image: Nh1,
+      image: 'https://pictures-for-websites.vercel.app/kshirin.png',
       bio: 'Leading neural network research and club operations. Passionate about deep learning applications in robotics.',
       links: {
         github: 'https://github.com/rithvikmatta',
@@ -23,7 +21,7 @@ const Team = () => {
     {
       name: 'Sarayu',
       role: 'Vice President / Research Head',
-      image: Nh2,
+      image: 'https://pictures-for-websites.vercel.app/sarayu.png',
       bio: 'Spearheading ethical AI initiatives and research publications. Expert in natural language processing.',
       links: {
         github: 'https://github.com/ananyasharma',
