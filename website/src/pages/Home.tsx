@@ -52,9 +52,8 @@ const Home = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-5xl md:text-7xl font-poppins font-bold mb-6"
           >
-            <span className="glow-text">Neural Hive</span>
-            <br />
-            in Action
+            <span className="glow-text">Neural </span>
+            <br />Hive
           </motion.h1>
           
           <motion.p
