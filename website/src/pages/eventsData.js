@@ -4,20 +4,29 @@ import { Calendar, MapPin, Users, Clock, Star, Trophy, Mic, Code } from 'lucide-
 export const upcomingEvents = [
   // Add upcoming events here as they are announced
   // Example structure:
-  // {
-  //   title: 'Event Title',
-  //   date: 'Date',
-  //   time: 'Time',
-  //   type: 'Event Type',
-  //   location: 'Location',
-  //   attendees: 0,
-  //   status: 'upcoming',
-  //   description: 'Event description...',
-  //   highlights: ['Highlight 1', 'Highlight 2', ...],
-  //   image: 'image_url',
-  //   icon: IconComponent,
-  //   featured: true/false (optional)
-  // }
+  {
+    title: 'Workshop1',
+    date: '20th August, 2025',
+    time: '10:00 AM - 3:00 PM',
+    type: 'Competition',
+    location: 'Seminar Hall 1 - Electronic City Campus',
+    attendees: 65,
+    status: 'completed',
+    description: 'Reinforcement Learning Rewired was an interactive, hands-on workshop hosted by Neural Hive that introduced students to the fundamentals of Reinforcement Learning (RL) and its growing real-world applications. Designed around the concept of building intelligent agents, the session offered a fun, game-based approach to learning how AI makes decisions through trial and error. Participants got to experiment with DeepSeek, an open-source LLM that runs locally—giving them insights into GenAI while also highlighting the value of data privacy. They then built their own RL-powered agents using Q-Learning algorithms, putting theory into practice through mini-games like Tic-Tac-Toe, where the AI learned and improved with every move.',
+    highlights: [
+      'Reinforcement Learning (Q-Learning)',
+      'DeepSeek (Local LLMs)',
+      'Python & OpenAI Gym-style Environments',
+      'Agent Training Pipelines',
+      'Game-based Simulation Environments',
+      'Understanding how RL enables agents to make autonomous decisions based on rewards and feedback',
+      'Hands-on experience in implementing RL algorithms in gaming scenarios',
+      'Understanding how local LLMs like DeepSeek support privacy-friendly AI experimentation'
+    ],
+    image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
+    icon: Trophy,
+    featured: true
+  }
 ];
 
 // Past Events Data
