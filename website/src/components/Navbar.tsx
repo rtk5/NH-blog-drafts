@@ -38,6 +38,10 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, [location.pathname]);
+
   const isActive = (path: string) => location.pathname === path;
 
   return (
