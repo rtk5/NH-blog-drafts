@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-// Updated to match your original logo import
-import logoImage from './Darker_Shade.png';
+import logoImage from '../../public/neuralhiveLogo.svg';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -39,8 +38,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  // Removed TypeScript type annotation
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <>
@@ -54,54 +52,50 @@ const Navbar = () => {
           initial={false}
           animate={{ width: '100%', borderRadius: 100, marginTop: 0 }}
           transition={spring}
-          className={`mx-auto flex items-center justify-between px-8 py-6 bg-primary-bg/40 backdrop-blur-lg border border-primary-gray-700/50 shadow-lg ${
+          className={`mx-auto flex items-center justify-between px-8 py-6 bg-black/40 backdrop-blur-lg border border-gray-800 shadow-lg ${
             scrolled ? 'max-w-[1300px]' : ''
           }`}
         >
           {/* Logo */}
           <motion.div layout className="flex items-center space-x-2">
-            <Link to="/" className="flex items-center space-x-2 group">
-              <img 
-                src={logoImage} 
-                alt="Neural Hive Logo" 
-                className="h-8 w-auto group-hover:scale-105 transition-transform" 
-              />
-              <span className="font-poppins font-bold glow-text text-xl group-hover:text-primary-magenta transition-colors">
-                Neural Hive
-              </span>
+            <Link to="/" className="flex items-center space-x-2">
+              <img src={logoImage} alt="Neural Hive Logo" className="h-8 w-auto" />
+              <span className="font-poppins font-bold text-white text-xl">Neural Hive</span>
             </Link>
           </motion.div>
 
           {/* Nav Items */}
           <motion.ul layout className="flex items-center space-x-8" transition={spring}>
             {navItems.map((item) => (
-              <li key={item.name}>
+              <li key={item.name} className="relative">
                 <Link
                   to={item.path}
                   className={`relative py-2 text-sm font-poppins transition-colors ${
                     isActive(item.path)
-                      ? 'text-primary-accent after:scale-x-100'
-                      : 'text-primary-gray-300 hover:text-primary-accent'
+                      ? 'text-[#F4C343]'
+                      : 'text-white hover:text-[#F4C343]'
                   }`}
                 >
                   {item.name}
-                  {isActive(item.path) && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-accent"
-                      initial={false}
-                    />
-                  )}
                 </Link>
+                {isActive(item.path) && (
+                  <motion.div
+                    layoutId="activeTabUnderline"
+                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-[#F4C343]"
+                    initial={false}
+                    transition={spring}
+                  />
+                )}
               </li>
             ))}
           </motion.ul>
+
 
           {/* Join Us */}
           <motion.div layout>
             <Link
               to="/join"
-              className="btn-primary px-6 py-2.5 rounded-full text-sm font-poppins transition-all hover:scale-105"
+              className="px-6 py-2.5 rounded-full text-sm font-poppins transition-all hover:scale-105 bg-[#F4C343] text-[#000952]"
             >
               Join Us
             </Link>
@@ -111,32 +105,21 @@ const Navbar = () => {
 
       {/* Mobile */}
       <nav className="fixed top-0 left-0 right-0 z-50 md:hidden">
-        <div className="w-full bg-primary-bg/90 backdrop-blur-lg border-b border-primary-gray-700/50">
+        <div className="w-full bg-black/90 backdrop-blur-lg border-b border-gray-800">
           <div className="flex items-center justify-between px-6 py-5">
-            <Link to="/" className="flex items-center space-x-3 group">
-              <img 
-                src={logoImage} 
-                alt="Neural Hive Logo" 
-                className="h-10 w-auto group-hover:scale-105 transition-transform" 
-              />
-              <span className="font-poppins font-bold glow-text text-xl group-hover:text-primary-magenta transition-colors">
-                Neural Hive
-              </span>
+            <Link to="/" className="flex items-center space-x-3">
+              <img src={logoImage} alt="Neural Hive Logo" className="h-10 w-auto" />
+              <span className="font-poppins font-bold text-white text-xl">Neural Hive</span>
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-primary-gray-300 hover:text-primary-accent transition-colors"
+              className="p-2 text-gray-300 hover:text-[#F4C343]"
             >
               {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
             </button>
           </div>
           {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="border-t border-primary-gray-700/50 bg-primary-card/95 backdrop-blur-lg"
-            >
+            <div className="border-t border-gray-800 bg-black/95">
               <div className="px-4 py-4 space-y-2">
                 {navItems.map((item) => (
                   <Link
@@ -145,8 +128,8 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                     className={`block px-4 py-3 rounded-lg transition-colors font-poppins ${
                       isActive(item.path)
-                        ? 'text-primary-accent bg-primary-accent/10'
-                        : 'text-primary-gray-300 hover:text-primary-accent hover:bg-primary-gray-800/50'
+                        ? 'text-[#F4C343] bg-[#F4C343]/10'
+                        : 'text-gray-300 hover:text-[#F4C343]'
                     }`}
                   >
                     {item.name}
@@ -155,12 +138,12 @@ const Navbar = () => {
                 <Link
                   to="/join"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full text-center btn-primary px-4 py-3 rounded-full mt-4 font-poppins"
+                  className="block w-full text-center px-4 py-3 rounded-full mt-4 font-poppins bg-[#F4C343] text-[#000952]"
                 >
                   Join Us
                 </Link>
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
       </nav>
