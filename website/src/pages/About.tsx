@@ -7,29 +7,29 @@ const About = () => {
     {
       icon: Brain,
       title: 'ML Research',
-      description: 'Exploring cutting-edge machine learning algorithms and their real-world applications'
+      description: 'Exploring cutting-edge machine learning algorithms and their real-world applications',
     },
     {
       icon: Cpu,
       title: 'Robotics',
-      description: 'Building intelligent robots that can navigate and interact with complex environments'
+      description: 'Building intelligent robots that can navigate and interact with complex environments',
     },
     {
       icon: Eye,
       title: 'Computer Vision',
-      description: 'Teaching machines to see and understand visual information from the world'
+      description: 'Teaching machines to see and understand visual information from the world',
     },
     {
       icon: Shield,
       title: 'Ethical AI',
-      description: 'Ensuring AI development follows ethical guidelines and serves humanity responsibly'
-    }
+      description: 'Ensuring AI development follows ethical guidelines and serves humanity responsibly',
+    },
   ];
 
   const affiliations = [
     { name: 'IEEE Student Branch', description: 'Technical excellence and innovation' },
     { name: 'Department of CSE', description: 'Academic support and mentorship' },
-    { name: 'PESU Research Center', description: 'Advanced research opportunities' }
+    { name: 'PESU Research Center', description: 'Advanced research opportunities' },
   ];
 
   return (
@@ -99,14 +99,14 @@ const About = () => {
               className="glass-card glow-border p-8"
             >
               <h3 className="text-2xl font-poppins font-semibold mb-4 text-primary-magenta">
-                Core Values
+                What We Do
               </h3>
-              <ul className="text-primary-gray-300 font-inter space-y-2">
-                <li>• Innovation through collaboration</li>
-                <li>• Ethical AI development</li>
-                <li>• Inclusive learning environment</li>
-                <li>• Project-driven approach</li>
-                <li>• Community impact focus</li>
+              <ul className="text-primary-gray-300 font-inter space-y-2 list-disc list-inside">
+                <li>Host weekly hack nights for collaborative learning</li>
+                <li>Organize speaker series and workshops with experts</li>
+                <li>Build and maintain open-source student-led projects</li>
+                <li>Support interdisciplinary research and innovation</li>
+                <li>Foster a community for peer mentoring and growth</li>
               </ul>
             </motion.div>
           </div>
@@ -189,6 +189,44 @@ const About = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Who We’re For */}
+      <section className="py-20 bg-primary-card/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="glass-card glow-border p-8"
+          >
+            <h2 className="text-3xl font-poppins font-bold mb-4 glow-text">Who We're For</h2>
+            <p className="text-lg text-primary-gray-300 font-inter leading-relaxed">
+              Anyone curious about technology — regardless of major or experience level.
+              Whether you're a coder, designer, or tech-enthusiast, there’s a space for you at Neural Hive.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Get Involved */}
+      <section className="py-20 bg-primary-card/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="glass-card glow-border p-8"
+          >
+            <h2 className="text-3xl font-poppins font-bold mb-4 glow-text">Get Involved</h2>
+            <p className="text-lg text-primary-gray-300 font-inter leading-relaxed">
+              Join our mailing list, drop by a hack night, or pitch your own idea.
+              No applications — just bring your curiosity and initiative!
+            </p>
+          </motion.div>
         </div>
       </section>
 

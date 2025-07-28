@@ -5,9 +5,9 @@ import Hero from "../components/HomePage/Hero";
 
 const Home = () => {
   const stats = [
-    { number: "60+", label: "Active Members", icon: Users },
+    { number: "70+", label: "Active Members", icon: Users },
     { number: "5", label: "Events in 2024-25", icon: Calendar },
-    { number: "12", label: "Live Projects", icon: Cpu },
+    { number: "10", label: "Live Projects", icon: Cpu },
   ];
 
   const events = [
@@ -66,27 +66,50 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-8">
-              <span className="glow-text">Our Mission</span>
-            </h2>
-            <p className="text-xl text-primary-gray-300 leading-relaxed font-inter">
-              At Neural Hive we believe in learning by doing. From snake-robots
-              slithering through rubble to AI models catching anomalies before
-              they escalate, our hive buzzes with innovation. We democratize AI
-              literacy and foster project-driven learning across all domains.
-            </p>
-          </motion.div>
+{/* Events Section */}
+  <section className="py-20">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl md:text-4xl font-poppins font-bold text-center mb-12">
+          <span className="glow-text">Upcoming Semester Events</span>
+        </h2>
+
+        <div className="relative border-l-2 border-primary-accent pl-6 space-y-10">
+          {[
+            { title: "Freshers Event", date: "TBD", description: "Welcome and orientation for new members" },
+            { title: "Workshop 1", date: "August 20, 2025", description: "Introductory technical workshop to kick off the semester" },
+            { title: "Pre-Hackathon Workshop", date: "September 10, 2025", description: "Skill-building and team formation before the hack" },
+            { title: "Hackathon", date: "September 12–13, 2025", description: "24 hours of innovation and collaboration" },
+            { title: "Workshop 3", date: "October 8, 2025", description: "Advanced concepts & practical applications" },
+            { title: "Maaya Event", date: "TBD", description: "Annual cultural + tech fest — details coming soon!" },
+          ].map((event, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="absolute w-4 h-4 bg-primary-accent rounded-full -left-[0.55rem] top-1.5 border-2 border-primary-bg" />
+              <div className="ml-4">
+                <h3 className="text-xl font-poppins font-semibold text-primary-accent">
+                  {event.title}
+                </h3>
+                <p className="text-sm text-primary-gray-400 mb-1">{event.date}</p>
+                <p className="text-primary-gray-300 font-inter">{event.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </section>
+      </motion.div>
+    </div>
+  </section>
 
       {/* Featured Events */}
       <section className="py-20 bg-primary-card/20">
