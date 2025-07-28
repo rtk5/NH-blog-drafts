@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import logoImage from '../../public/neuralhiveLogo.svg';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -63,7 +62,7 @@ const Navbar = () => {
           {/* Logo */}
           <motion.div layout className="flex items-center space-x-2">
             <Link to="/" className="flex items-center space-x-2">
-              <img src={logoImage} alt="Neural Hive Logo" className="h-8 w-auto" />
+              <img src="/neuralhiveLogo.svg" alt="Neural Hive Logo" className="h-8 w-auto" />
               <span className="font-poppins font-bold text-white text-xl">Neural Hive</span>
             </Link>
           </motion.div>
@@ -112,7 +111,7 @@ const Navbar = () => {
         <div className="w-full bg-black/90 backdrop-blur-lg border-b border-gray-800">
           <div className="flex items-center justify-between px-6 py-5">
             <Link to="/" className="flex items-center space-x-3">
-              <img src={logoImage} alt="Neural Hive Logo" className="h-10 w-auto" />
+              <img src="/neuralhiveLogo.svg" alt="Neural Hive Logo" className="h-10 w-auto" />
               <span className="font-poppins font-bold text-white text-xl">Neural Hive</span>
             </Link>
             <button
