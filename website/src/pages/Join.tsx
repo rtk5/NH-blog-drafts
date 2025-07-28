@@ -6,25 +6,25 @@ const Join = () => {
   const timeline = [
     {
       phase: 'Application Period',
-      date: 'Feb 2 - Feb 6, 2026',
+      date: 'Feb 1st week 2026',
       description: 'Submit your application through our online form',
       status: 'upcoming'
     },
     {
       phase: 'Initial Screening',
-      date: 'Feb 9 - Feb 13, 2026',
+      date: 'Feb 2nd week 2026',
       description: 'Review of applications and shortlisting candidates',
       status: 'upcoming'
     },
     {
       phase: 'Technical Interview',
-      date: 'Feb 16 - Feb 20, 2026',
+      date: 'Feb 3rd week 2026',
       description: 'One-on-one interviews with core team members',
       status: 'upcoming'
     },
     {
       phase: 'Final Selection',
-      date: 'Mar 2, 2026',
+      date: 'March 1st week 2026',
       description: 'Results announcement and welcome to Neural Hive',
       status: 'upcoming'
     }
@@ -41,11 +41,11 @@ const Join = () => {
     },
     {
       question: 'What is the time commitment?',
-      answer: 'We ask members to dedicate around 4-6 hours per week to club activities, which can include exciting things like team meetings, hands-on workshops, and collaborative project work. But don\'t worry — we understand how hectic things can get during exam season, so there\'s plenty of flexibility. Our goal is to help you learn and grow stress-free and at a steady pace. Even if you only have a few free hours and want to dive deep, there\'s a place for you here!'
+      answer: 'We ask members to dedicate around 4-6 hours a week during club activities, which can include exciting things like team meetings, hands-on workshops, and collaborative project work. But don\'t worry — we understand how hectic things can get during exam season, so there\'s plenty of flexibility. Our goal is to help you learn and grow stress-free and at a steady pace. Even if you only have a few free hours and want to dive deep, there\'s a place for you here!'
     },
     {
       question: 'Is it free to join Neural Hive?',
-      answer: 'Yes, it\'s completely free to become a member! Every student is welcome to be a part of our community without worrying about any cost. We may host special workshops or events that have a small fee, but those are always optional. You\'ll never have to pay to be involved, learn, and grow with us'
+      answer: 'Yes, it\'s completely free to become a member! Every student is welcome to be a part of our community without worrying about any cost. We may host special workshops or hackathons that have a small fee, but those are always optional. You\'ll never have to pay to be involved, learn, and grow with us'
     },
     {
       question: 'What opportunities will I get as a member?',
