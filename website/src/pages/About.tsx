@@ -50,6 +50,21 @@ const About = () => {
               The premier AI & Machine Learning club at PES University, Electronic City Campus
             </p>
           </motion.div>
+
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="glass-card glow-border p-8 max-w-4xl mx-auto"
+          >
+            <p className="text-lg text-primary-gray-300 font-inter leading-relaxed mb-6">
+              This club is for all students interested in AI/ML. No prior experience is necessary –
+              just a curious mind and a passion for learning. Whether you're a seasoned coder or just 
+              looking to understand what AI is all about, you'll find a welcoming community here.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -68,8 +83,11 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-xl text-primary-gray-300 font-inter max-w-3xl mx-auto leading-relaxed">
-              To democratize AI literacy and foster project-driven learning among students, 
-              creating a vibrant ecosystem where innovation thrives and future tech leaders are born.
+            To foster a thriving student community around Machine Learning and Artificial Intelligence. 
+              We provide a dedicated platform where you can explore your interests, from the basics of 
+            data cleaning to building complex models. We're committed to helping you develop essential skills 
+                                      and connect with like-minded peers.
+
             </p>
           </motion.div>
 
@@ -99,14 +117,17 @@ const About = () => {
               className="glass-card glow-border p-8"
             >
               <h3 className="text-2xl font-poppins font-semibold mb-4 text-primary-magenta">
-                Core Values
+               What We Do
               </h3>
+               <p className="text-primary-gray-300 font-inter leading-relaxed">
+              The world of AI and ML is vast and exciting, and so are our plans! 
+              We're all about hands-on learning, skill development, and real-world application. 
+              Here's a glimpse of what you can expect from us this semester:
+              </p>
               <ul className="text-primary-gray-300 font-inter space-y-2">
-                <li>• Innovation through collaboration</li>
-                <li>• Ethical AI development</li>
-                <li>• Inclusive learning environment</li>
-                <li>• Project-driven approach</li>
-                <li>• Community impact focus</li>
+                <li>• Workshops on Understanding Machine Learning Concepts: For beginners or pros, we cover key ML principles, making complex ideas accessible and fun.</li>
+                <li>• Start-ups Guest Talks: Connect with the pros! We'll be inviting founders from leading tech startups to share their insights on how AI/ML is used in the industry and what skills are in demand. </li>
+                <li>• AI/ML for Social Good Hackathon: Use your AI/ML skills to come up with innovative solutions for rising social issues. An opportunity to collaborate, innovate, and make a real impact.</li>
               </ul>
             </motion.div>
           </div>
@@ -231,6 +252,42 @@ const About = () => {
         </div>
       </section>
 
+
+      
+       {/* Get Involved */}
+      <section className="py-20 bg-primary-card/20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <UserPlus className="h-16 w-16 text-primary-accent mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 glow-text">
+              Get Involved!
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="glass-card glow-border p-8 max-w-4xl mx-auto"
+          >
+            <p className="text-lg text-primary-gray-300 font-inter leading-relaxed mb-6">
+              We're eager to host our events. Don't miss out on the opportunity to learn, connect, and innovate.
+            
+                              Ready to dive into the world of AI and ML with us?
+                              We can't wait to build something amazing with you!
+
+            </p>
+          </motion.div>
+        </div>
+
+      </section>
 
     </div>
   );
