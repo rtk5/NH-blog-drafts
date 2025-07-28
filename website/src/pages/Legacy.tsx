@@ -10,7 +10,7 @@ const Legacy = () => {
         {
           name: 'Tanistha Hota',
           role: 'Student Lead',
-          image: 'https://github.com/rtk5/pictures-for-websites/tanishta.webp',
+          image: 'https://pictures-for-websites.vercel.app/tanishta.webp',
           bio: 'Visionary founder who established Neural Hive as PESU EC\'s premier AI club.',
           achievements: ['Founder and Lead of Neural Hive', 'scaled the club from one event a year to a thriving ML community with regular workshops', 'mentored projects and a promoted a culture of shared learning'],
           links: {
