@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <Hero/>
+      <Hero />
 
       {/* Stats Section */}
       <section className="py-20 bg-primary-card/20">
@@ -66,25 +66,91 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Upcoming Events Timeline */}
+      <section className="py-20 bg-background" id="upcoming-events">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-8">
-              <span className="glow-text">Our Mission</span>
+            <h2 className="text-3xl md:text-4xl font-bold glow-text">
+              Events for the Upcoming Semester
             </h2>
-            <p className="text-xl text-primary-gray-300 leading-relaxed font-inter">
-              At Neural Hive we believe in learning by doing. From snake-robots
-              slithering through rubble to AI models catching anomalies before
-              they escalate, our hive buzzes with innovation. We democratize AI
-              literacy and foster project-driven learning across all domains.
-            </p>
           </motion.div>
+
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-primary-accent z-0"></div>
+
+            <div className="space-y-24">
+              {[
+                {
+                  title: "Freshers Event",
+                  date: "TBD",
+                  description: "Welcome new members and introduce club activities.",
+                },
+                {
+                  title: "Workshop 1",
+                  date: "August 20, 2025",
+                  description: "Hands-on session for beginner members.",
+                },
+                {
+                  title: "Pre-Hackathon Workshop",
+                  date: "September 10, 2025",
+                  description: "Prep session to build hackathon-ready skills.",
+                },
+                {
+                  title: "Hackathon",
+                  date: "September 12–13, 2025",
+                  description: "Flagship 24-hour hackathon of Neural Hive.",
+                },
+                {
+                  title: "Workshop 3",
+                  date: "October 8, 2025",
+                  description: "Deeper dive into ML/AI applications.",
+                },
+                {
+                  title: "Maaya Event",
+                  date: "TBD",
+                  description: "Showcase of AIML creativity during Maaya Fest.",
+                },
+              ].map((event, i) => {
+                const isLeft = i % 2 === 0;
+                return (
+                  <motion.div
+                    key={event.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1, duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className={`relative flex flex-col md:flex-row items-center justify-between ${
+                      isLeft ? "md:flex-row-reverse" : ""
+                    }`}
+                  >
+                    {/* Event card */}
+                    <div className="md:w-5/12 z-10">
+                      <div className="glass-card p-6 shadow-xl glow-border">
+                        <h3 className="text-xl font-semibold glow-text">{event.title}</h3>
+                        <p className="text-primary-gray-400 mt-2">{event.description}</p>
+                        <div className="mt-4 inline-block px-3 py-1 bg-primary-accent/10 text-primary-accent font-semibold text-sm rounded-full shadow">
+                          {event.date}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Circle */}
+                    <div className="z-20 w-fit absolute left-1/2 -translate-x-1/2">
+                      <div className="w-5 h-5 rounded-full bg-primary-accent border-4 border-background"></div>
+                    </div>
+
+                    <div className="md:w-5/12"></div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -133,9 +199,7 @@ const Home = () => {
                   <h3 className="text-xl font-poppins font-semibold mb-3">
                     {event.title}
                   </h3>
-                  <p className="text-primary-gray-400 font-inter">
-                    {event.description}
-                  </p>
+                  <p className="text-primary-gray-400 font-inter">{event.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -158,8 +222,7 @@ const Home = () => {
               Ready to Join the Revolution?
             </h2>
             <p className="text-xl text-primary-gray-300 mb-8 font-inter">
-              Become a neuron in our hive and help shape the future of AI at
-              PESU EC
+              Become a neuron in our hive and help shape the future of AI at PESU EC
             </p>
             <Link to="/join" className="btn-primary text-lg px-8 py-4">
               Start Your Journey
