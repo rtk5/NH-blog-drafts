@@ -6,25 +6,25 @@ const Join = () => {
   const timeline = [
     {
       phase: 'Application Period',
-      date: 'Aug 1 - Aug 20, 2025',
+      date: 'Feb 2 - Feb 6, 2026',
       description: 'Submit your application through our online form',
       status: 'upcoming'
     },
     {
       phase: 'Initial Screening',
-      date: 'Aug 21 - Aug 25, 2025',
+      date: 'Feb 9 - Feb 13, 2026',
       description: 'Review of applications and shortlisting candidates',
       status: 'upcoming'
     },
     {
       phase: 'Technical Interview',
-      date: 'Aug 26 - Aug 30, 2025',
+      date: 'Feb 16 - Feb 20, 2026',
       description: 'One-on-one interviews with core team members',
       status: 'upcoming'
     },
     {
       phase: 'Final Selection',
-      date: 'Sep 1, 2025',
+      date: 'Mar 2, 2026',
       description: 'Results announcement and welcome to Neural Hive',
       status: 'upcoming'
     }
@@ -33,23 +33,23 @@ const Join = () => {
   const faqs = [
     {
       question: 'Who can apply to join Neural Hive?',
-      answer: 'Any PESU EC student from any year and branch can apply. We welcome students with diverse backgrounds and interests in AI/ML.'
+      answer: 'Any student from PESU EC, regardless of their year of study or branch of engineering, is eligible to apply for Neural Hive. We actively encourage students from all branches to apply, as long as they share a passion for AI and Machine Learning. Whether you\'re a first-year just beginning to explore AI/ML or a final-year student with project experience, Neural Hive offers opportunities to learn and collaborate.'
     },
     {
-      question: 'Do I need prior experience in AI/ML?',
-      answer: 'No prior experience is required! We value enthusiasm and willingness to learn over existing knowledge. We provide training and mentorship.'
+      question: 'Do I need to have prior experience in AI/ML?',
+      answer: 'No prior experience is required! We\'re looking for students who are curious, passionate, and eager to learn—regardless of their current skill level. Even if you\'ve just started to explore AI/ML, you\'re welcome here. We provide hands-on training and exciting workshops to help you build a strong foundation and grow your expertise over time.'
     },
     {
       question: 'What is the time commitment?',
-      answer: 'We expect 4-6 hours per week for club activities, including meetings, workshops, and project work. Flexibility is provided during exams.'
+      answer: 'We ask members to dedicate around 4-6 hours per week to club activities, which can include exciting things like team meetings, hands-on workshops, and collaborative project work. But don\'t worry — we understand how hectic things can get during exam season, so there\'s plenty of flexibility. Our goal is to help you learn and grow stress-free and at a steady pace. Even if you only have a few free hours and want to dive deep, there\'s a place for you here!'
     },
     {
-      question: 'Are there any fees to join?',
-      answer: 'No, membership is completely free. We may occasionally organize paid workshops or events, but participation is always optional.'
+      question: 'Is it free to join Neural Hive?',
+      answer: 'Yes, it\'s completely free to become a member! Every student is welcome to be a part of our community without worrying about any cost. We may host special workshops or events that have a small fee, but those are always optional. You\'ll never have to pay to be involved, learn, and grow with us'
     },
     {
       question: 'What opportunities will I get as a member?',
-      answer: 'Access to exclusive workshops, industry mentorship, project collaboration, research opportunities, and networking with AI professionals.'
+      answer: 'As a Neural Hive member, you will have some of the most thrilling experiences on campus. Get access to exclusive, hands-on workshops where industry standard tools and ideas come alive. Collaborate on innovative projects, dive into research that solves real world problems. You will also join a vibrant network of AI enthusiasts—from curious beginners to established professionals—that can open doors to internships, competitions, and startup opportunities. If you\'re excited about shaping the future of tech, this is the place to be!'
     }
   ];
 
