@@ -76,7 +76,7 @@ const Hero = () => {
                 <div className="absolute top-3 right-3 sm:top-5 sm:right-5 bg-[#000000] backdrop-blur-sm rounded-lg p-2 sm:p-3 md:p-4 text-white">
                   <div className="flex items-center gap-2 text-xs sm:text-sm">
                     <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-green-400 rounded-full"></div>
-                    <span className="font-medium">60+ Members</span>
+                    <span className="font-medium">70+ Active Members</span>
                   </div>
                   <div className="px-4 text-[10px] sm:text-xs text-gray-300 mt-1">
                     Join the community
