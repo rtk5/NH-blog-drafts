@@ -36,7 +36,7 @@ const events = [
       title: "BrainHack Hackathon",
       date: "Sep 15, 2024",
       type: "24h Hackathon",
-      description: "40 teams competed with healthcare AI problem statements",
+      description: "40 teams competed with healthcare AI problem statements from PES",
       image:
         "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
