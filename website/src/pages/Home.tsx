@@ -5,9 +5,9 @@ import Hero from "../components/HomePage/Hero";
 
 const Home = () => {
   const stats = [
-    { number: "60+", label: "Active Members", icon: Users },
+    { number: "70+", label: "Active Members", icon: Users },
     { number: "5", label: "Events in 2024-25", icon: Calendar },
-    { number: "12", label: "Live Projects", icon: Cpu },
+    { number: "10", label: "Live Projects", icon: Cpu },
   ];
 
   const events = [
