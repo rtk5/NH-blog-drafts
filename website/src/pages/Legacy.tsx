@@ -8,15 +8,15 @@ const Legacy = () => {
       year: '2023-24',
       members: [
         {
-          name: 'Aditya Krishnan',
-          role: 'Founding President',
-          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
+          name: 'Tanistha Hota',
+          role: 'Student Lead',
+          image: 'https://github.com/rtk5/pictures-for-websites/tanishta.webp',
           bio: 'Visionary founder who established Neural Hive as PESU EC\'s premier AI club.',
-          achievements: ['Founded Neural Hive', 'Organized first AI Bootcamp', 'Established industry partnerships'],
+          achievements: ['Founder and Lead of Neural Hive', 'scaled the club from one event a year to a thriving ML community with regular workshops', 'mentored projects and a promoted a culture of shared learning'],
           links: {
-            github: 'https://github.com/adityakrishnan',
-            linkedin: 'https://linkedin.com/in/adityakrishnan',
-            email: 'aditya@alumni.neuralhive.com'
+            github: 'https://github.com/tanisthahota',
+            linkedin: 'https://www.linkedin.com/in/tanistha-hota/',
+            email: 'hotatanistha@gmail.com'
           },
           specialties: ['Leadership', 'AI Strategy', 'Community Building']
         },

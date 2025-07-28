@@ -32,9 +32,7 @@ const Hero = () => {
 
             {/* Description */}
             <div className="text-base sm:text-lg md:text-xl mb-8 font-poppins max-w-xl mx-auto lg:mx-0 leading-relaxed text-[#ffffff]/80">
-              Neural Hive, the AI club of PES University, Electronic City,
-              brings students opportunities to learn, innovate, and grow in
-              machine learning and artificial intelligence.
+              Neural Hive, the AI/ML club at PES University, Electronic City, provides students with opportunities to learn, innovate, and grow in the fields of machine learning and artificial intelligence.
             </div>
 
             {/* Buttons */}
