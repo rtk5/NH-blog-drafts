@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Camera, Filter, ArrowRight } from 'lucide-react';
+import { Camera, Filter, X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -10,53 +10,83 @@ const Gallery = () => {
   const galleryEvents = [
     {
       id: 1,
-      title: 'Reinforcement Learning Rewired',
-      slug: 'reinforcement-learning-rewired',
+      title: 'BrainHack Hackathon 2024',
+      slug: 'brainhack-hackathon-2024',
       category: '2024',
-      event: 'AI Workshop',
-      description: 'An advanced workshop exploring how reinforcement learning drives decision-making in AI systems. Participants experimented with OpenAI Gym and policy optimization strategies.',
-      coverImage: 'https://i.postimg.cc/1tNSHRXV/rlr.jpg0',
-      photoCount: 21
+      event: 'BrainHack Hackathon',
+      description: 'Teams working intensively during our 24-hour hackathon',
+      coverImage: 'https://images.pexels.com/photos/7664747/pexels-photo-7664747.jpeg?auto=compress&cs=tinysrgb&w=800',
+      photoCount: 18
     },
     {
       id: 2,
-      title: 'Agentic 101',
-      slug: 'agentic-101',
-      category: '2025',
-      event: 'Beginner Talk',
-      description: 'An introductory session on agentic systems and LLM-based autonomous agents. Attendees gained conceptual understanding and real-world use cases of AI agents.',
-      coverImage: 'https://i.postimg.cc/LsmkMhLL/Whats-App-Image-2025-07-27-at-12-20-40-20dfe780.jpg',
-      photoCount: 14
+      title: 'Visionary Talks: Dr. Ananya Rao',
+      slug: 'visionary-talks-dr-ananya-rao',
+      category: '2024',
+      event: 'Visionary Talks',
+      description: 'Industry expert discussing AI in medical imaging',
+      coverImage: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
+      photoCount: 15
     },
     {
       id: 3,
-      title: 'Canvas Clue',
-      slug: 'canvas-clue',
-      category: '2024',
-      event: 'AI + Art Challenge',
-      description: 'Participants combined AI-generated hints and human creativity to decode abstract art using computer vision and NLP. A fun, hands-on blend of AI and artistic interpretation.',
-      coverImage: 'https://i.postimg.cc/mgkz3MYd/can.jpg',
-      photoCount: 17
+      title: 'ML 101 Workshop',
+      slug: 'ml-101-workshop',
+      category: '2025',
+      event: 'ML Workshop',
+      description: 'Hands-on learning session with neural networks',
+      coverImage: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=800',
+      photoCount: 20
     },
     {
       id: 4,
-      title: 'Establishing Causality in Complex Mental Issues using AI',
-      slug: 'causality-in-mental-health-ai',
+      title: 'AI Bootcamp 2024',
+      slug: 'ai-bootcamp-2024',
       category: '2024',
-      event: 'Tech Talk',
-      description: 'A research-focused session exploring how machine learning models can infer causal links in mental health conditions, using graph-based algorithms and observational data.',
-      coverImage: 'https://i.postimg.cc/c1TLDC4P/cas.jpg',
-      photoCount: 13
+      event: 'AI Bootcamp',
+      description: 'Welcome session for our comprehensive AI bootcamp',
+      coverImage: 'https://images.pexels.com/photos/7662235/pexels-photo-7662235.jpeg?auto=compress&cs=tinysrgb&w=800',
+      photoCount: 22
     },
     {
       id: 5,
-      title: 'Filter Fiesta',
-      slug: 'filter-fiesta',
+      title: 'SNARLOS Robot Testing',
+      slug: 'snarlos-robot-testing',
+      category: '2024',
+      event: 'Project Work',
+      description: 'Testing our snake robot for disaster response scenarios',
+      coverImage: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
+      photoCount: 16
+    },
+    {
+      id: 6,
+      title: 'Sign Language Glove Demo',
+      slug: 'sign-language-glove-demo',
+      category: '2024',
+      event: 'Project Showcase',
+      description: 'Demonstrating our sign language translation device',
+      coverImage: 'https://images.pexels.com/photos/7048047/pexels-photo-7048047.jpeg?auto=compress&cs=tinysrgb&w=800',
+      photoCount: 14
+    },
+    {
+      id: 7,
+      title: 'Neural Style Transfer Workshop',
+      slug: 'neural-style-transfer-workshop',
       category: '2024',
       event: 'Workshop',
-      description: 'Participants learned to build Snapchat-style face filters using Python, OpenCV, and MediaPipe. Real-time face landmark detection was a key highlight.',
-      coverImage: 'https://i.postimg.cc/rwkZKV5F/filtrer.jpg',
-      photoCount: 18
+      description: 'Learning artistic AI image transformation techniques',
+      coverImage: 'https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=800',
+      photoCount: 19
+    },
+    {
+      id: 8,
+      title: 'Team Building Session',
+      slug: 'team-building-session',
+      category: '2024',
+      event: 'Team Building',
+      description: 'Core team planning session for upcoming events',
+      coverImage: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=800',
+      photoCount: 12
     }
   ];
 
@@ -127,14 +157,14 @@ const Gallery = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredEvents.map((event, index) => (
               <motion.div
-                key={${event.id}-${activeFilter}}
+                key={`${event.id}-${activeFilter}`}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05, duration: 0.4 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
-                <Link to={/gallery/${event.slug}}>
+                <Link to={`/gallery/${event.slug}`}>
                   <div className="relative overflow-hidden rounded-xl bg-primary-card glass-card glow-border hover:shadow-lg hover:shadow-primary-accent/20 transition-all duration-300">
                     <div className="relative h-64 overflow-hidden">
                       <img
