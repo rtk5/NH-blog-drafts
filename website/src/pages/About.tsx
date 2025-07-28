@@ -231,39 +231,7 @@ const About = () => {
         </div>
       </section>
 
-       {/* Get Involved */}
-      <section className="py-20 bg-primary-card/20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <UserPlus className="h-16 w-16 text-primary-accent mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 glow-text">
-              Get Involved!
-            </h2>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="glass-card glow-border p-8 max-w-4xl mx-auto"
-          >
-            <p className="text-lg text-primary-gray-300 font-inter leading-relaxed mb-6">
-              We're eager to host our events. Don't miss out on the opportunity to learn, connect, and innovate.
-            
-                              Ready to dive into the world of AI and ML with us?
-                              We can't wait to build something amazing with you!
-
-            </p>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };
