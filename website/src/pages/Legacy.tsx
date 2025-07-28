@@ -21,9 +21,9 @@ const Legacy = () => {
           specialties: ['Leadership', 'AI Strategy', 'Community Building']
         },
         {
-          name: 'Sneha Reddy',
+          name: 'Rishit Rastogi',
           role: 'Founding Vice President',
-          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
+          image: 'https://pictures-for-websites.vercel.app/rishit.webp',
           bio: 'Co-founder who shaped the club\'s technical direction and research focus.',
           achievements: ['Co-founded Neural Hive', 'Led first research initiatives', 'Mentored 20+ students'],
           links: {
@@ -34,7 +34,7 @@ const Legacy = () => {
           specialties: ['Research', 'Machine Learning', 'Mentorship']
         },
         {
-          name: 'Rahul Sharma',
+          name: 'Anuhya Tyada',
           role: 'Technical Lead',
           image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
           bio: 'Built the technical foundation and led the first major projects.',
@@ -47,7 +47,46 @@ const Legacy = () => {
           specialties: ['Full-Stack Development', 'System Architecture', 'Project Management']
         },
         {
-          name: 'Priyanka Nair',
+          name: 'Uday Kiran',
+          role: 'Events Coordinator',
+          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
+          bio: 'Organized the club\'s first major events and built external partnerships.',
+          achievements: ['Organized 3 major events', 'Built industry network', 'Secured sponsorships'],
+          links: {
+            github: 'https://github.com/priyankanair',
+            linkedin: 'https://linkedin.com/in/priyankanair',
+            email: 'priyanka@alumni.neuralhive.com'
+          },
+          specialties: ['Event Management', 'Partnerships', 'Marketing']
+        },
+        {
+          name: 'Suhit Hegde ',
+          role: 'Events Coordinator',
+          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
+          bio: 'Organized the club\'s first major events and built external partnerships.',
+          achievements: ['Organized 3 major events', 'Built industry network', 'Secured sponsorships'],
+          links: {
+            github: 'https://github.com/priyankanair',
+            linkedin: 'https://linkedin.com/in/priyankanair',
+            email: 'priyanka@alumni.neuralhive.com'
+          },
+          specialties: ['Event Management', 'Partnerships', 'Marketing']
+        },
+        {
+          name: 'Tanay',
+          role: 'Events Coordinator',
+          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
+          bio: 'Organized the club\'s first major events and built external partnerships.',
+          achievements: ['Organized 3 major events', 'Built industry network', 'Secured sponsorships'],
+          links: {
+            github: 'https://github.com/priyankanair',
+            linkedin: 'https://linkedin.com/in/priyankanair',
+            email: 'priyanka@alumni.neuralhive.com'
+          },
+          specialties: ['Event Management', 'Partnerships', 'Marketing']
+        },
+        {
+          name: 'Sameer Beedi',
           role: 'Events Coordinator',
           image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
           bio: 'Organized the club\'s first major events and built external partnerships.',
