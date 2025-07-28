@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Target, Lightbulb, Users, Code, Cpu, Eye, Shield } from 'lucide-react';
+import { Brain, Target, Lightbulb, Users, Code, Cpu, Eye, Shield, UserPlus } from 'lucide-react';
 
 const About = () => {
   const domains = [
@@ -252,6 +252,7 @@ const About = () => {
         </div>
       </section>
 
+
       
        {/* Get Involved */}
       <section className="py-20 bg-primary-card/20">
@@ -285,7 +286,9 @@ const About = () => {
             </p>
           </motion.div>
         </div>
+
       </section>
+
     </div>
   );
 };
