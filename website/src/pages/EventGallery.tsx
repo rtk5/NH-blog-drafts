@@ -9,295 +9,263 @@ const EventGallery = () => {
 
   // Sample event data - in a real app, this would come from a CMS or API
   const eventData = {
-    'brainhack-hackathon-2024': {
-      title: 'BrainHack Hackathon 2024',
+    'reinforcement-learning-rewired': {
+      title: 'Reinforcement Learning Rewired',
       date: 'September 15-16, 2024',
-      location: 'Innovation Lab, PESU EC',
-      description: '40 teams competed in our flagship 24-hour hackathon with healthcare AI problem statements.',
-      coverImage: 'https://images.pexels.com/photos/7664747/pexels-photo-7664747.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      location: 'PESU EC',
+      description: 'An advanced workshop exploring how reinforcement learning drives decision-making in AI systems. Participants experimented with OpenAI Gym and policy optimization strategies.',
+      coverImage: 'https://i.postimg.cc/1tNSHRXV/rlr.jpg',
       photos: [
         {
           id: 1,
-          src: 'https://images.pexels.com/photos/7664747/pexels-photo-7664747.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Opening ceremony with all participating teams'
+          src: 'https://i.postimg.cc/76q4v53F/IMG-20250212-WA0017.jpg',
+          caption: 'Participants arriving for the RL workshop'
         },
         {
           id: 2,
-          src: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Teams brainstorming healthcare AI solutions'
+          src: 'https://i.postimg.cc/d3xcTnbF/IMG-20250212-WA0023.jpg',
+          caption: 'Session on OpenAI Gym basics and environments'
         },
         {
           id: 3,
-          src: 'https://images.pexels.com/photos/7688319/pexels-photo-7688319.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Intensive coding session during the hackathon'
+          src: 'https://i.postimg.cc/tJTHT8mD/IMG-20250212-WA0025.jpg',
+          caption: 'Explaining reward functions and learning loops'
         },
         {
           id: 4,
-          src: 'https://images.pexels.com/photos/7662235/pexels-photo-7662235.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Mentors providing guidance to participants'
+          src: 'https://i.postimg.cc/qRQTppQz/IMG-20250212-WA0027.jpg',
+          caption: 'Hands-on activity with policy gradient methods'
         },
         {
           id: 5,
-          src: 'https://images.pexels.com/photos/7048047/pexels-photo-7048047.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Project presentations and demos'
+          src: 'https://i.postimg.cc/c19Sj4rz/IMG-20250212-WA0029.jpg',
+          caption: 'Live demo of reinforcement learning agents in action'
         },
         {
           id: 6,
-          src: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Late night debugging and development'
+          src: 'https://i.postimg.cc/bN4jyC0H/IMG-20250212-WA0031.jpg',
+          caption: 'Student team coding their custom RL environments'
         },
         {
           id: 7,
-          src: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Team collaboration and problem solving'
+          src: 'https://i.postimg.cc/hPXBqWmt/IMG-20250212-WA0033.jpg',
+          caption: 'Mentors assisting participants with debugging'
         },
         {
           id: 8,
-          src: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Final presentations to the judging panel'
+          src: 'https://i.postimg.cc/XYF6pfQM/IMG-20250212-WA0035.jpg',
+          caption: 'Workshop discussions on real-world RL use cases'
         },
         {
           id: 9,
-          src: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Winners announcement and prize distribution'
-        },
-        {
-          id: 10,
-          src: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Networking session with industry experts'
-        },
-        {
-          id: 11,
-          src: 'https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Participants showcasing their innovative solutions'
-        },
-        {
-          id: 12,
-          src: 'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Technical discussions and code reviews'
-        },
-        {
-          id: 13,
-          src: 'https://images.pexels.com/photos/7664747/pexels-photo-7664747.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Group photo of all participants and organizers'
-        },
-        {
-          id: 14,
-          src: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Refreshment break and informal networking'
-        },
-        {
-          id: 15,
-          src: 'https://images.pexels.com/photos/7688319/pexels-photo-7688319.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Setup and preparation before the event'
-        },
-        {
-          id: 16,
-          src: 'https://images.pexels.com/photos/7662235/pexels-photo-7662235.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Closing ceremony and feedback session'
-        },
-        {
-          id: 17,
-          src: 'https://images.pexels.com/photos/7048047/pexels-photo-7048047.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Behind the scenes - organizing team in action'
-        },
-        {
-          id: 18,
-          src: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Post-event celebration and team bonding'
+          src: 'https://i.postimg.cc/cJSyYvbv/IMG-20250212-WA0046.jpg',
+          caption: 'Group photo wrapping up the workshop'
         }
       ]
     },
-    'visionary-talks-dr-ananya-rao': {
-      title: 'Visionary Talks: Dr. Ananya Rao',
-      date: 'November 21, 2024',
-      location: 'Main Auditorium, PESU EC',
-      description: 'Industry expert insights on AI applications in medical imaging and diagnostics.',
-      coverImage: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    'agentic-101': {
+      title: 'Agentic 101',
+      date: 'August 2, 2024',
+      location: 'Smart Classroom 401, PESU EC',
+      description: 'A hands-on workshop that introduced students to agent-based modeling, intelligent agents, and simulations using modern AI tools.',
+      coverImage: 'https://i.postimg.cc/LsmkMhLL/Whats-App-Image-2025-07-27-at-12-20-40-20dfe780.jpg',
       photos: [
         {
           id: 1,
-          src: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Dr. Ananya Rao presenting on AI in medical imaging'
+          src: 'https://i.postimg.cc/mDPwgwyC/nh-img1.jpg',
+          caption: 'Introduction to intelligent agents and agent-based modeling'
         },
         {
           id: 2,
-          src: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Packed auditorium with engaged audience'
+          src: 'https://i.postimg.cc/zB4kbgxM/nh-img2.jpg',
+          caption: 'Participants engaged in interactive AI simulation activities'
         },
         {
           id: 3,
-          src: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Interactive Q&A session with students'
+          src: 'https://i.postimg.cc/QC5JpdPM/nh-img3.jpg',
+          caption: 'Live demo session on building AI agents'
         },
         {
           id: 4,
-          src: 'https://images.pexels.com/photos/7662235/pexels-photo-7662235.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Technical demonstration of medical AI applications'
+          src: 'https://i.postimg.cc/1RNBxvtZ/nh-img4.jpg',
+          caption: 'Explaining real-world applications of agent-based systems'
         },
         {
           id: 5,
-          src: 'https://images.pexels.com/photos/7048047/pexels-photo-7048047.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Students taking notes during the presentation'
+          src: 'https://i.postimg.cc/gkFDG3XL/nh-img5.jpg',
+          caption: 'Students coding behavior-driven agents in Python'
         },
         {
           id: 6,
-          src: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Welcome address by Neural Hive president'
+          src: 'https://i.postimg.cc/bNxRrdkC/nh-img6.jpg',
+          caption: 'Problem-solving session with collaborative groups'
         },
         {
           id: 7,
-          src: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Case studies in medical image analysis'
-        },
-        {
-          id: 8,
-          src: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Networking session after the talk'
-        },
-        {
-          id: 9,
-          src: 'https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Group photo with the speaker'
-        },
-        {
-          id: 10,
-          src: 'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Students discussing career opportunities'
-        },
-        {
-          id: 11,
-          src: 'https://images.pexels.com/photos/7664747/pexels-photo-7664747.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Presentation slides on AI ethics in healthcare'
-        },
-        {
-          id: 12,
-          src: 'https://images.pexels.com/photos/7688319/pexels-photo-7688319.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Live demonstration of diagnostic AI tools'
-        },
-        {
-          id: 13,
-          src: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Closing remarks and vote of thanks'
-        },
-        {
-          id: 14,
-          src: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Faculty and students engaging with the speaker'
-        },
-        {
-          id: 15,
-          src: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Event setup and preparation'
+          src: 'https://i.postimg.cc/SxV7L5Zc/nh-img7.jpg',
+          caption: 'Group photo after successful completion of the workshop'
         }
       ]
     },
-    'ml-101-workshop': {
-      title: 'ML 101 Workshop',
-      date: 'January 12, 2025',
-      location: 'Computer Lab 3, PESU EC',
-      description: 'Intensive 4-hour journey from basic regression to convolutional neural networks.',
-      coverImage: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    'canvas-clue': {
+      title: 'Canvas Clue',
+      date: 'July 20, 2024',
+      location: 'Drawing Hall, PESU EC',
+      description: 'A competitive AI-themed Pictionary game where teams illustrated technical terms using drawing prompts and guessed each other\'s sketches.',
+      coverImage: 'https://i.postimg.cc/mgkz3MYd/can.jpg',
       photos: [
         {
           id: 1,
-          src: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Workshop introduction and agenda overview'
+          src: 'https://i.postimg.cc/CxMx86ny/DSC-0571.jpg',
+          caption: 'Participants sketching AI terms under time pressure'
         },
         {
           id: 2,
-          src: 'https://images.pexels.com/photos/7662235/pexels-photo-7662235.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Hands-on coding session with Python'
+          src: 'https://i.postimg.cc/bw6N9H1Z/DSC-0572.jpg',
+          caption: 'Teams collaborating on technical clues'
         },
         {
           id: 3,
-          src: 'https://images.pexels.com/photos/7048047/pexels-photo-7048047.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Students working on linear regression exercises'
+          src: 'https://i.postimg.cc/1zfRCnKJ/DSC-0574.jpg',
+          caption: 'Audience enjoying the rapid-fire guesses'
         },
         {
           id: 4,
-          src: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Instructor explaining neural network concepts'
+          src: 'https://i.postimg.cc/TPFdZd7G/DSC-0581.jpg',
+          caption: 'Judges evaluating the best artistic interpretations'
         },
         {
           id: 5,
-          src: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Collaborative learning and peer assistance'
+          src: 'https://i.postimg.cc/76zH4Fdz/DSC-0584.jpg',
+          caption: 'Whiteboards full of creative machine learning doodles'
         },
         {
           id: 6,
-          src: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'CNN implementation and image classification'
+          src: 'https://i.postimg.cc/CL7FwHPc/DSC-0586.jpg',
+          caption: 'Teams presenting their clue interpretations'
         },
         {
           id: 7,
-          src: 'https://images.pexels.com/photos/7688319/pexels-photo-7688319.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Debugging and troubleshooting session'
+          src: 'https://i.postimg.cc/C5VFxvpQ/IMG-2505-Enhanced-NR.jpg',
+          caption: 'Excitement builds during the final round'
         },
         {
           id: 8,
-          src: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Project showcase and presentations'
+          src: 'https://i.postimg.cc/nVvFPtvb/IMG-2512-Enhanced-NR.jpg',
+          caption: 'Quick-thinking participants drawing neural nets and algorithms'
         },
         {
           id: 9,
-          src: 'https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Group discussion on ML applications'
+          src: 'https://i.postimg.cc/Y0ftG1pq/IMG-2516-Enhanced-NR.jpg',
+          caption: 'Laughter and learning combined in every round'
         },
         {
           id: 10,
-          src: 'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Coffee break and informal networking'
+          src: 'https://i.postimg.cc/QdMjC9vh/IMG-2522-Enhanced-NR.jpg',
+          caption: 'Winners being awarded for the most creative clue-solving'
+        }
+      ]
+    },
+    'establishing-causality-ai-mental-health': {
+      title: 'Establishing Causality in Complex Mental Issues using AI',
+      date: 'October 16, 2024',
+      location: 'PESU EC',
+      description: 'An expert-led seminar exploring the role of AI in understanding and establishing causal links in mental health disorders, combining neuroscience, data science, and ethical frameworks.',
+      coverImage: 'https://i.postimg.cc/c1TLDC4P/cas.jpg',
+      photos: [
+        {
+          id: 1,
+          src: 'https://i.postimg.cc/Kv2HJ65W/Whats-App-Image-2024-10-16-at-20-26-16-93851dcc.jpg',
+          caption: 'Speaker introducing AI applications in mental health'
         },
         {
-          id: 11,
-          src: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Advanced topics and future learning paths'
+          id: 2,
+          src: 'https://i.postimg.cc/FHFnQ08g/Whats-App-Image-2024-10-16-at-20-26-16-98496f6d.jpg',
+          caption: 'Audience engaged during the causality session'
         },
         {
-          id: 12,
-          src: 'https://images.pexels.com/photos/7664747/pexels-photo-7664747.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Certificate distribution ceremony'
+          id: 3,
+          src: 'https://i.postimg.cc/6pHb6yNs/Whats-App-Image-2024-10-16-at-20-26-17-2b493d99.jpg',
+          caption: 'Visualizations of causal inference models'
         },
         {
-          id: 13,
-          src: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Feedback session and workshop evaluation'
+          id: 4,
+          src: 'https://i.postimg.cc/rFNYbfnw/Whats-App-Image-2024-10-16-at-20-26-18-0e665e4e.jpg',
+          caption: 'Discussion on AI ethics in mental healthcare'
         },
         {
-          id: 14,
-          src: 'https://images.pexels.com/photos/7662235/pexels-photo-7662235.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Resource sharing and follow-up materials'
+          id: 5,
+          src: 'https://i.postimg.cc/MGvPnqWn/Whats-App-Image-2024-10-16-at-20-26-21-37b574f9.jpg',
+          caption: 'Interactive Q&A session with the expert'
         },
         {
-          id: 15,
-          src: 'https://images.pexels.com/photos/7048047/pexels-photo-7048047.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Workshop organizers and participants'
+          id: 6,
+          src: 'https://i.postimg.cc/vmkP9kB3/Whats-App-Image-2024-10-16-at-20-26-25-b540f7d8.jpg',
+          caption: 'Attendees networking after the session'
         },
         {
-          id: 16,
-          src: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Lab setup and technical preparations'
+          id: 7,
+          src: 'https://i.postimg.cc/FRSTxpkm/Whats-App-Image-2024-10-16-at-20-26-26-94b25a7d.jpg',
+          caption: 'Closing remarks and group photo'
+        }
+      ]
+    },
+    'filter-fiesta': {
+      title: 'Filter Fiesta',
+      date: 'October 24, 2024',
+      location: 'PESU EC',
+      description: 'A vibrant photo-filter themed event encouraging creativity, photography, and fun interaction using real-time computer vision and AR filters.',
+      coverImage: 'https://i.postimg.cc/rwkZKV5F/filtrer.jpg',
+      photos: [
+        {
+          id: 1,
+          src: 'https://i.postimg.cc/sfNp27M4/DSC-0974.jpg',
+          caption: 'Participants engaging with AR filters'
         },
         {
-          id: 17,
-          src: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'One-on-one mentoring and guidance'
+          id: 2,
+          src: 'https://i.postimg.cc/VkynqwBS/DSC-0975.jpg',
+          caption: 'Creative filter showcase in action'
         },
         {
-          id: 18,
-          src: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Final group photo with all participants'
+          id: 3,
+          src: 'https://i.postimg.cc/c4tftCYy/DSC-0976.jpg',
+          caption: 'Team capturing fun moments'
         },
         {
-          id: 19,
-          src: 'https://images.pexels.com/photos/7688319/pexels-photo-7688319.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Post-workshop discussion and next steps'
+          id: 4,
+          src: 'https://i.postimg.cc/fbDdPvPD/DSC-0978.jpg',
+          caption: 'Hands-on with photo filter customization'
         },
         {
-          id: 20,
-          src: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
-          caption: 'Cleanup and event wrap-up'
+          id: 5,
+          src: 'https://i.postimg.cc/9QGT1kJL/DSC-0980.jpg',
+          caption: 'Behind the scenes of the setup'
+        },
+        {
+          id: 6,
+          src: 'https://i.postimg.cc/xCdzf1YZ/DSC-0982.jpg',
+          caption: 'Participants exploring facial tracking filters'
+        },
+        {
+          id: 7,
+          src: 'https://i.postimg.cc/d1STLcVV/DSC-0989.jpg',
+          caption: 'Group enjoying the filter experience'
+        },
+        {
+          id: 8,
+          src: 'https://i.postimg.cc/Y05GzNgc/DSC-0990.jpg',
+          caption: 'Filter Fiesta booth interactions'
+        },
+        {
+          id: 9,
+          src: 'https://i.postimg.cc/SQ3M44PZ/DSC-0991.jpg',
+          caption: 'Judges reviewing creative entries'
+        },
+        {
+          id: 10,
+          src: 'https://i.postimg.cc/65ZG5SJB/DSC-0992.jpg',
+          caption: 'Final celebration and prize distribution'
         }
       ]
     }
