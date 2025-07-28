@@ -97,22 +97,28 @@ const Contact = () => {
 
   const teamContacts = [
     {
+      name: 'Kshirin Shetty',
+      role: 'Club Head',
+      email: 'president@kshirinshetty1@gmail.com',
+      focus: 'Event coordination'
+    },
+    {
+      name: 'Sarayu Ventrapati',
+      role: 'Club Head',
+      email: 'vsarayu74@gmail.com',
+      focus: 'Management'
+    },
+    {
       name: 'Rithvik Matta',
-      role: 'President',
-      email: 'president@neuralhive.com',
-      focus: 'General inquiries, partnerships'
+      role: 'Tech Head',
+      email: 'rithvik.matta@gmail.com',
+      focus: 'Project mentoring'
     },
     {
-      name: 'Ananya Sharma',
-      role: 'Vice President',
-      email: 'vp@neuralhive.com',
-      focus: 'Research collaborations, academic queries'
-    },
-    {
-      name: 'Priya Nair',
-      role: 'Events Coordinator',
-      email: 'events@neuralhive.com',
-      focus: 'Event partnerships, speaker invitations'
+      name: 'Siddartha AY',
+      role: 'Tech Head',
+      email: 'idk yet',
+      focus: 'Hackathon coordination'
     }
   ];
 
