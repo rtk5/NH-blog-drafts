@@ -50,7 +50,7 @@ export const pastEvents = [
       'Hands-on experience in implementing RL algorithms in gaming scenarios',
       'Understanding how local LLMs like DeepSeek support privacy-friendly AI experimentation'
     ],
-    image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://i.postimg.cc/1tNSHRXV/rlr.jpg',
     icon: Trophy,
     featured: true
   },
@@ -71,7 +71,7 @@ export const pastEvents = [
       'Understanding how GenAI models create human-like responses and creative outputs',
       'Learned how RAG and agentic systems make AI more context-aware and autonomous'
     ],
-    image: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://i.postimg.cc/LsmkMhLL/Whats-App-Image-2025-07-27-at-12-20-40-20dfe780.jpg',
     icon: Code
   },
   {
@@ -91,7 +91,7 @@ export const pastEvents = [
       'Learning how to apply ML techniques like outlier detection in unconventional, story-driven contexts',
       'Gaining experience in team-based problem-solving using real-world data'
     ],
-    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://i.postimg.cc/mgkz3MYd/can.jpg',
     icon: Mic
   },
   {
@@ -111,7 +111,7 @@ export const pastEvents = [
       'Gaining awareness of how advanced AI models can be responsibly applied in mental health',
       'Understanding the importance of causality and ethical AI in healthcare solutions'
     ],
-    image: 'https://images.pexels.com/photos/7664747/pexels-photo-7664747.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://i.postimg.cc/c1TLDC4P/cas.jpg',
     icon: Trophy,
     featured: true
   },
@@ -132,7 +132,7 @@ export const pastEvents = [
       'Understanding the pipeline of face detection and landmark mapping',
       'Hands-on experience with integrating AI models into live, interactive applications'
     ],
-    image: 'https://images.pexels.com/photos/7662235/pexels-photo-7662235.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://i.postimg.cc/rwkZKV5F/filtrer.jpg',
     icon: Code
   }
 ];
