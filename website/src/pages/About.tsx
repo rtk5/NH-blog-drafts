@@ -31,6 +31,30 @@ const About = () => {
     { name: 'Department of CSE', description: 'Academic support and mentorship' },
     { name: 'PESU Research Center', description: 'Advanced research opportunities' },
   ];
+  const missionCards = [
+    {
+      title: "Our Mission",
+      content:
+        "To foster a thriving student community around Machine Learning and Artificial Intelligence. We want to provide a dedicated platform where you can explore your interests, from the very basics of data cleaning to building complex models.",
+    },
+    {
+      title: "What We Do",
+      content:
+        "• Workshops on Understanding Machine Learning Concepts\n" +
+        "• Start-up Guest Talks with AI/ML industry experts\n" +
+        "• AI/ML for Social Good Hackathon — create impact with code",
+    },
+    {
+      title: "Who We're For",
+      content:
+        "This club is for all students interested in AI/ML. No prior experience is necessary – just a curious mind and a passion for learning. Whether you're a seasoned coder or just looking to understand what AI is all about, you'll find a welcoming community here.",
+    },
+    {
+      title: "Get Involved!",
+      content:
+        "Don't miss out on the opportunity to learn, connect, and innovate. Ready to dive into the world of AI and ML with us?\nWe can't wait to build something amazing with you!",
+    },
+  ];
 
   return (
     <div className="min-h-screen pt-20">
@@ -53,65 +77,45 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
+        {/* Mission Section */}
       <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <Target className="h-16 w-16 text-primary-accent mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 glow-text">
-              Our Mission
-            </h2>
-            <p className="text-xl text-primary-gray-300 font-inter max-w-3xl mx-auto leading-relaxed">
-              To democratize AI literacy and foster project-driven learning among students, 
-              creating a vibrant ecosystem where innovation thrives and future tech leaders are born.
+            <h2 className="text-4xl font-poppins font-bold mb-4 text-primary-white">About Us</h2>
+            <p className="text-lg text-primary-gray-300 font-inter max-w-3xl mx-auto">
+              Welcome to NeuralHive, your premier destination for all things Artificial Intelligence (AI) and Machine Learning (ML) on campus.
+              NeuralHive was founded to address a significant need we identified within our university community: a dedicated and dynamic space for students passionate about AI and ML.
+              Over time, we've successfully cultivated a vibrant hub where enthusiasts can explore these cutting-edge fields, connect with like-minded peers, and push the boundaries of their knowledge and skills.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="glass-card glow-border p-8"
-            >
-              <h3 className="text-2xl font-poppins font-semibold mb-4 text-primary-accent">
-                Vision Statement
-              </h3>
-              <p className="text-primary-gray-300 font-inter leading-relaxed">
-                To be the leading student organization that bridges the gap between theoretical AI knowledge 
-                and practical implementation, producing graduates who are not just consumers but creators 
-                of AI technology.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="glass-card glow-border p-8"
-            >
-              <h3 className="text-2xl font-poppins font-semibold mb-4 text-primary-magenta">
-                What We Do
-              </h3>
-              <ul className="text-primary-gray-300 font-inter space-y-2 list-disc list-inside">
-                <li>Host weekly hack nights for collaborative learning</li>
-                <li>Organize speaker series and workshops with experts</li>
-                <li>Build and maintain open-source student-led projects</li>
-                <li>Support interdisciplinary research and innovation</li>
-                <li>Foster a community for peer mentoring and growth</li>
-              </ul>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {missionCards.map((card, index) => (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="glass-card glow-border p-8"
+              >
+                <h3 className="text-2xl font-poppins font-semibold mb-4 text-primary-accent">
+                  {card.title}
+                </h3>
+                <p className="text-primary-gray-300 font-inter leading-relaxed whitespace-pre-wrap">
+                  {card.content}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* Origin Story */}
       <section className="py-20 bg-primary-card/20">

@@ -10,7 +10,28 @@ const Home = () => {
     { number: "10", label: "Live Projects", icon: Cpu },
   ];
 
-  const events = [
+const latestEvents = [
+  {
+    title: "Maaya Workshop",
+    date: "October 20, 2025",
+    description:
+      "A fun, creative workshop to explore AI-generated art tools. Participants got hands-on experience with generative models and contributed to a live mural!",
+  },
+  {
+    title: "Workshop 3: Build Your First Model",
+    date: "October 8, 2025",
+    description:
+      "An intermediate workshop on scikit-learn pipelines and real-world datasets. Participants built their first classifier using hands-on data.",
+  },
+  {
+    title: "Hackathon: AI for Social Good",
+    date: "September 12–13, 2025",
+    description:
+      "A 24-hour sprint where teams built AI solutions for real social challenges. Judges included startup founders and ML engineers.",
+  },
+];
+
+const events = [
     {
       title: "BrainHack Hackathon",
       date: "Sep 15, 2024",
@@ -111,60 +132,38 @@ const Home = () => {
     </div>
   </section>
 
-      {/* Featured Events */}
-      <section className="py-20 bg-primary-card/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
-              <span className="glow-text">Event Spotlight</span>
-            </h2>
-            <p className="text-xl text-primary-gray-400 font-inter">
-              Recent highlights from our innovation journey
-            </p>
-          </motion.div>
+    {/* Event Spotlight */}
+    <section className="py-20 bg-primary-black">
+      <div className="container">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-center mb-12 text-primary-white"
+        >
+          Event Spotlight
+        </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {events.map((event, index) => (
-              <motion.div
-                key={event.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="glass-card glow-border overflow-hidden group hover:shadow-lg hover:shadow-primary-accent/20 transition-all duration-300"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4 bg-primary-accent text-primary-bg px-3 py-1 rounded-full text-sm font-semibold">
-                    {event.type}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-primary-accent text-sm font-semibold mb-2">
-                    {event.date}
-                  </p>
-                  <h3 className="text-xl font-poppins font-semibold mb-3">
-                    {event.title}
-                  </h3>
-                  <p className="text-primary-gray-400 font-inter">
-                    {event.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {latestEvents.map((event, index) => (
+            <motion.div
+              key={event.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-b from-[#1d1d1d] to-[#111] border border-primary-accent rounded-xl p-6 shadow-lg"
+            >
+              <h3 className="text-2xl font-semibold text-primary-accent mb-2">{event.title}</h3>
+              <p className="text-sm text-primary-gray-400 mb-4">{event.date}</p>
+              <p className="text-primary-gray-200">{event.description}</p>
+            </motion.div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
+
 
       {/* CTA Section */}
       <section className="py-20">
