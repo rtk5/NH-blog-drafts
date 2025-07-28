@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Mail, Instagram, Linkedin, Github } from 'lucide-react';
+import { Mail, Instagram, Linkedin, Github } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,9 +10,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-r from-primary-accent to-primary-magenta">
-                <Brain className="h-6 w-6 text-primary-bg" />
-              </div>
+              <img src="/neuralhiveLogo.svg" alt="Neural Hive Logo" className="h-8 w-auto" />
               <span className="text-xl font-poppins font-bold glow-text">
                 Neural Hive
               </span>
