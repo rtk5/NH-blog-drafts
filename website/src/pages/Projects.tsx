@@ -12,7 +12,7 @@ const Projects = () => {
   status: 'Completed',
   description: 'A robust voice-based attendance system that leverages advanced speaker recognition technology for contactless user authentication. The comprehensive biometric authentication pipeline features audio preprocessing including format conversion, noise reduction, and bandpass filtering, coupled with deep learning-based speaker recognition using the ECAPA-TDNN architecture from SpeechBrain. The system processes real-time voice recordings, extracts high-dimensional speaker embeddings, and employs cosine similarity matching for identity verification against a reference database. Through precise cosine distance calculations, the system accurately matches live voice recordings against pre-registered speaker profiles, enabling seamless attendance verification. Enhanced with audio augmentation for improved robustness, an interactive CLI for real-time operation, and comprehensive logging for system monitoring, this solution is ideal for educational institutions and organizational environments requiring reliable biometric attendance tracking.',
   tech: ['Python', 'SpeechBrain', 'ECAPA-TDNN', 'PyTorch', 'NumPy', 'librosa', 'scipy', 'soundfile'],
-  image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
+  image: 'https://images.pexels.com/photos/302655/pexels-photo-302655.jpeg?_gl=1*lw79ey*_ga*MTQzOTg2MjI5OS4xNzUzOTcwNDcy*_ga_8JE65Q40S6*czE3NTM5NzA0NzEkbzEkZzEkdDE3NTM5NzA0ODEkajUwJGwwJGgw',
   github: 'https://github.com/rtk5/AI-Based-Attendance-System-using-Voice-Recognition',
   demo: null,
   featured: true
