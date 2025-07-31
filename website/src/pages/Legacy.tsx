@@ -11,133 +11,100 @@ const Legacy = () => {
           name: 'Tanistha Hota',
           role: 'Student Lead',
           image: 'https://pictures-for-websites.vercel.app/tanishta.webp',
-          bio: 'Visionary founder who established Neural Hive as PESU EC\'s premier AI club.',
-          achievements: ['Founder and Lead of Neural Hive', 'scaled the club from one event a year to a thriving ML community with regular workshops', 'mentored projects and a promoted a culture of shared learning'],
+          bio: 'Founder and visionary lead of Neural Hive, scaling the club from a single event per year into a vibrant ML community through hands-on workshops, mentorship, and collaborative learning.',
+          achievements: [
+            'Founder and Lead of Neural Hive',
+            'Project intern at Nokia',
+            'Winners at the Hasgeek Open Source AI Hackathon (Winter Edition)',
+            'Finalists at the Great Bengaluru Hackathon (Namma Yatri Track)'
+          ],
           links: {
             github: 'https://github.com/tanisthahota',
             linkedin: 'https://www.linkedin.com/in/tanistha-hota/',
             email: 'hotatanistha@gmail.com'
           },
-          specialties: ['Leadership', 'AI Strategy', 'Community Building']
+          specialties: ['PyTorch', 'Transformers', 'PEFT', 'Computer Vision', 'NLP']
         },
         {
           name: 'Rishit Rastogi',
-          role: 'Founding Vice President',
-          image: 'https://pictures-for-websites.vercel.app/rishit.webp',
-          bio: 'Co-founder who shaped the club\'s technical direction and research focus.',
-          achievements: ['Co-founded Neural Hive', 'Led first research initiatives', 'Mentored 20+ students'],
+          role: 'Vice Head',
+          image: 'https://drive.google.com/open?id=1iaDST6YP32XyEeEVGfMXYfxuVf9NdzjW',
+          bio: 'Tech-driven leader with a passion for cross-platform AI frameworks, self-hosted solutions, and dynamic team-based problem solving.',
+          achievements: ['Launched ML project mentorship program', 'Drove innovation and technical excellence across the club'],
           links: {
-            github: 'https://github.com/snehareddy',
-            linkedin: 'https://linkedin.com/in/snehareddy',
-            email: 'sneha@alumni.neuralhive.com'
+            github: 'https://github.com/Xhades14',
+            linkedin: 'https://www.linkedin.com/in/rishit-rastogi-877472245',
+            email: 'rishit.rastogi14@gmail.com'
           },
-          specialties: ['Research', 'Machine Learning', 'Mentorship']
+          specialties: ['Data and AI', 'Knowledge Graphs', 'Leadership Strategy']
         },
         {
           name: 'Anuhya Tyada',
-          role: 'Technical Lead',
-          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-          bio: 'Built the technical foundation and led the first major projects.',
-          achievements: ['Developed club infrastructure', 'Led 5 major projects', 'Industry internship at Google'],
+          role: 'Design Head',
+          image: 'https://drive.google.com/open?id=1W8iABV5d_fpkKzz65RQxwBSwglj5Lq4b',
+          bio: 'Led Neural Hive’s design initiatives by establishing a unified visual identity and managing a team of designers for event branding and outreach.',
+          achievements: ['Built consistent club branding', 'Led and mentored a team of 8 designers'],
           links: {
-            github: 'https://github.com/rahulsharma',
-            linkedin: 'https://linkedin.com/in/rahulsharma',
-            email: 'rahul@alumni.neuralhive.com'
+            github: 'https://github.com/nuhyya',
+            linkedin: 'https://www.linkedin.com/in/anuhya-tyada-316695296/',
+            email: 'anuhyatyada@gmail.com'
           },
-          specialties: ['Full-Stack Development', 'System Architecture', 'Project Management']
+          specialties: ['Canva', 'Poster Design', 'Illustration', 'Animation']
         },
         {
           name: 'Uday Kiran',
-          role: 'Events Coordinator',
-          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-          bio: 'Organized the club\'s first major events and built external partnerships.',
-          achievements: ['Organized 3 major events', 'Built industry network', 'Secured sponsorships'],
+          role: 'Events Head',
+          image: 'https://drive.google.com/open?id=1TgbkYsm5Wd9KotD9YV-TW3sxpfJwcZKc',
+          bio: 'Directed all event operations, curating impactful experiences through workshops, hackathons, and speaker sessions that brought cutting-edge AI to the student community.',
+          achievements: ['Orchestrated successful workshops and hackathons', 'Spearheaded club event execution'],
           links: {
-            github: 'https://github.com/priyankanair',
-            linkedin: 'https://linkedin.com/in/priyankanair',
-            email: 'priyanka@alumni.neuralhive.com'
+            github: 'https://github.com/udaykiran1101',
+            linkedin: 'https://www.linkedin.com/in/uday-kiran-9004a128b/',
+            email: 'udaykiran1101@gmail.com'
           },
-          specialties: ['Event Management', 'Partnerships', 'Marketing']
+          specialties: ['Event Planning', 'Logistics', 'Community Engagement']
         },
         {
-          name: 'Suhit Hegde ',
-          role: 'Events Coordinator',
-          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-          bio: 'Organized the club\'s first major events and built external partnerships.',
-          achievements: ['Organized 3 major events', 'Built industry network', 'Secured sponsorships'],
+          name: 'Suhit Hegde',
+          role: 'Operations Head',
+          image: 'https://drive.google.com/open?id=1AI7WGgAhP2RtbsNQNuFSEXhNGL70EkxY',
+          bio: 'Established and managed the club’s operational backbone, ensuring seamless execution of all club initiatives.',
+          achievements: ['Structured operations for major club events'],
           links: {
-            github: 'https://github.com/priyankanair',
-            linkedin: 'https://linkedin.com/in/priyankanair',
-            email: 'priyanka@alumni.neuralhive.com'
+            github: '',
+            linkedin: 'https://www.linkedin.com/in/suhit-hegde-a63446297/',
+            email: 'suhithegde@gmail.com'
           },
-          specialties: ['Event Management', 'Partnerships', 'Marketing']
-        },
-        {
-          name: 'Tanay',
-          role: 'Events Coordinator',
-          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-          bio: 'Organized the club\'s first major events and built external partnerships.',
-          achievements: ['Organized 3 major events', 'Built industry network', 'Secured sponsorships'],
-          links: {
-            github: 'https://github.com/priyankanair',
-            linkedin: 'https://linkedin.com/in/priyankanair',
-            email: 'priyanka@alumni.neuralhive.com'
-          },
-          specialties: ['Event Management', 'Partnerships', 'Marketing']
+          specialties: ['Club Operations', 'Execution Strategy']
         },
         {
           name: 'Sameer Beedi',
-          role: 'Events Coordinator',
-          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-          bio: 'Organized the club\'s first major events and built external partnerships.',
-          achievements: ['Organized 3 major events', 'Built industry network', 'Secured sponsorships'],
+          role: 'Technical Head',
+          image: 'https://drive.google.com/open?id=1EIkn6qnXbcsO1JSZRweXmidu4GfBlbM4',
+          bio: 'Led all technical operations, mentored development teams, and provided expertise in advanced AI technologies.',
+          achievements: ['Mentored technical teams', 'Led ML and GenAI initiatives'],
           links: {
-            github: 'https://github.com/priyankanair',
-            linkedin: 'https://linkedin.com/in/priyankanair',
-            email: 'priyanka@alumni.neuralhive.com'
+            github: 'https://github.com/Sameerbeedi',
+            linkedin: 'https://www.linkedin.com/in/sameer-beedi-50a23b299/',
+            email: 'sameerbeedi29@gmail.com'
           },
-          specialties: ['Event Management', 'Partnerships', 'Marketing']
-        }
-      ]
-    },
-    {
-      year: '2022-23',
-      members: [
-        {
-          name: 'Vikram Patel',
-          role: 'Research Head',
-          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-          bio: 'Early contributor who helped establish the club\'s research culture.',
-          achievements: ['Published 2 research papers', 'Mentored junior researchers', 'Won Best Project Award'],
-          links: {
-            github: 'https://github.com/vikrampatel',
-            linkedin: 'https://linkedin.com/in/vikrampatel',
-            email: 'vikram@alumni.neuralhive.com'
-          },
-          specialties: ['Research', 'Deep Learning', 'Computer Vision']
+          specialties: ['Machine Learning', 'Generative AI']
         },
         {
-          name: 'Meera Gupta',
-          role: 'Community Manager',
-          image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-          bio: 'Built the early community and established club traditions.',
-          achievements: ['Grew membership to 50+', 'Created mentorship program', 'Established alumni network'],
+          name: 'Tanay',
+          role: 'Ex SM&M Head',
+          image: 'https://drive.google.com/open?id=1DXIdTsXiQ_7N9X4MwvVHh0XOwEBcdukp',
+          bio: 'Pioneered the club’s social media and marketing presence, growing engagement and effectively promoting all major club events and recruitments.',
+          achievements: ['Created and managed all social media platforms', 'Directed marketing for every club event and recruitment cycle'],
           links: {
-            github: 'https://github.com/meeragupta',
-            linkedin: 'https://linkedin.com/in/meeragupta',
-            email: 'meera@alumni.neuralhive.com'
+            github: 'https://github.com/tnayagarwal',
+            linkedin: 'https://www.linkedin.com/in/tanay-agarwal-620b5720b',
+            email: 'tanaynilesh@gmail.com'
           },
-          specialties: ['Community Building', 'Program Management', 'Alumni Relations']
+          specialties: ['Social Media Outreach', 'Marketing', 'Python & AI Development']
         }
       ]
     }
-  ];
-
-  const stats = [
-    { number: '15+', label: 'Alumni Members', sublabel: 'Across different years' },
-    { number: '85%', label: 'Placement Rate', sublabel: 'In top tech companies' },
-    { number: '25+', label: 'Projects Completed', sublabel: 'By alumni during tenure' },
-    { number: '10+', label: 'Industry Positions', sublabel: 'Currently held by alumni' }
   ];
 
   return (
