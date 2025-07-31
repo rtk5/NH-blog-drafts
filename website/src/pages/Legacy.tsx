@@ -28,7 +28,7 @@ const Legacy = () => {
         {
           name: 'Rishit Rastogi',
           role: 'Vice Head',
-          image: 'https://drive.google.com/open?id=1iaDST6YP32XyEeEVGfMXYfxuVf9NdzjW',
+          image: 'pictures-for-websites.vercel.app/rishit.webp',
           bio: 'Tech-driven leader with a passion for cross-platform AI frameworks, self-hosted solutions, and dynamic team-based problem solving.',
           achievements: ['Launched ML project mentorship program', 'Drove innovation and technical excellence across the club'],
           links: {
@@ -41,7 +41,7 @@ const Legacy = () => {
         {
           name: 'Anuhya Tyada',
           role: 'Design Head',
-          image: 'https://drive.google.com/open?id=1W8iABV5d_fpkKzz65RQxwBSwglj5Lq4b',
+          image: 'pictures-for-websites.vercel.app/anuhya.webp',
           bio: 'Led Neural Hive’s design initiatives by establishing a unified visual identity and managing a team of designers for event branding and outreach.',
           achievements: ['Built consistent club branding', 'Led and mentored a team of 8 designers'],
           links: {
@@ -54,7 +54,7 @@ const Legacy = () => {
         {
           name: 'Uday Kiran',
           role: 'Events Head',
-          image: 'https://drive.google.com/open?id=1TgbkYsm5Wd9KotD9YV-TW3sxpfJwcZKc',
+          image: 'pictures-for-websites.vercel.app/uday.webp',
           bio: 'Directed all event operations, curating impactful experiences through workshops, hackathons, and speaker sessions that brought cutting-edge AI to the student community.',
           achievements: ['Orchestrated successful workshops and hackathons', 'Spearheaded club event execution'],
           links: {
@@ -67,7 +67,7 @@ const Legacy = () => {
         {
           name: 'Suhit Hegde',
           role: 'Operations Head',
-          image: 'https://drive.google.com/open?id=1AI7WGgAhP2RtbsNQNuFSEXhNGL70EkxY',
+          image: 'pictures-for-websites.vercel.app/suhit.webp',
           bio: 'Established and managed the club’s operational backbone, ensuring seamless execution of all club initiatives.',
           achievements: ['Structured operations for major club events'],
           links: {
@@ -80,7 +80,7 @@ const Legacy = () => {
         {
           name: 'Sameer Beedi',
           role: 'Technical Head',
-          image: 'https://drive.google.com/open?id=1EIkn6qnXbcsO1JSZRweXmidu4GfBlbM4',
+          image: 'pictures-for-websites.vercel.app/sameer.webp',
           bio: 'Led all technical operations, mentored development teams, and provided expertise in advanced AI technologies.',
           achievements: ['Mentored technical teams', 'Led ML and GenAI initiatives'],
           links: {
@@ -92,8 +92,8 @@ const Legacy = () => {
         },
         {
           name: 'Tanay',
-          role: 'Ex SM&M Head',
-          image: 'https://drive.google.com/open?id=1DXIdTsXiQ_7N9X4MwvVHh0XOwEBcdukp',
+          role: 'SM&M Head',
+          image: 'pictures-for-websites.vercel.app/tanay.webp',
           bio: 'Pioneered the club’s social media and marketing presence, growing engagement and effectively promoting all major club events and recruitments.',
           achievements: ['Created and managed all social media platforms', 'Directed marketing for every club event and recruitment cycle'],
           links: {
