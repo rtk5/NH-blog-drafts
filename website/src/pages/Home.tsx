@@ -10,32 +10,60 @@ const Home = () => {
     { number: "10", label: "Live Projects", icon: Cpu },
   ];
 
-  const events = [
-    {
-      title: "BrainHack Hackathon",
-      date: "Sep 15, 2024",
-      type: "24h Hackathon",
-      description: "40 teams competed with healthcare AI problem statements",
-      image:
-        "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    {
-      title: "Visionary Talks: Dr. Ananya Rao",
-      date: "Nov 21, 2024",
-      type: "Speaker Session",
-      description: "AI in Medical Imaging - Industry insights and applications",
-      image:
-        "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-    {
-      title: "ML 101 Workshop",
-      date: "Jan 12, 2025",
-      type: "Hands-on Workshop",
-      description: "From regression to CNN in 4 intensive hours",
-      image:
-        "https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=800",
-    },
-  ];
+ const events = [
+  {
+    title: "Reinforcement Learning Rewired",
+    date: "Feb 12, 2025",
+    type: "Competition",
+    description: "Interactive workshop on RL fundamentals with Q-Learning and DeepSeek LLM experimentation",
+    image: "https://i.postimg.cc/1tNSHRXV/rlr.jpg",
+    attendees: 65,
+    location: "Seminar Hall 1 - Electronic City Campus",
+    time: "10:00 AM - 3:00 PM",
+    status: "completed",
+    highlights: [
+      "Reinforcement Learning (Q-Learning)",
+      "DeepSeek (Local LLMs)",
+      "Python & OpenAI Gym-style Environments",
+      "Agent Training Pipelines",
+      "Game-based Simulation Environments"
+    ]
+  },
+  {
+    title: "Agentic 101",
+    date: "Jan 29, 2025",
+    type: "Hands-on Workshop",
+    description: "Cutting-edge workshop on GenAI, RAG, and Agentic Patterns shaping intelligent systems",
+    image: "https://i.postimg.cc/LsmkMhLL/Whats-App-Image-2025-07-27-at-12-20-40-20dfe780.jpg",
+    attendees: 60,
+    location: "Seminar Hall 1 - Electronic City Campus",
+    time: "2:30 PM - 4:45 PM",
+    status: "completed",
+    highlights: [
+      "Generative AI (LLMs)",
+      "Retrieval-Augmented Generation (RAG)",
+      "Agentic Design Patterns",
+      "Python-based Implementation Frameworks"
+    ]
+  },
+  {
+    title: "Canvas Clue",
+    date: "Nov 6, 2024",
+    type: "Workshop",
+    description: "Data-driven mystery event combining ML techniques with art heist storytelling during Maaya fest",
+    image: "https://i.postimg.cc/mgkz3MYd/can.jpg",
+    attendees: 45,
+    location: "Seminar Hall 1 - Electronic City Campus",
+    time: "1:30 PM - 5:00 PM",
+    status: "completed",
+    highlights: [
+      "Python (Pandas, Scikit-Learn)",
+      "Outlier Detection Algorithms",
+      "Exploratory Data Analysis (EDA)",
+      "Classification & Predictive Modeling"
+    ]
+  }
+];
 
   return (
     <div className="min-h-screen">
