@@ -42,7 +42,7 @@ const Legacy = () => {
           name: 'Anuhya Tyada',
           role: 'Design Head',
           image: 'https://drive.google.com/open?id=1W8iABV5d_fpkKzz65RQxwBSwglj5Lq4b',
-          bio: 'Led Neural Hive’s design initiatives by establishing a unified visual identity and managing a team of designers for event branding and outreach.',
+          bio: 'Led Neural Hive's design initiatives by establishing a unified visual identity and managing a team of designers for event branding and outreach.',
           achievements: ['Built consistent club branding', 'Led and mentored a team of 8 designers'],
           links: {
             github: 'https://github.com/nuhyya',
@@ -68,7 +68,7 @@ const Legacy = () => {
           name: 'Suhit Hegde',
           role: 'Operations Head',
           image: 'https://drive.google.com/open?id=1AI7WGgAhP2RtbsNQNuFSEXhNGL70EkxY',
-          bio: 'Established and managed the club’s operational backbone, ensuring seamless execution of all club initiatives.',
+          bio: 'Established and managed the club's operational backbone, ensuring seamless execution of all club initiatives.',
           achievements: ['Structured operations for major club events'],
           links: {
             github: '',
@@ -94,7 +94,7 @@ const Legacy = () => {
           name: 'Tanay',
           role: 'Ex SM&M Head',
           image: 'https://drive.google.com/open?id=1DXIdTsXiQ_7N9X4MwvVHh0XOwEBcdukp',
-          bio: 'Pioneered the club’s social media and marketing presence, growing engagement and effectively promoting all major club events and recruitments.',
+          bio: 'Pioneered the club's social media and marketing presence, growing engagement and effectively promoting all major club events and recruitments.',
           achievements: ['Created and managed all social media platforms', 'Directed marketing for every club event and recruitment cycle'],
           links: {
             github: 'https://github.com/tnayagarwal',
@@ -107,21 +107,28 @@ const Legacy = () => {
     }
   ];
 
+  const stats = [
+    { number: '7+', label: 'Founding Members', sublabel: 'Class of 2023-24' },
+    { number: '100%', label: 'Leadership Impact', sublabel: 'Shaped club direction' },
+    { number: '50+', label: 'Students Mentored', sublabel: 'By founding team' },
+    { number: '15+', label: 'Major Events', sublabel: 'Organized by founders' }
+  ];
+
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-gray-900 text-white">
       {/* Hero Section */}
-      <section className="py-20 neuron-bg">
+      <section className="py-20 bg-gradient-to-b from-purple-900/20 to-transparent">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Clock className="h-20 w-20 text-primary-accent mx-auto mb-6" />
-            <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6 glow-text">
+            <Clock className="h-20 w-20 text-purple-400 mx-auto mb-6" />
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Legacy Members
             </h1>
-            <p className="text-xl text-primary-gray-300 font-inter">
+            <p className="text-xl text-gray-300">
               Honoring the pioneers who built the foundation of Neural Hive
             </p>
           </motion.div>
@@ -129,7 +136,7 @@ const Legacy = () => {
       </section>
 
       {/* Alumni Stats */}
-      <section className="py-20 bg-primary-card/20">
+      <section className="py-20 bg-gray-800/20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -138,11 +145,11 @@ const Legacy = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <Award className="h-16 w-16 text-primary-accent mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 glow-text">
+            <Award className="h-16 w-16 text-purple-400 mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Alumni Impact
             </h2>
-            <p className="text-xl text-primary-gray-400 font-inter">
+            <p className="text-xl text-gray-400">
               The lasting impact of our founding members and early contributors
             </p>
           </motion.div>
@@ -155,11 +162,11 @@ const Legacy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="glass-card glow-border p-6 text-center hover:shadow-lg hover:shadow-primary-accent/20 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/20 rounded-lg p-6 text-center hover:shadow-lg hover:shadow-purple-400/20 transition-all duration-300"
               >
-                <h3 className="text-3xl font-poppins font-bold glow-text mb-2">{stat.number}</h3>
-                <p className="text-primary-gray-300 font-inter font-medium mb-1">{stat.label}</p>
-                <p className="text-primary-gray-500 font-inter text-sm">{stat.sublabel}</p>
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">{stat.number}</h3>
+                <p className="text-gray-300 font-medium mb-1">{stat.label}</p>
+                <p className="text-gray-500 text-sm">{stat.sublabel}</p>
               </motion.div>
             ))}
           </div>
@@ -168,7 +175,7 @@ const Legacy = () => {
 
       {/* Legacy Members by Year */}
       {legacyMembers.map((yearGroup, yearIndex) => (
-        <section key={yearGroup.year} className={`py-20 ${yearIndex % 2 === 1 ? 'bg-primary-card/20' : ''}`}>
+        <section key={yearGroup.year} className={`py-20 ${yearIndex % 2 === 1 ? 'bg-gray-800/20' : ''}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -177,10 +184,10 @@ const Legacy = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 glow-text">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Class of {yearGroup.year}
               </h2>
-              <p className="text-xl text-primary-gray-400 font-inter">
+              <p className="text-xl text-gray-400">
                 {yearGroup.year === '2023-24' ? 'The founding generation who started it all' : 'Early pioneers who shaped our direction'}
               </p>
             </motion.div>
@@ -193,34 +200,37 @@ const Legacy = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="glass-card glow-border overflow-hidden group hover:shadow-lg hover:shadow-primary-accent/20 transition-all duration-300"
+                  className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/20 rounded-lg overflow-hidden group hover:shadow-lg hover:shadow-purple-400/20 transition-all duration-300"
                 >
                   <div className="relative h-64 overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        e.target.src = 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400';
+                      }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-bg/80 to-transparent"></div>
-                    <div className="absolute top-4 right-4 bg-primary-magenta text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+                    <div className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       Alumni
                     </div>
                   </div>
                   
                   <div className="p-6">
-                    <h3 className="text-xl font-poppins font-semibold mb-1">{member.name}</h3>
-                    <p className="text-primary-accent font-inter font-medium mb-3">{member.role}</p>
-                    <p className="text-primary-gray-400 font-inter text-sm mb-4 leading-relaxed">
+                    <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                    <p className="text-purple-400 font-medium mb-3">{member.role}</p>
+                    <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                       {member.bio}
                     </p>
                     
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-primary-accent mb-2">Key Achievements:</h4>
+                      <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Achievements:</h4>
                       <ul className="space-y-1">
                         {member.achievements.slice(0, 2).map((achievement, i) => (
                           <li key={i} className="flex items-start space-x-2">
-                            <div className="w-1.5 h-1.5 bg-primary-accent rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-xs text-primary-gray-400">{achievement}</span>
+                            <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span className="text-xs text-gray-400">{achievement}</span>
                           </li>
                         ))}
                       </ul>
@@ -230,7 +240,7 @@ const Legacy = () => {
                       {member.specialties.slice(0, 2).map((specialty) => (
                         <span
                           key={specialty}
-                          className="px-2 py-1 bg-primary-accent/20 text-primary-accent text-xs rounded-full font-inter"
+                          className="px-2 py-1 bg-purple-400/20 text-purple-400 text-xs rounded-full"
                         >
                           {specialty}
                         </span>
@@ -238,25 +248,27 @@ const Legacy = () => {
                     </div>
                     
                     <div className="flex space-x-3">
-                      <a
-                        href={member.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary-gray-400 hover:text-primary-accent transition-colors"
-                      >
-                        <Github className="h-4 w-4" />
-                      </a>
+                      {member.links.github && (
+                        <a
+                          href={member.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 hover:text-purple-400 transition-colors"
+                        >
+                          <Github className="h-4 w-4" />
+                        </a>
+                      )}
                       <a
                         href={member.links.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary-gray-400 hover:text-primary-accent transition-colors"
+                        className="text-gray-400 hover:text-purple-400 transition-colors"
                       >
                         <Linkedin className="h-4 w-4" />
                       </a>
                       <a
                         href={`mailto:${member.links.email}`}
-                        className="text-primary-gray-400 hover:text-primary-accent transition-colors"
+                        className="text-gray-400 hover:text-purple-400 transition-colors"
                       >
                         <Mail className="h-4 w-4" />
                       </a>
@@ -277,25 +289,25 @@ const Legacy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="glass-card glow-border p-12"
+            className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/20 rounded-lg p-12"
           >
-            <Award className="h-16 w-16 text-primary-accent mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6 glow-text">
+            <Award className="h-16 w-16 text-purple-400 mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Join Our Alumni Network
             </h2>
-            <p className="text-xl text-primary-gray-300 mb-8 font-inter">
+            <p className="text-xl text-gray-300 mb-8">
               Are you a Neural Hive alumni? Connect with us and help mentor the next generation of AI innovators.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:alumni@neuralhive.com"
-                className="btn-primary"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
               >
                 Connect with Alumni
               </a>
               <a
                 href="/contact"
-                className="btn-secondary"
+                className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-colors"
               >
                 Update Your Info
               </a>
