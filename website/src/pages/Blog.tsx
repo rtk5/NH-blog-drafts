@@ -37,15 +37,29 @@ const Blog = () => {
 
   const blogPosts = [
     {
+      title: 'Machine Learning Fundamentals: A Beginner\'s Complete Guide',
+      author: 'AI/ML Team',
+      date: '31 Jul 2025',
+      readTime: '12 min read',
+      category: 'Machine Learning',
+      excerpt: 'Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles. This comprehensive guide will walk you through the essential concepts, processes, and terminology you need to know.',
+      tags: ['Machine Learning', 'AI Fundamentals', 'Data Science', 'Beginner Guide'],
+      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
+      featured: true,
+      slug: 'machine-learning-fundamentals-beginners-guide'
+    }
+    // Commented out other blog posts to show only ML Fundamentals
+    /*
+    {
       title: 'Getting Started with PyTorch',
       author: 'Rithvik Matta',
       date: '15 Jan 2025',
       readTime: '8 min read',
-      category: 'Tutorial',
+      category: 'Deep Learning',
       excerpt: 'A comprehensive guide to setting up PyTorch and building your first neural network from scratch.',
       tags: ['PyTorch', 'Deep Learning', 'Neural Networks', 'Python'],
       image: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=800',
-      featured: true,
+      featured: false,
       slug: 'getting-started-with-pytorch'
     },
     {
@@ -53,9 +67,9 @@ const Blog = () => {
       author: 'Karthik Venkat',
       date: '10 Jan 2025',
       readTime: '12 min read',
-      category: 'Security',
+      category: 'Cybersecurity AI',
       excerpt: 'Learn reconnaissance techniques using BloodHound for cybersecurity competitions and ethical hacking.',
-      tags: ['CTF', 'Security', 'BloodHound', 'Reconnaissance'],
+      tags: ['CTF', 'AI Security', 'BloodHound', 'Reconnaissance'],
       image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
       featured: false,
       slug: 'intro-to-ctf-recon-with-bloodhound'
@@ -65,7 +79,7 @@ const Blog = () => {
       author: 'Ananya Sharma',
       date: '5 Jan 2025',
       readTime: '15 min read',
-      category: 'Programming',
+      category: 'AI Development',
       excerpt: 'Deep dive into implementing secure client-server communication using SSL/TLS protocols in C.',
       tags: ['C Programming', 'SSL/TLS', 'Network Security', 'Socket Programming'],
       image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -77,7 +91,7 @@ const Blog = () => {
       author: 'Priya Nair',
       date: '28 Dec 2024',
       readTime: '10 min read',
-      category: 'Tutorial',
+      category: 'Computer Vision',
       excerpt: 'Introduction to computer vision concepts, OpenCV basics, and practical image processing techniques.',
       tags: ['Computer Vision', 'OpenCV', 'Image Processing', 'Python'],
       image: 'https://images.pexels.com/photos/7048047/pexels-photo-7048047.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -89,7 +103,7 @@ const Blog = () => {
       author: 'Shreya Patel',
       date: '20 Dec 2024',
       readTime: '6 min read',
-      category: 'Ethics',
+      category: 'AI Ethics',
       excerpt: 'Exploring the importance of ethical considerations in AI development and deployment.',
       tags: ['AI Ethics', 'Responsible AI', 'Machine Learning', 'Society'],
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -101,16 +115,18 @@ const Blog = () => {
       author: 'Arjun Reddy',
       date: '15 Dec 2024',
       readTime: '11 min read',
-      category: 'DevOps',
+      category: 'MLOps',
       excerpt: 'Learn how to create production-ready APIs for your machine learning models using FastAPI.',
       tags: ['FastAPI', 'ML Deployment', 'Python', 'REST API'],
       image: 'https://images.pexels.com/photos/7662235/pexels-photo-7662235.jpeg?auto=compress&cs=tinysrgb&w=800',
       featured: false,
       slug: 'deploying-ml-models-with-fastapi'
     }
+    */
   ];
 
-  const categories = ['All', 'Tutorial', 'Security', 'Programming', 'Ethics', 'DevOps'];
+  // Updated categories with AIML keywords
+  const categories = ['All', 'Machine Learning', 'Deep Learning', 'Computer Vision', 'Natural Language Processing', 'AI Ethics', 'MLOps', 'Data Science', 'Neural Networks', 'Reinforcement Learning'];
   const [activeCategory, setActiveCategory] = React.useState('All');
 
   const filteredPosts = activeCategory === 'All' 
@@ -131,10 +147,10 @@ const Blog = () => {
           >
             <BookOpen className="h-20 w-20 text-primary-accent mx-auto mb-6" />
             <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6 glow-text">
-              Blog & Resources
+              AI/ML Blog & Resources
             </h1>
             <p className="text-xl text-primary-gray-300 font-inter">
-              Knowledge sharing from our community - tutorials, insights, and technical deep-dives
+              Knowledge sharing from our AI/ML community - tutorials, insights, and technical deep-dives
             </p>
           </motion.div>
         </div>
@@ -154,7 +170,7 @@ const Blog = () => {
               Featured Posts
             </h2>
             <p className="text-xl text-primary-gray-400 font-inter">
-              Hand-picked articles from our technical contributors
+              Hand-picked articles from our AI/ML technical contributors
             </p>
           </motion.div>
 
@@ -241,7 +257,7 @@ const Blog = () => {
               All Posts
             </h2>
             <p className="text-xl text-primary-gray-400 font-inter mb-8">
-              Explore our complete collection of technical articles and tutorials
+              Explore our complete collection of AI/ML articles and tutorials
             </p>
 
             {/* Category Filter */}
@@ -350,7 +366,7 @@ const Blog = () => {
               Stay Updated
             </h2>
             <p className="text-xl text-primary-gray-300 mb-8 font-inter">
-              Subscribe to get notified when we publish new technical articles and tutorials
+              Subscribe to get notified when we publish new AI/ML articles and tutorials
             </p>
             
             {subscribed ? (
