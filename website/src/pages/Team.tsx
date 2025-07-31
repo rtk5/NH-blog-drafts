@@ -109,7 +109,7 @@ const Team = () => {
       name: 'Dr. Kokila Paramanadam',
       role: 'Faculty Advisor',
       department: 'Professor, Dept. of CSE',
-      image: 'pictures-for-websites.vercel.app/kokila.webp',
+      image: 'https://pictures-for-websites.vercel.app/kokila.webp',
       expertise: 'Machine Learning, Generative AI, Applied Computing'
     }
   ];
