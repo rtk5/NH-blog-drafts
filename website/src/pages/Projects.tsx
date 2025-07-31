@@ -17,6 +17,39 @@ const Projects = () => {
       demo: null,
       featured: true
     },
+    {
+  title: 'Personalised AI Automated Social Media Manager',
+  category: 'Hivemind',
+  status: 'Completed',
+  description: 'A personalized social media manager built for clubs and student communities that automates the end-to-end process of generating event-specific promotional content using current social media trends and club-specific knowledge. By combining real-time scraping from platforms like Instagram and YouTube with a RAG pipeline powered by Gemini and ChromaDB, the system produces tailored content ideas including reel scripts, posters, and audio suggestions. The modular architecture integrates real-time social media scraping, retrieval-augmented generation, and multi-modal content suggestion through a hybrid LlamaIndex–LangChain setup for context-aware retrieval. Designed for modularity and reusability, it supports dynamic event input, robust club profile memory, and multi-platform content strategies, making it ideal for clubs aiming to boost engagement with minimal manual content planning.',
+  tech: ['Python', 'Streamlit', 'Gemini', 'HuggingFace Embeddings', 'ChromaDB', 'LangChain', 'LlamaIndex', 'BeautifulSoup', 'YouTube Data API', 'Instagram Web Scraper', 'Pillow'],
+  image: 'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=800',
+  github: 'https://github.com/rtk5/AI-Based-Attendance-System-using-Voice-Recognition',
+  demo: null,
+  featured: true
+},
+{
+  title: 'Explainable Anomaly Detection in Smart Grids using Autoencoders and TreeSHAP',
+  category: 'Hivemind',
+  status: 'Completed',
+  description: 'An interpretable anomaly detection framework tailored for smart grid data that employs a hybrid ML pipeline comprising a Variational Autoencoder for unsupervised anomaly detection, a Random Forest classifier for refined decision boundaries, and TreeSHAP for explainable output. The system takes in preprocessed grid telemetry data, compresses it through the VAE to learn latent patterns of normal operating behavior, classifies anomalies based on reconstruction error, and provides transparent feature-level explanations through TreeSHAP. This approach makes the model trustworthy and usable in critical infrastructure monitoring where understanding the reasoning behind anomaly detection is crucial for operational safety and regulatory compliance.',
+  tech: ['Python', 'PyTorch', 'Scikit-learn', 'SHAP', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Jupyter'],
+  image: 'https://images.pexels.com/photos/159201/circuit-circuit-board-resistor-computer-159201.jpeg?auto=compress&cs=tinysrgb&w=800',
+  github: 'https://github.com/rtk5/AI-Based-Attendance-System-using-Voice-Recognition',
+  demo: null,
+  featured: true
+},
+{
+  title: 'Automated Academic Answer Evaluation System',
+  category: 'Hivemind',
+  status: 'Completed',
+  description: 'An intelligent system that automates academic answer evaluation using advanced AI techniques. The modular architecture features dedicated components for PDF OCR, text processing, reference answer parsing, vector search using FAISS, and LLM-powered grading through the Gemini API. The system extracts both handwritten and machine-readable text from PDFs using OCR technology, intelligently matches student answers to questions using vector embeddings and keyword extraction with KeyBERT, and leverages Google Gemini for accurate, rubric-based grading. This provides educational institutions with an efficient, consistent, and scalable automated assessment solution that maintains grading quality while significantly reducing manual evaluation time.',
+  tech: ['Python', 'Google Gemini API', 'Jina AI Embeddings', 'FAISS', 'KeyBERT', 'NLTK', 'Streamlit', 'Gradio'],
+  image: 'https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=800',
+  github: 'https://github.com/rtk5/AI-Based-Attendance-System-using-Voice-Recognition',
+  demo: null,
+  featured: true,
+}
     
   ];
 
