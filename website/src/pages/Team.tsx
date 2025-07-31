@@ -9,7 +9,7 @@ const Team = () => {
     {
       name: 'Kshirin Shetty',
       role: 'Club Head',
-      image: 'https://pictures-for-websites.vercel.app/KshirinShetty.jpg',
+      image: 'https://pictures-for-websites.vercel.app/KshirinShetty.webp',
       bio: 'Oversees the strategic direction and vision of Neural Hive. Passionate about applied AI in vision, language, and responsible ML research.',
       links: {
         github: 'https://github.com/kshirinshetty',
@@ -45,7 +45,7 @@ const Team = () => {
     {
       name: 'Rithvik Matta',
       role: 'Tech Head',
-      image: 'https://pictures-for-websites.vercel.app/RithvikMatta.jpg',
+      image: 'https://pictures-for-websites.vercel.app/Rithvik.webp',
       bio: 'Handles technical initiatives such as workshops, blogs, and web presence. Mentors members in system development and backend technologies.',
       links: {
         github: 'https://github.com/rtk5',
@@ -57,7 +57,7 @@ const Team = () => {
     {
       name: 'Abhigna V',
       role: 'Design Head',
-      image: '',
+      image: 'pictures-for-websites.vercel.app/Abhigna.webp',
       bio: 'Leads all design efforts from visual branding to event collateral. Passionate about expressive visuals and storytelling.',
       links: {
         github: '',
@@ -106,18 +106,11 @@ const Team = () => {
 
   const advisors = [
     {
-      name: 'Dr. Rajesh Kumar',
+      name: 'Dr. Kokila Paramanadam',
       role: 'Faculty Advisor',
       department: 'Professor, Dept. of CSE',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-      expertise: 'Machine Learning, Data Mining, AI Ethics'
-    },
-    {
-      name: 'Dr. Meena Vasan',
-      role: 'Research Mentor',
-      department: 'Associate Professor, Dept. of CSE',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-      expertise: 'Computer Vision, Neural Networks, Pattern Recognition'
+      image: 'pictures-for-websites.vercel.app/kokila.webp',
+      expertise: 'Machine Learning, Generative AI, Applied Computing'
     }
   ];
 
