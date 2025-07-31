@@ -107,6 +107,13 @@ const Legacy = () => {
     }
   ];
 
+  const stats = [
+    { number: '15+', label: 'Alumni Members', sublabel: 'Across different years' },
+    { number: '85%', label: 'Placement Rate', sublabel: 'In top tech companies' },
+    { number: '25+', label: 'Projects Completed', sublabel: 'By alumni during tenure' },
+    { number: '10+', label: 'Industry Positions', sublabel: 'Currently held by alumni' }
+  ];
+
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
