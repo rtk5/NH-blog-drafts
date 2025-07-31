@@ -7,16 +7,16 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Real Time Voice Authentication For Attendance Monitoring',
-      category: 'Hivemind',
-      status: 'Completed',
-      description: 'This project develops a robust voice-based attendance system that leverages advanced speaker recognition technology for contactless user authentication. The system implements a complete audio processing pipeline with noise reduction and feature extraction capabilities, utilizing the state-of-the-art ECAPA-TDNN model to generate unique voice embeddings. Through cosine distance calculations, the system accurately matches live voice recordings against pre-registered speaker profiles, enabling seamless attendance verification. The solution includes audio augmentation for enhanced robustness, interactive CLI for real-time operation, and comprehensive logging for system monitoring, making it ideal for educational institutions and organizational environments requiring reliable biometric attendance tracking.',
-      tech: ['Python', 'ECAPA-TDNN', 'PyTorch', 'NumPy', 'scipy'],
-      image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/rtk5/AI-Based-Attendance-System-using-Voice-Recognition',
-      demo: null,
-      featured: true
-    },
+  title: 'Real Time Voice Authentication For Attendance Monitoring',
+  category: 'Hivemind',
+  status: 'Completed',
+  description: 'A robust voice-based attendance system that leverages advanced speaker recognition technology for contactless user authentication. The comprehensive biometric authentication pipeline features audio preprocessing including format conversion, noise reduction, and bandpass filtering, coupled with deep learning-based speaker recognition using the ECAPA-TDNN architecture from SpeechBrain. The system processes real-time voice recordings, extracts high-dimensional speaker embeddings, and employs cosine similarity matching for identity verification against a reference database. Through precise cosine distance calculations, the system accurately matches live voice recordings against pre-registered speaker profiles, enabling seamless attendance verification. Enhanced with audio augmentation for improved robustness, an interactive CLI for real-time operation, and comprehensive logging for system monitoring, this solution is ideal for educational institutions and organizational environments requiring reliable biometric attendance tracking.',
+  tech: ['Python', 'SpeechBrain', 'ECAPA-TDNN', 'PyTorch', 'NumPy', 'librosa', 'scipy', 'soundfile'],
+  image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
+  github: 'https://github.com/rtk5/AI-Based-Attendance-System-using-Voice-Recognition',
+  demo: null,
+  featured: true
+},
     {
   title: 'Personalised AI Automated Social Media Manager',
   category: 'Hivemind',
