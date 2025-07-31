@@ -57,7 +57,7 @@ const Team = () => {
     {
       name: 'Abhigna V',
       role: 'Design Head',
-      image: 'pictures-for-websites.vercel.app/Abhigna.webp',
+      image: 'https://pictures-for-websites.vercel.app/Abighna.webp',
       bio: 'Leads all design efforts from visual branding to event collateral. Passionate about expressive visuals and storytelling.',
       links: {
         github: '',

@@ -90,7 +90,7 @@ const Contact = () => {
       icon: Github,
       name: 'GitHub',
       handle: '@NeuralHive-PESU',
-      url: 'https://github.com/NeuralHive-PESU',
+      url: 'https://github.com/Neural-Hive-PESU',
       color: 'hover:text-gray-300'
     }
   ];
