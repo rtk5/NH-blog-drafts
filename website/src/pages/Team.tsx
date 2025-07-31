@@ -8,75 +8,99 @@ const Team = () => {
   const teamMembers = [
     {
       name: 'Kshirin Shetty',
-      role: 'President / ML Lead',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Leading neural network research and club operations. Passionate about deep learning applications in robotics.',
+      role: 'Club Head',
+      image: 'https://pictures-for-websites.vercel.app/KshirinShetty.jpg',
+      bio: 'Oversees the strategic direction and vision of Neural Hive. Passionate about applied AI in vision, language, and responsible ML research.',
       links: {
-        github: 'https://github.com/rithvikmatta',
-        linkedin: 'https://linkedin.com/in/rithvikmatta',
-        email: 'rithvik@neuralhive.com'
+        github: 'https://github.com/kshirinshetty',
+        linkedin: 'https://www.linkedin.com/in/kshirin-shetty-7372b426a/',
+        email: 'kshirinshetty1@gmail.com'
       },
-      specialties: ['Deep Learning', 'Computer Vision', 'Team Leadership']
+      specialties: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'Natural Language Processing', 'Explainable AI']
     },
     {
-      name: 'Sarayu',
-      role: 'Vice President / Research Head',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Spearheading ethical AI initiatives and research publications. Expert in natural language processing.',
+      name: 'Sarayu Ventrapati',
+      role: 'Club Head',
+      image: 'https://pictures-for-websites.vercel.app/SarayuV.webp',
+      bio: 'Leads end-to-end club activities and fosters AI research and innovation. Works across ML, LLMs, and Reinforcement Learning.',
       links: {
-        github: 'https://github.com/ananyasharma',
-        linkedin: 'https://linkedin.com/in/ananyasharma',
-        email: 'ananya@neuralhive.com'
+        github: 'https://github.com/V-Sarayu',
+        linkedin: 'https://www.linkedin.com/in/sarayu-ventrapati/',
+        email: 'vsarayu74@gmail.com'
       },
-      specialties: ['NLP', 'Ethical AI', 'Research']
+      specialties: ['Python', 'Deep Learning', 'LLMs', 'Prompt Engineering', 'MongoDB']
+    },
+    {
+      name: 'Siddartha A Yogesha',
+      role: 'Tech Lead',
+      image: '',
+      bio: 'Leads all core technical projects, research initiatives, and systems design. Focused on building robust, research-driven ML and CV systems.',
+      links: {
+        github: 'https://github.com/SiddarthAA',
+        linkedin: 'https://www.linkedin.com/in/siddartha-aralakuppe-yogesha-44510b290/',
+        email: 'siddartha_ay@protonmail.com'
+      },
+      specialties: ['Computer Vision', 'Generative AI', 'Machine Learning', 'Deep Learning', 'NLP']
     },
     {
       name: 'Rithvik Matta',
-      role: 'Technical Lead / Robotics',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Building autonomous systems and leading hardware integration projects. IoT and embedded systems specialist.',
+      role: 'Tech Head',
+      image: 'https://pictures-for-websites.vercel.app/RithvikMatta.jpg',
+      bio: 'Handles technical initiatives such as workshops, blogs, and web presence. Mentors members in system development and backend technologies.',
       links: {
-        github: 'https://github.com/karthikvenkat',
-        linkedin: 'https://linkedin.com/in/karthikvenkat',
-        email: 'karthik@neuralhive.com'
+        github: 'https://github.com/rtk5',
+        linkedin: 'https://www.linkedin.com/in/rithvik-matta-a8490b2ba/',
+        email: 'rithvik.mattta@gmail.com'
       },
-      specialties: ['Robotics', 'IoT', 'Hardware Integration']
+      specialties: ['C/C++', 'Python', 'MERN Stack']
     },
     {
-      name: 'Priya Nair',
-      role: 'Events Coordinator',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Organizing impactful events and workshops. Connecting industry experts with student community.',
+      name: 'Abhigna V',
+      role: 'Design Head',
+      image: '',
+      bio: 'Leads all design efforts from visual branding to event collateral. Passionate about expressive visuals and storytelling.',
       links: {
-        github: 'https://github.com/priyanair',
-        linkedin: 'https://linkedin.com/in/priyanair',
-        email: 'priya@neuralhive.com'
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/abhignavattikuti/',
+        email: 'abhignavattikuti@gmail.com'
       },
-      specialties: ['Event Management', 'Community Building', 'Public Relations']
+      specialties: ['Canva', 'Figma', 'React.js', 'Node.js', 'C/C++', 'Python', 'IoT']
     },
     {
-      name: 'Arjun Reddy',
-      role: 'Web Development Lead',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Full-stack developer maintaining club digital presence. Expertise in modern web technologies.',
+      name: 'Saijyoti Panda',
+      role: 'Events Head',
+      image: 'https://pictures-for-websites.vercel.app/SaijyotiPanda.webp',
+      bio: 'Handles event planning and execution with an engineering mindset. Interested in low-level systems, AI, and cybersecurity.',
       links: {
-        github: 'https://github.com/arjunreddy',
-        linkedin: 'https://linkedin.com/in/arjunreddy',
-        email: 'arjun@neuralhive.com'
+        github: 'https://www.github.com/sxijyoti',
+        linkedin: 'https://www.linkedin.com/in/saijyoti-panda',
+        email: 'NA'
       },
-      specialties: ['Full-Stack Development', 'UI/UX Design', 'DevOps']
+      specialties: ['Systems Programming', 'AI/ML', 'Web Dev', 'Go', 'Python']
     },
     {
-      name: 'Shreya Patel',
-      role: 'Content & Outreach Lead',
-      image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Creating educational content and managing social media presence. Technical writing specialist.',
+      name: 'Aditya D Rao',
+      role: 'Social Media and Marketing',
+      image: 'https://pictures-for-websites.vercel.app/AdiRao.webp',
+      bio: 'Markets club events to boost visibility and engagement. Bridges technical depth with public outreach.',
       links: {
-        github: 'https://github.com/shreyapatel',
-        linkedin: 'https://linkedin.com/in/shreyapatel',
-        email: 'shreya@neuralhive.com'
+        github: 'https://github.com/AdiXgit',
+        linkedin: 'https://www.linkedin.com/in/aditya-dwaraki-rao-492672212/',
+        email: 'adirao8771@gmail.com'
       },
-      specialties: ['Technical Writing', 'Content Strategy', 'Social Media']
+      specialties: ['Machine Learning', 'Systems Programming', 'Quantum Computing']
+    },
+    {
+      name: 'Vishwa',
+      role: 'Operations Lead',
+      image: 'https://pictures-for-websites.vercel.app/CVishwa.webp',
+      bio: 'Ensures the smooth execution of all internal processes and club logistics. Deeply interested in ML and security.',
+      links: {
+        github: '',
+        linkedin: 'https://www.linkedin.com/in/vishwa-c-7364112b8/',
+        email: 'vishwa66c@gmail.com'
+      },
+      specialties: ['Neural Networks', 'Crisis Management', 'Threat Analysis', 'Classical ML']
     }
   ];
 
