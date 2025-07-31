@@ -7,96 +7,20 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'SNARLOS',
-      category: 'Flagship',
-      status: 'Ongoing',
-      description: 'Modular snake-robot for disaster search-and-rescue operations with autonomous navigation.',
-      tech: ['ESP32', 'LIDAR', 'CNN', 'ROS', 'Python'],
+      title: 'Real Time Voice Authentication For Attendance Monitoring',
+      category: 'Hivemind',
+      status: 'Completed',
+      description: 'This project develops a robust voice-based attendance system that leverages advanced speaker recognition technology for contactless user authentication. The system implements a complete audio processing pipeline with noise reduction and feature extraction capabilities, utilizing the state-of-the-art ECAPA-TDNN model to generate unique voice embeddings. Through cosine distance calculations, the system accurately matches live voice recordings against pre-registered speaker profiles, enabling seamless attendance verification. The solution includes audio augmentation for enhanced robustness, interactive CLI for real-time operation, and comprehensive logging for system monitoring, making it ideal for educational institutions and organizational environments requiring reliable biometric attendance tracking.',
+      tech: ['Python', 'ECAPA-TDNN', 'PyTorch', 'NumPy', 'scipy'],
       image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/neuralhive/snarlos',
+      github: 'https://github.com/rtk5/AI-Based-Attendance-System-using-Voice-Recognition',
       demo: null,
       featured: true
     },
-    {
-      title: 'ASVR Voice Attendance',
-      category: 'Completed',
-      status: 'Completed',
-      description: 'Automated voice-based attendance system using speaker recognition and natural language processing.',
-      tech: ['Python', 'TensorFlow', 'Speech Recognition', 'Flask'],
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/neuralhive/asvr-attendance',
-      demo: 'https://asvr-demo.neuralhive.com',
-      featured: false
-    },
-    {
-      title: 'LinkUp Chat',
-      category: 'Ongoing',
-      status: 'Ongoing',
-      description: 'Real-time chat application with AI-powered moderation and smart reply suggestions.',
-      tech: ['React', 'Node.js', 'Socket.io', 'OpenAI API'],
-      image: 'https://images.pexels.com/photos/7688319/pexels-photo-7688319.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/neuralhive/linkup-chat',
-      demo: 'https://linkup.neuralhive.com',
-      featured: false
-    },
-    {
-      title: 'Sign Language Glove',
-      category: 'Flagship',
-      status: 'Ongoing',
-      description: 'Wearable device that translates sign language gestures to text and speech in real-time.',
-      tech: ['Arduino', 'Machine Learning', 'Sensors', 'Mobile App'],
-      image: 'https://images.pexels.com/photos/7048047/pexels-photo-7048047.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/neuralhive/sign-language-glove',
-      demo: null,
-      featured: true
-    },
-    {
-      title: 'Anomaly Detection CCTV',
-      category: 'Completed',
-      status: 'Completed',
-      description: 'AI-powered surveillance system that detects unusual activities and sends real-time alerts.',
-      tech: ['OpenCV', 'YOLO', 'FastAPI', 'MongoDB'],
-      image: 'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/neuralhive/anomaly-detection',
-      demo: null,
-      featured: false
-    },
-    {
-      title: 'Raw Socket Chatroom',
-      category: 'Completed',
-      status: 'Completed',
-      description: 'Low-level networking implementation of a secure multi-user chat system using raw sockets.',
-      tech: ['C', 'Raw Sockets', 'Encryption', 'Threading'],
-      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/neuralhive/raw-socket-chat',
-      demo: null,
-      featured: false
-    },
-    {
-      title: 'CareerWay Chatbot',
-      category: 'Ongoing',
-      status: 'Ongoing',
-      description: 'AI career counseling chatbot that provides personalized guidance and job recommendations.',
-      tech: ['NLP', 'Transformer Models', 'React', 'FastAPI'],
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/neuralhive/careerway-bot',
-      demo: 'https://careerway.neuralhive.com',
-      featured: false
-    },
-    {
-      title: 'Neural Style Transfer App',
-      category: 'Completed',
-      status: 'Completed',
-      description: 'Web application that applies artistic styles to photos using deep neural networks.',
-      tech: ['TensorFlow.js', 'React', 'Canvas API', 'WebGL'],
-      image: 'https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=800',
-      github: 'https://github.com/neuralhive/neural-style-transfer',
-      demo: 'https://style-transfer.neuralhive.com',
-      featured: false
-    }
+    
   ];
 
-  const filters = ['All', 'Flagship', 'Ongoing', 'Completed'];
+  const filters = ['All', 'Hivemind', 'Ongoing', 'Completed'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
@@ -142,7 +66,7 @@ const Projects = () => {
               Featured Projects
             </h2>
             <p className="text-xl text-primary-gray-400 font-inter">
-              Our flagship innovations making real-world impact
+              Our Hivemind innovations making real-world impact
             </p>
           </motion.div>
 
