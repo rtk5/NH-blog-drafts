@@ -21,7 +21,7 @@ const Team = () => {
     {
       name: 'Sarayu Ventrapati',
       role: 'Club Head',
-      image: 'https://pictures-for-websites.vercel.app/SarayuV.webp',
+      image: 'https://pictures-for-websites.vercel.app/Sarayu%20V.jpg',
       bio: 'Leads end-to-end club activities and fosters AI research and innovation. Works across ML, LLMs, and Reinforcement Learning.',
       links: {
         github: 'https://github.com/V-Sarayu',
