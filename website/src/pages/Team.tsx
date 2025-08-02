@@ -33,7 +33,7 @@ const Team = () => {
     {
       name: 'Siddartha A Yogesha',
       role: 'Tech Lead',
-      image: '',
+      image: 'https://pictures-for-websites.vercel.app/sidd.jpg',
       bio: 'Leads all core technical projects, research initiatives, and systems design. Focused on building robust, research-driven ML and CV systems.',
       links: {
         github: 'https://github.com/SiddarthAA',
