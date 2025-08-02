@@ -52,7 +52,7 @@ const Team = () => {
         linkedin: 'https://www.linkedin.com/in/rithvik-matta-a8490b2ba/',
         email: 'rithvik.mattta@gmail.com'
       },
-      specialties: ['C/C++', 'Python', 'MERN Stack']
+      specialties: ['Natural Language Processing ', 'Computer Vision', ' Machine Learning']
     },
     {
       name: 'Abhigna V',
