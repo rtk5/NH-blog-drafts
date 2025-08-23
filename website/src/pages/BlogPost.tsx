@@ -103,11 +103,11 @@ The machine learning process starts with collecting and processing training data
 
 **Structured vs. Unstructured Data:**
 
-- **Structured data:** Organized in a predefined format, typically in tables or databases with rows and columns. This includes:
+ **Structured data:** Organized in a predefined format, typically in tables or databases with rows and columns. This includes:
   - **Tabular data:** Spreadsheets, databases, or CSV files with rows representing instances and columns representing features.
   - **Time-series data:** Sequences of values measured over time, such as stock prices, sensor readings, or weather data.
 
-- **Unstructured data:** Lacks a predefined structure, requiring advanced techniques to extract meaningful patterns:
+ **Unstructured data:** Lacks a predefined structure, requiring advanced techniques to extract meaningful patterns:
   - **Text data:** Documents, articles, social media posts, and other textual content.
   - **Image data:** Digital images, photographs, and video frames.
   - **Audio data:** Sound recordings, music, and speech.
