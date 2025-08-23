@@ -83,7 +83,7 @@ Building a machine learning model involves several key stages that work together
 
 The machine learning process starts with collecting and processing training data. There's a famous saying in the ML community: "garbage in, garbage out." This means that an ML model is only as good as the data used to train it. Data preparation and processing might seem routine, but it's arguably the most critical stage that can make or break your model's performance.
 
-![Machine Learning Process](pictures/training-data.png)
+![Machine Learning Process](/pictures/training-data.png)
 
 
 #### Types of Data
@@ -109,7 +109,7 @@ The machine learning process starts with collecting and processing training data
 
 Once your data is prepared, you need to choose an appropriate machine learning algorithm. The choice depends on several factors:
 
-![Machine Learning Process](pictures/machine-learning-process.png)
+![Machine Learning Process](/pictures/machine-learning-process.png)
 
 
 - **Problem type:** Classification, regression, clustering, or other tasks.
@@ -215,7 +215,7 @@ To ensure your model generalizes well to new data, you should use techniques lik
 
 After training and validation, it's time to use your model to make predictions or decisions. This process is called inferencing.
 
-![Machine Learning Process](pictures/inferencing.png)
+![Machine Learning Process](/pictures/inferencing.png)
 
 
 ### Types of Inferencing
