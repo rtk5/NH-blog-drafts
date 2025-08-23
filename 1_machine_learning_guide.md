@@ -9,7 +9,7 @@ Machine learning is a subset of artificial intelligence (AI) that enables comput
 
 Think of it like teaching a child to recognize animals. Instead of describing every possible feature of a cat, you show them hundreds of cat pictures. Eventually, they learn to identify cats on their own by recognizing common patterns and features.
 
-![Simple Supervised Learning Example](https://images.openai.com/thumbnails/url/4s2lcHicu1mUUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw6yDHKJDHN0Sw03dItMdknxTqmKzPcJjndJC_asyPUv807z9bJMjTSNL_PIynIpLE8qsUzP8Mn1T_RQKwYAvyQpfA)
+![Simple Supervised Learning Example](https://media.geeksforgeeks.org/wp-content/uploads/20250428163955355688/Flowchart-of-Machine-Learning-Model.webp)
 
 
 ## The Machine Learning Process
@@ -58,12 +58,12 @@ Once your data is prepared, you need to choose an appropriate machine learning a
 
 Training is where the magic happens. The algorithm analyzes your data to learn patterns and relationships. This process varies depending on the learning approach.
 
-![Simple ML Workflow](https://images.openai.com/thumbnails/url/OmQTCnicu1mUUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw5J8ShyDPOoKg-uiDQvdHQvSEwqCDXNdjfOyTH3s_RKzXQyM8tIy4vIiTTwNwzw8EpLSTcuTClOC0pUKwYAzFQpQw)
+![Simple ML Workflow](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2AVUzIPOx0QuAub6tGLIQy2A.png)
 
 
 ## Types of Machine Learning
 
-![Types of ML](https://images.openai.com/thumbnails/url/K6ktmHicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw4qdSxx8SsP8sqIcC33SzbKNM5KcykqSg12j8hOCXPO8CjVLYhP1802z3EKLI6ozEl38Sr2Cvc0yXX1SFcrBgAvVypR)
+![Types of ML](https://blog.infodiagram.com/wp-content/uploads/2024/09/predictive-ai-model-development-process-diagram-1024x576.png)
 
 
 ### Supervised Learning
