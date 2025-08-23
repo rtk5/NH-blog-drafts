@@ -63,6 +63,7 @@ And if you remember nothing else from this rant, remember this: it's better to t
       content: `
 # Machine Learning Fundamentals: A Beginner's Complete Guide
 
+
 Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles. If you're new to this field, understanding the fundamentals is crucial for building a solid foundation. This comprehensive guide will walk you through the essential concepts, processes, and terminology you need to know.
 
 ## What is Machine Learning?
@@ -73,6 +74,7 @@ Think of it like teaching a child to recognize animals. Instead of describing ev
 
 ![Simple Supervised Learning Example](https://media.geeksforgeeks.org/wp-content/uploads/20250428163955355688/Flowchart-of-Machine-Learning-Model.webp)
 
+
 ## The Machine Learning Process
 
 Building a machine learning model involves several key stages that work together to create an intelligent system:
@@ -81,7 +83,8 @@ Building a machine learning model involves several key stages that work together
 
 The machine learning process starts with collecting and processing training data. There's a famous saying in the ML community: "garbage in, garbage out." This means that an ML model is only as good as the data used to train it. Data preparation and processing might seem routine, but it's arguably the most critical stage that can make or break your model's performance.
 
-![Machine Learning Process](https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80)
+![Machine Learning Process](pictures/training-data.png)
+
 
 #### Types of Data
 
@@ -106,7 +109,8 @@ The machine learning process starts with collecting and processing training data
 
 Once your data is prepared, you need to choose an appropriate machine learning algorithm. The choice depends on several factors:
 
-![Machine Learning Process](https://miro.medium.com/v2/resize:fit:1400/1*VUzIPOx0QuAub6tGLIQy2A.png)
+![Machine Learning Process](pictures/machine-learning-process.png)
+
 
 - **Problem type:** Classification, regression, clustering, or other tasks.
 - **Data size:** Some algorithms work better with large datasets, others with smaller ones.
@@ -117,11 +121,13 @@ Once your data is prepared, you need to choose an appropriate machine learning a
 
 Training is where the magic happens. The algorithm analyzes your data to learn patterns and relationships. This process varies depending on the learning approach.
 
-![Simple ML Workflow](https://miro.medium.com/v2/resize:fit:1400/1*VUzIPOx0QuAub6tGLIQy2A.png)
+![Simple ML Workflow](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2AVUzIPOx0QuAub6tGLIQy2A.png)
+
 
 ## Types of Machine Learning
 
 ![Types of ML](https://blog.infodiagram.com/wp-content/uploads/2024/09/predictive-ai-model-development-process-diagram-1024x576.png)
+
 
 ### Supervised Learning
 
@@ -209,7 +215,8 @@ To ensure your model generalizes well to new data, you should use techniques lik
 
 After training and validation, it's time to use your model to make predictions or decisions. This process is called inferencing.
 
-![Machine Learning Process](https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80)
+![Machine Learning Process](pictures/inferencing.png)
+
 
 ### Types of Inferencing
 
@@ -272,6 +279,7 @@ Remember that machine learning is both an art and a science. While understanding
 The field of machine learning offers endless possibilities for innovation and problem-solving. Whether you're interested in healthcare, finance, technology, or any other domain, ML skills can help you unlock valuable insights from data and create intelligent systems that make a real difference.
 
 Start with the fundamentals, practice regularly, and don't be afraid to experiment. The journey of mastering machine learning is challenging but incredibly rewarding.
+
       `
     }
   };
