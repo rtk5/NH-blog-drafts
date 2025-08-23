@@ -44,13 +44,13 @@ const Blog = () => {
       category: 'College Life',
       excerpt: 'Hey freshers, and hello to the rest of you seniors who are basically running on caffeine, deadlines, and whatever confidence you had before grades humbled you into oblivion.',
       tags: ['College', 'Life', 'Freshers', 'Algorithm'],
-      image: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://media.canva.com/v2/files/uri:ifs%3A%2F%2FS%2F1f69dbc8-f321-4ace-b082-b8e19b6309f6_00000041_001?csig=AAAAAAAAAAAAAAAAAAAAADIU_j8Cda5Zmeo5ZnPRX2A9VblfAeO05PhZvF0hpbGI&exp=1755969116&signer=assistant-rpc&token=AAIAAVMAMTFmNjlkYmM4LWYzMjEtNGFjZS1iMDgyLWI4ZTE5YjYzMDlmNl8wMDAwMDA0MV8wMDEAAAAAAZjX6lpAcTScmvYkiVcVOgry1GoN1j-Ck5Lw7xx6gDbGK-ywpxY',
       featured: true,
       slug: 'welcome-to-college-youre-now-in-the-algorithm'
     },
     {
       title: 'Machine Learning Fundamentals: A Beginner\'s Complete Guide',
-      author: 'AI/ML Team',
+      author: 'Rithvik Matta',
       date: '31 Jul 2025',
       readTime: '12 min read',
       category: 'Machine Learning',
