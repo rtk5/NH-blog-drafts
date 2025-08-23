@@ -41,7 +41,7 @@ const Legacy = () => {
         {
           name: 'Anuhya Tyada',
           role: 'Design Head',
-          image: 'https://pictures-for-websites.vercel.app/anuhya.webp',
+          image: 'https://pictures-for-websites.vercel.app/anhuya.webp',
           bio: 'Led Neural Hive’s design initiatives by establishing a unified visual identity and managing a team of designers for event branding and outreach.',
           achievements: ['Built consistent club branding', 'Led and mentored a team of 8 designers'],
           links: {

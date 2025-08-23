@@ -21,7 +21,7 @@ const Team = () => {
     {
       name: 'Sarayu Ventrapati',
       role: 'Club Head',
-      image: 'https://pictures-for-websites.vercel.app/SarayuV.webp',
+      image: 'https://pictures-for-websites.vercel.app/Sarayu%20V.jpg',
       bio: 'Leads end-to-end club activities and fosters AI research and innovation. Works across ML, LLMs, and Reinforcement Learning.',
       links: {
         github: 'https://github.com/V-Sarayu',
@@ -33,7 +33,7 @@ const Team = () => {
     {
       name: 'Siddartha A Yogesha',
       role: 'Tech Lead',
-      image: '',
+      image: 'https://pictures-for-websites.vercel.app/sidd.jpg',
       bio: 'Leads all core technical projects, research initiatives, and systems design. Focused on building robust, research-driven ML and CV systems.',
       links: {
         github: 'https://github.com/SiddarthAA',
@@ -52,7 +52,7 @@ const Team = () => {
         linkedin: 'https://www.linkedin.com/in/rithvik-matta-a8490b2ba/',
         email: 'rithvik.mattta@gmail.com'
       },
-      specialties: ['C/C++', 'Python', 'MERN Stack']
+      specialties: ['Natural Language Processing ', 'Computer Vision', ' Machine Learning']
     },
     {
       name: 'Abhigna V',
