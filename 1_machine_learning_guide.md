@@ -1,5 +1,6 @@
 # Machine Learning Fundamentals: A Beginner's Complete Guide
 
+
 Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles. If you're new to this field, understanding the fundamentals is crucial for building a solid foundation. This comprehensive guide will walk you through the essential concepts, processes, and terminology you need to know.
 
 ## What is Machine Learning?
@@ -7,6 +8,9 @@ Machine learning has become one of the most transformative technologies of our t
 Machine learning is a subset of artificial intelligence (AI) that enables computers to learn and make decisions from data without being explicitly programmed for every specific task. Instead of following pre-written instructions, ML systems identify patterns in data and use these patterns to make predictions or decisions about new, unseen data.
 
 Think of it like teaching a child to recognize animals. Instead of describing every possible feature of a cat, you show them hundreds of cat pictures. Eventually, they learn to identify cats on their own by recognizing common patterns and features.
+
+![Simple Supervised Learning Example](https://images.openai.com/thumbnails/url/4s2lcHicu1mUUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw6yDHKJDHN0Sw03dItMdknxTqmKzPcJjndJC_asyPUv807z9bJMjTSNL_PIynIpLE8qsUzP8Mn1T_RQKwYAvyQpfA)
+
 
 ## The Machine Learning Process
 
@@ -54,7 +58,13 @@ Once your data is prepared, you need to choose an appropriate machine learning a
 
 Training is where the magic happens. The algorithm analyzes your data to learn patterns and relationships. This process varies depending on the learning approach.
 
+![Simple ML Workflow](https://images.openai.com/thumbnails/url/OmQTCnicu1mUUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw5J8ShyDPOoKg-uiDQvdHQvSEwqCDXNdjfOyTH3s_RKzXQyM8tIy4vIiTTwNwzw8EpLSTcuTClOC0pUKwYAzFQpQw)
+
+
 ## Types of Machine Learning
+
+![Types of ML](https://images.openai.com/thumbnails/url/K6ktmHicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw4qdSxx8SsP8sqIcC33SzbKNM5KcykqSg12j8hOCXPO8CjVLYhP1802z3EKLI6ozEl38Sr2Cvc0yXX1SFcrBgAvVypR)
+
 
 ### Supervised Learning
 
@@ -206,4 +216,3 @@ Remember that machine learning is both an art and a science. While understanding
 The field of machine learning offers endless possibilities for innovation and problem-solving. Whether you're interested in healthcare, finance, technology, or any other domain, ML skills can help you unlock valuable insights from data and create intelligent systems that make a real difference.
 
 Start with the fundamentals, practice regularly, and don't be afraid to experiment. The journey of mastering machine learning is challenging but incredibly rewarding.
-
