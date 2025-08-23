@@ -12,7 +12,11 @@ const BlogPost = () => {
   const blogPosts = {
     'welcome-to-college-youre-now-in-the-algorithm': {
       title: 'Welcome to College: You\'re Now in the Algorithm',
-      author: 'Diya Prakash',
+      author: {
+        name: 'Diya Prakash',
+        image: 'https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=400',
+        bio: '3rd Year CSE student passionate about AI/ML and sharing honest insights about college life. Currently running on caffeine and confusion, but making it work!'
+      },
       date: '1 Aug 2025',
       readTime: '5 min read',
       category: 'College Life',
@@ -54,7 +58,11 @@ And if you remember nothing else from this rant, remember this: it's better to t
     },
     'machine-learning-fundamentals-beginners-guide': {
       title: 'Machine Learning Fundamentals: A Beginner\'s Complete Guide',
-      author: 'AI/ML Team',
+      author: {
+        name: 'Rithvik Matta',
+        image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
+        bio: 'ML enthusiast and active member of Neural Hive. Passionate about making complex AI concepts accessible to beginners. When not coding, you can find him explaining algorithms with coffee analogies.'
+      },
       date: '31 Jul 2025',
       readTime: '12 min read',
       category: 'Machine Learning',
@@ -62,7 +70,6 @@ And if you remember nothing else from this rant, remember this: it's better to t
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200',
       content: `
 # Machine Learning Fundamentals: A Beginner's Complete Guide
-
 
 Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles. If you're new to this field, understanding the fundamentals is crucial for building a solid foundation. This comprehensive guide will walk you through the essential concepts, processes, and terminology you need to know.
 
@@ -72,9 +79,6 @@ Machine learning is a subset of artificial intelligence (AI) that enables comput
 
 Think of it like teaching a child to recognize animals. Instead of describing every possible feature of a cat, you show them hundreds of cat pictures. Eventually, they learn to identify cats on their own by recognizing common patterns and features.
 
-![Simple Supervised Learning Example](https://media.geeksforgeeks.org/wp-content/uploads/20250428163955355688/Flowchart-of-Machine-Learning-Model.webp)
-
-
 ## The Machine Learning Process
 
 Building a machine learning model involves several key stages that work together to create an intelligent system:
@@ -82,9 +86,6 @@ Building a machine learning model involves several key stages that work together
 ### 1. Data Collection and Preparation
 
 The machine learning process starts with collecting and processing training data. There's a famous saying in the ML community: "garbage in, garbage out." This means that an ML model is only as good as the data used to train it. Data preparation and processing might seem routine, but it's arguably the most critical stage that can make or break your model's performance.
-
-![Machine Learning Process](/pictures/training-data.png)
-
 
 #### Types of Data
 
@@ -109,9 +110,6 @@ The machine learning process starts with collecting and processing training data
 
 Once your data is prepared, you need to choose an appropriate machine learning algorithm. The choice depends on several factors:
 
-![Machine Learning Process](/pictures/machine-learning-process.png)
-
-
 - **Problem type:** Classification, regression, clustering, or other tasks.
 - **Data size:** Some algorithms work better with large datasets, others with smaller ones.
 - **Interpretability needs:** Some algorithms provide clear explanations, others are "black boxes."
@@ -121,13 +119,7 @@ Once your data is prepared, you need to choose an appropriate machine learning a
 
 Training is where the magic happens. The algorithm analyzes your data to learn patterns and relationships. This process varies depending on the learning approach.
 
-![Simple ML Workflow](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2AVUzIPOx0QuAub6tGLIQy2A.png)
-
-
 ## Types of Machine Learning
-
-![Types of ML](https://blog.infodiagram.com/wp-content/uploads/2024/09/predictive-ai-model-development-process-diagram-1024x576.png)
-
 
 ### Supervised Learning
 
@@ -211,32 +203,6 @@ To ensure your model generalizes well to new data, you should use techniques lik
 - **K-Fold Cross-Validation:** Split data into k parts, train on k-1, test on 1, repeat.
 - **Hold-Out Validation:** Keep a separate validation set for final evaluation.
 
-## Inferencing: Putting Models to Work
-
-After training and validation, it's time to use your model to make predictions or decisions. This process is called inferencing.
-
-![Machine Learning Process](/pictures/inferencing.png)
-
-
-### Types of Inferencing
-
-**Batch Inferencing:**
-
-Batch inferencing processes large amounts of data all at once to provide a set of results. This approach is ideal for tasks like data analysis, where accuracy is more important than speed. Examples include:
-
-- Monthly customer segmentation analysis.
-- Quarterly financial forecasting.
-- Daily recommendation updates.
-
-**Real-Time Inferencing:**
-
-Real-time inferencing makes decisions quickly in response to new information as it arrives. This is crucial for applications requiring immediate responses, such as:
-
-- Chatbots responding to user queries.
-- Self-driving cars making split-second decisions.
-- Fraud detection systems flagging suspicious transactions.
-- Medical diagnosis systems providing instant results.
-
 ## Common Challenges and Solutions
 
 ### Overfitting and Underfitting
@@ -279,7 +245,94 @@ Remember that machine learning is both an art and a science. While understanding
 The field of machine learning offers endless possibilities for innovation and problem-solving. Whether you're interested in healthcare, finance, technology, or any other domain, ML skills can help you unlock valuable insights from data and create intelligent systems that make a real difference.
 
 Start with the fundamentals, practice regularly, and don't be afraid to experiment. The journey of mastering machine learning is challenging but incredibly rewarding.
+      `
+    },
+    'deep-learning-neural-networks-explained': {
+      title: 'Deep Learning and Neural Networks: From Theory to Practice',
+      author: {
+        name: 'Arjun Kumar',
+        image: 'https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=400',
+        bio: 'Deep Learning researcher and Neural Hive co-founder. Currently working on computer vision projects and loves breaking down complex neural architectures into digestible concepts.'
+      },
+      date: '29 Jul 2025',
+      readTime: '15 min read',
+      category: 'Deep Learning',
+      tags: ['Deep Learning', 'Neural Networks', 'AI', 'Computer Vision'],
+      image: 'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      content: `
+# Deep Learning and Neural Networks: From Theory to Practice
 
+Deep learning has revolutionized artificial intelligence, enabling breakthrough advances in computer vision, natural language processing, and many other domains. This comprehensive guide explores the fundamental concepts behind neural networks and how they power modern AI applications.
+
+## Understanding Neural Networks
+
+Neural networks are computational models inspired by the human brain's structure and function. They consist of interconnected nodes (neurons) that process and transmit information, learning complex patterns through training on large datasets.
+
+### The Basic Building Block: The Perceptron
+
+The simplest form of a neural network is the perceptron, which takes multiple inputs, applies weights to them, sums them up, and passes the result through an activation function to produce an output.
+
+### Multi-Layer Perceptrons
+
+By stacking multiple layers of perceptrons, we create deep neural networks capable of learning complex, non-linear relationships in data. Each layer transforms the input in increasingly abstract ways.
+
+## Deep Learning Architectures
+
+### Convolutional Neural Networks (CNNs)
+
+CNNs are particularly effective for image processing tasks. They use convolutional layers to detect local features like edges and textures, pooling layers to reduce dimensionality, and fully connected layers for final classification.
+
+### Recurrent Neural Networks (RNNs)
+
+RNNs are designed to work with sequential data by maintaining internal memory. They're particularly useful for natural language processing and time series analysis.
+
+### Transformer Architecture
+
+The transformer architecture, introduced in the "Attention Is All You Need" paper, has become the foundation for modern language models like GPT and BERT.
+
+## Training Deep Networks
+
+### Backpropagation
+
+The backpropagation algorithm is the cornerstone of neural network training. It calculates gradients by propagating errors backward through the network, allowing us to update weights to minimize loss.
+
+### Optimization Algorithms
+
+Various optimization algorithms like SGD, Adam, and RMSprop help navigate the complex loss landscape of deep networks more effectively.
+
+### Regularization Techniques
+
+Techniques like dropout, batch normalization, and weight decay help prevent overfitting and improve generalization.
+
+## Applications and Use Cases
+
+Deep learning has found applications across numerous domains:
+
+- **Computer Vision**: Image classification, object detection, facial recognition
+- **Natural Language Processing**: Machine translation, sentiment analysis, chatbots
+- **Healthcare**: Medical image analysis, drug discovery, disease prediction
+- **Autonomous Systems**: Self-driving cars, robotics, game playing
+
+## Challenges and Future Directions
+
+While deep learning has achieved remarkable success, several challenges remain:
+
+- **Interpretability**: Understanding how deep networks make decisions
+- **Data Efficiency**: Reducing the amount of labeled data required
+- **Computational Requirements**: Making models more efficient and accessible
+- **Robustness**: Ensuring models work reliably in real-world conditions
+
+## Getting Started with Deep Learning
+
+To begin your deep learning journey:
+
+1. **Master the fundamentals**: Linear algebra, calculus, and probability
+2. **Choose a framework**: TensorFlow, PyTorch, or Keras
+3. **Start with tutorials**: Work through guided projects and examples
+4. **Practice with datasets**: Experiment with real-world data
+5. **Join the community**: Participate in forums, competitions, and meetups
+
+Deep learning continues to evolve rapidly, with new architectures and techniques emerging regularly. By understanding the fundamentals and staying engaged with the community, you'll be well-positioned to contribute to this exciting field.
       `
     }
   };
@@ -332,7 +385,7 @@ Start with the fundamentals, practice regularly, and don't be afraid to experime
               </span>
               <div className="flex items-center space-x-1">
                 <User className="h-4 w-4" />
-                <span>{post.author}</span>
+                <span>{post.author.name}</span>
               </div>
               <div className="flex items-center space-x-1">
                 <Calendar className="h-4 w-4" />
@@ -478,18 +531,16 @@ Start with the fundamentals, practice regularly, and don't be afraid to experime
             </h3>
             <div className="flex items-start space-x-4">
               <img
-                src="https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=100"
-                alt={post.author}
-                className="w-16 h-16 rounded-full object-cover"
+                src={post.author.image}
+                alt={post.author.name}
+                className="w-16 h-16 rounded-full object-cover flex-shrink-0"
               />
               <div>
                 <h4 className="text-xl font-poppins font-semibold mb-2 text-primary-accent">
-                  {post.author}
+                  {post.author.name}
                 </h4>
-                <p className="text-primary-gray-300 font-inter">
-                  {post.author === 'Diya Prakash' 
-                    ? '3rd Year CSE student passionate about AI/ML and sharing honest insights about college life.'
-                    : 'Active member of Neural Hive, passionate about sharing knowledge and building the AI community at PESU EC.'}
+                <p className="text-primary-gray-300 font-inter leading-relaxed">
+                  {post.author.bio}
                 </p>
               </div>
             </div>
