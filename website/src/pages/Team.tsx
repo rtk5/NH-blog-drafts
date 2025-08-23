@@ -45,7 +45,7 @@ const Team = () => {
     {
       name: 'Rithvik Matta',
       role: 'Tech Head',
-      image: 'https://pictures-for-websites.vercel.app/Rithvik.webp',
+      image: 'https://pictures-for-websites.vercel.app/rtk.webp',
       bio: 'Handles technical initiatives such as workshops, blogs, and web presence. Mentors members in system development and backend technologies.',
       links: {
         github: 'https://github.com/rtk5',
