@@ -10,911 +10,268 @@ const BlogPost = () => {
 
   // Sample blog posts data - in a real app, this would come from a CMS or API
   const blogPosts = {
-    'getting-started-with-pytorch': {
-      title: 'Getting Started with PyTorch',
-      author: 'Rithvik Matta',
-      date: '15 Jan 2025',
-      readTime: '8 min read',
-      category: 'Tutorial',
-      tags: ['PyTorch', 'Deep Learning', 'Neural Networks', 'Python'],
-      image: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    'welcome-to-college-youre-now-in-the-algorithm': {
+      title: 'Welcome to College: You\'re Now in the Algorithm',
+      author: 'Diya Prakash',
+      date: '1 Aug 2025',
+      readTime: '5 min read',
+      category: 'College Life',
+      tags: ['College', 'Life', 'Freshers', 'Algorithm'],
+      image: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=1200',
       content: `
-# Getting Started with PyTorch
+# Welcome to College: You're Now in the Algorithm
 
-PyTorch has become one of the most popular deep learning frameworks, and for good reason. Its dynamic computational graph and intuitive Python-first approach make it an excellent choice for both research and production.
+Hey freshers, and hello to the rest of you seniors who are basically running on caffeine, deadlines, and whatever confidence you had before grades humbled you into oblivion.
 
-## Why PyTorch?
+So, you've joined college. You've got dreams, ambitions, and a new laptop that you swear you're going to use for "productive work" — welcome to the world of AIML, where the code compiles 10% of the time, and the rest of the time you're just debugging your own life choices (kind of like me during mechanical ESA, staring at some PDF called MECHANICAL_COMBINED_SLIDES at 1 a.m., wondering why I exist).
 
-PyTorch offers several advantages over other frameworks:
+## Let's be real:
 
-- **Dynamic Computation Graphs**: Unlike static graphs, PyTorch builds the graph on-the-fly, making debugging easier
-- **Pythonic**: Feels natural to Python developers
-- **Strong Community**: Excellent documentation and community support
-- **Research-Friendly**: Easy to experiment with new architectures
+College is basically a giant neural network. First year is data preprocessing (removing bad habits… or adding new ones). Second year is training (overfitting on random tutorials you'll never revisit). Third year is hyperparameter tuning (a.k.a. freaking out about internships). And final year? That's just inference mode — praying your model (a.k.a. you) works in the real world (spoiler: it's more like barely compiling).
 
-## Installation
+## But here's the problem:
 
-First, let's install PyTorch. Visit [pytorch.org](https://pytorch.org) to get the installation command for your system.
+Most of us are in default mode — running in the great rat race. Spending three days researching "best ML course for beginners" and zero days actually starting one. Doing deep learning because it sounds deep. Building a chatbot because… well, ChatGPT is the buzzword of the decade. Before you know it, you've got around 10 GitHub repos named "final_final_version_REAL" and no clue what half of them do.
 
-\`\`\`bash
-# For CPU-only version
-pip install torch torchvision torchaudio
+**We forget the "why."**
 
-# For CUDA (GPU) version
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-\`\`\`
+Why did we even start learning ML? Was it curiosity? Was it to make something cool? Or was it just because LinkedIn made us feel like unemployed trash at 19 (btw, it still does)
 
-## Your First Neural Network
+## Here's my hot take:
 
-Let's build a simple neural network to classify handwritten digits:
+You don't have to be the fastest rat. You just have to be the curious one. Build ridiculous projects. Make the world's worst classifier. Train a model that predicts your GPA based on the number of classes you slept through. Fail spectacularly, laugh about it, then fix it. That's how you actually learn.
 
-\`\`\`python
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torchvision import datasets, transforms
+Because one day, when you graduate, you'll realize something important:
 
-# Define the neural network
-class SimpleNet(nn.Module):
-    def __init__(self):
-        super(SimpleNet, self).__init__()
-        self.fc1 = nn.Linear(784, 128)
-        self.fc2 = nn.Linear(128, 64)
-        self.fc3 = nn.Linear(64, 10)
-        self.relu = nn.ReLU()
-        
-    def forward(self, x):
-        x = x.view(-1, 784)  # Flatten the image
-        x = self.relu(self.fc1(x))
-        x = self.relu(self.fc2(x))
-        x = self.fc3(x)
-        return x
+**There was never really a finish line — just a lot of strange, frustrating, surprisingly fun checkpoints along the way.**
 
-# Create the model
-model = SimpleNet()
-print(model)
-\`\`\`
+And if you remember nothing else from this rant, remember this: it's better to trip on a path you chose than to sprint down one you don't understand. Slow down, look around, and maybe — just maybe — start running your own algorithm.
 
-## Loading Data
+---
 
-PyTorch provides convenient data loaders for common datasets:
-
-\`\`\`python
-# Data preprocessing
-transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize((0.1307,), (0.3081,))
-])
-
-# Load MNIST dataset
-train_dataset = datasets.MNIST('data', train=True, download=True, transform=transform)
-test_dataset = datasets.MNIST('data', train=False, transform=transform)
-
-train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle=True)
-test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=1000, shuffle=False)
-\`\`\`
-
-## Training the Model
-
-Here's how to train your neural network:
-
-\`\`\`python
-# Define loss function and optimizer
-criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
-
-# Training loop
-def train(model, train_loader, optimizer, criterion, epochs=5):
-    model.train()
-    for epoch in range(epochs):
-        running_loss = 0.0
-        for batch_idx, (data, target) in enumerate(train_loader):
-            optimizer.zero_grad()
-            output = model(data)
-            loss = criterion(output, target)
-            loss.backward()
-            optimizer.step()
-            
-            running_loss += loss.item()
-            if batch_idx % 100 == 0:
-                print(f'Epoch {epoch+1}/{epochs}, Batch {batch_idx}, Loss: {loss.item():.4f}')
-
-# Train the model
-train(model, train_loader, optimizer, criterion)
-\`\`\`
-
-## Key Concepts
-
-### Tensors
-Tensors are the fundamental data structure in PyTorch, similar to NumPy arrays but with GPU support:
-
-\`\`\`python
-# Create tensors
-x = torch.tensor([1, 2, 3])
-y = torch.randn(3, 4)  # Random tensor
-z = torch.zeros(2, 3)  # Zero tensor
-\`\`\`
-
-### Autograd
-PyTorch's automatic differentiation system:
-
-\`\`\`python
-x = torch.tensor([2.0], requires_grad=True)
-y = x ** 2
-y.backward()
-print(x.grad)  # Prints tensor([4.])
-\`\`\`
-
-## Best Practices
-
-1. **Use DataLoaders**: Always use PyTorch's DataLoader for efficient data loading
-2. **GPU Utilization**: Move your model and data to GPU when available
-3. **Model Checkpointing**: Save your model regularly during training
-4. **Validation**: Always validate your model on unseen data
-
-## Next Steps
-
-Now that you understand the basics, here are some next steps:
-
-- Explore different architectures (CNNs, RNNs, Transformers)
-- Learn about transfer learning
-- Experiment with different optimizers and loss functions
-- Try building more complex projects
-
-## Conclusion
-
-PyTorch provides an excellent foundation for deep learning projects. Its flexibility and ease of use make it perfect for both beginners and advanced practitioners. Start with simple projects and gradually work your way up to more complex architectures.
-
-Happy coding! 🚀
+*By Diya Prakash, 3rd Year CSE student (currently in inference mode… inferring why I chose CSE)*
       `
     },
-    'intro-to-ctf-recon-with-bloodhound': {
-      title: 'Intro to CTF Recon with BloodHound',
-      author: 'Karthik Venkat',
-      date: '10 Jan 2025',
+    'machine-learning-fundamentals-beginners-guide': {
+      title: 'Machine Learning Fundamentals: A Beginner\'s Complete Guide',
+      author: 'AI/ML Team',
+      date: '31 Jul 2025',
       readTime: '12 min read',
-      category: 'Security',
-      tags: ['CTF', 'Security', 'BloodHound', 'Reconnaissance'],
-      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      category: 'Machine Learning',
+      tags: ['Machine Learning', 'AI Fundamentals', 'Data Science', 'Beginner Guide'],
+      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200',
       content: `
-# Intro to CTF Recon with BloodHound
+# Machine Learning Fundamentals: A Beginner's Complete Guide
 
-BloodHound is a powerful tool for Active Directory reconnaissance that has become essential in both red team operations and CTF competitions. This guide will walk you through the basics of using BloodHound for CTF challenges.
+Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles. If you're new to this field, understanding the fundamentals is crucial for building a solid foundation. This comprehensive guide will walk you through the essential concepts, processes, and terminology you need to know.
 
-## What is BloodHound?
+## What is Machine Learning?
 
-BloodHound is a single page Javascript web application that uses graph theory to reveal hidden and often unintended relationships within an Active Directory environment. It's particularly useful for:
+Machine learning is a subset of artificial intelligence (AI) that enables computers to learn and make decisions from data without being explicitly programmed for every specific task. Instead of following pre-written instructions, ML systems identify patterns in data and use these patterns to make predictions or decisions about new, unseen data.
 
-- Finding attack paths
-- Identifying privilege escalation opportunities
-- Understanding domain relationships
-- Visualizing complex AD structures
+Think of it like teaching a child to recognize animals. Instead of describing every possible feature of a cat, you show them hundreds of cat pictures. Eventually, they learn to identify cats on their own by recognizing common patterns and features.
 
-## Installation and Setup
+![Simple Supervised Learning Example](https://media.geeksforgeeks.org/wp-content/uploads/20250428163955355688/Flowchart-of-Machine-Learning-Model.webp)
 
-### Installing BloodHound
+## The Machine Learning Process
 
-\`\`\`bash
-# Download the latest release from GitHub
-wget https://github.com/BloodHoundAD/BloodHound/releases/latest
+Building a machine learning model involves several key stages that work together to create an intelligent system:
 
-# Install Neo4j (required database)
-sudo apt update
-sudo apt install neo4j
+### 1. Data Collection and Preparation
 
-# Start Neo4j service
-sudo systemctl start neo4j
-sudo systemctl enable neo4j
-\`\`\`
+The machine learning process starts with collecting and processing training data. There's a famous saying in the ML community: "garbage in, garbage out." This means that an ML model is only as good as the data used to train it. Data preparation and processing might seem routine, but it's arguably the most critical stage that can make or break your model's performance.
 
-### Initial Configuration
+![Machine Learning Process](https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80)
 
-1. Access Neo4j browser at \`http://localhost:7474\`
-2. Default credentials: \`neo4j:neo4j\`
-3. Change the password when prompted
-4. Launch BloodHound and connect to the database
+#### Types of Data
 
-## Data Collection
+**Labeled vs. Unlabeled Data:**
 
-Before analysis, you need to collect data from the target domain.
+- **Labeled data:** Each example comes with a correct answer or target variable. For instance, in an image classification task, labeled data would consist of images along with their corresponding class labels (cat, dog, car).
+- **Unlabeled data:** Examples without any associated labels or target variables. This might be a collection of images without any labels or annotations.
 
-### Using SharpHound
+**Structured vs. Unstructured Data:**
 
-SharpHound is the official data collector for BloodHound:
+- **Structured data:** Organized in a predefined format, typically in tables or databases with rows and columns. This includes:
+  - **Tabular data:** Spreadsheets, databases, or CSV files with rows representing instances and columns representing features.
+  - **Time-series data:** Sequences of values measured over time, such as stock prices, sensor readings, or weather data.
 
-\`\`\`powershell
-# Basic collection
-.\SharpHound.exe -c All
+- **Unstructured data:** Lacks a predefined structure, requiring advanced techniques to extract meaningful patterns:
+  - **Text data:** Documents, articles, social media posts, and other textual content.
+  - **Image data:** Digital images, photographs, and video frames.
+  - **Audio data:** Sound recordings, music, and speech.
+  - **Video data:** Moving images with temporal sequences.
 
-# Stealth collection (slower but less detectable)
-.\SharpHound.exe -c All --stealth
+### 2. Algorithm Selection
 
-# Specific collection methods
-.\SharpHound.exe -c DCOnly,Group,LocalAdmin
-\`\`\`
+Once your data is prepared, you need to choose an appropriate machine learning algorithm. The choice depends on several factors:
 
-### Using BloodHound.py
+![Machine Learning Process](https://miro.medium.com/v2/resize:fit:1400/1*VUzIPOx0QuAub6tGLIQy2A.png)
 
-For Linux environments or when you can't run executables:
+- **Problem type:** Classification, regression, clustering, or other tasks.
+- **Data size:** Some algorithms work better with large datasets, others with smaller ones.
+- **Interpretability needs:** Some algorithms provide clear explanations, others are "black boxes."
+- **Performance requirements:** Speed vs. accuracy trade-offs.
 
-\`\`\`bash
-# Install bloodhound.py
-pip install bloodhound
+### 3. Model Training
 
-# Collect data remotely
-bloodhound-python -u username -p password -ns 10.10.10.10 -d domain.local -c all
-\`\`\`
+Training is where the magic happens. The algorithm analyzes your data to learn patterns and relationships. This process varies depending on the learning approach.
 
-## Understanding the Interface
+![Simple ML Workflow](https://miro.medium.com/v2/resize:fit:1400/1*VUzIPOx0QuAub6tGLIQy2A.png)
 
-### Main Components
+## Types of Machine Learning
 
-1. **Graph View**: Visual representation of relationships
-2. **Raw Query**: Custom Cypher queries
-3. **Pre-built Queries**: Common attack scenarios
-4. **Database Info**: Statistics about collected data
+![Types of ML](https://blog.infodiagram.com/wp-content/uploads/2024/09/predictive-ai-model-development-process-diagram-1024x576.png)
 
-### Key Nodes
+### Supervised Learning
 
-- **Users**: Domain user accounts
-- **Groups**: Security and distribution groups
-- **Computers**: Domain-joined machines
-- **Domains**: Domain objects
-- **GPOs**: Group Policy Objects
-- **OUs**: Organizational Units
+In supervised learning, algorithms are trained on labeled data. The goal is to learn a mapping function that can predict the output for new, unseen input data.
 
-## Common CTF Scenarios
+**Common supervised learning tasks:**
 
-### Finding Domain Admins
+- **Classification:** Predicting categories (spam vs. not spam, disease vs. healthy).
+- **Regression:** Predicting continuous values (house prices, temperature).
 
-\`\`\`cypher
-MATCH (u:User)-[:MemberOf*1..]->(g:Group)
-WHERE g.name =~ "(?i).*DOMAIN ADMINS.*"
-RETURN u.name
-\`\`\`
+**Popular algorithms:**
 
-### Shortest Path to Domain Admin
+- Linear Regression
+- Decision Trees
+- Random Forest
+- Support Vector Machines
+- Neural Networks
 
-Use the pre-built query "Shortest Paths to Domain Admins from Owned Principals" after marking users as owned.
+### Unsupervised Learning
 
-### Kerberoastable Users
+Unsupervised learning algorithms learn from unlabeled data. The goal is to discover inherent patterns, structures, or relationships within the input data without knowing the "correct" answers.
 
-\`\`\`cypher
-MATCH (u:User)
-WHERE u.hasspn = true
-RETURN u.name, u.serviceprincipalnames
-\`\`\`
+**Common unsupervised learning tasks:**
 
-### ASREPRoastable Users
+- **Clustering:** Grouping similar data points together.
+- **Dimensionality reduction:** Simplifying data while preserving important information.
+- **Anomaly detection:** Identifying unusual patterns or outliers.
 
-\`\`\`cypher
-MATCH (u:User)
-WHERE u.dontreqpreauth = true
-RETURN u.name
-\`\`\`
+**Popular algorithms:**
 
-## Advanced Techniques
+- K-Means Clustering
+- Hierarchical Clustering
+- Principal Component Analysis (PCA)
+- Association Rules
 
-### Custom Queries
+### Reinforcement Learning
 
-Finding users with DCSync privileges:
+In reinforcement learning, the machine learns through trial and error, receiving feedback in the form of rewards or penalties for its actions. The goal is to learn the best actions to take in different situations to maximize cumulative rewards.
 
-\`\`\`cypher
-MATCH (u:User)-[:GetChanges|GetChangesAll*1..]->(d:Domain)
-RETURN u.name
-\`\`\`
+**Key concepts:**
 
-Finding computers with unconstrained delegation:
+- **Agent:** The learning entity.
+- **Environment:** The world the agent operates in.
+- **Actions:** What the agent can do.
+- **Rewards:** Feedback from the environment.
+- **Policy:** The agent's strategy for choosing actions.
 
-\`\`\`cypher
-MATCH (c:Computer)
-WHERE c.unconstraineddelegation = true
-RETURN c.name
-\`\`\`
+**Applications:**
 
-### Marking Nodes as Owned
+- Game playing (chess, Go).
+- Robotics.
+- Autonomous vehicles.
+- Resource allocation.
 
-Right-click on nodes and select "Mark User as Owned" to:
-- Track your progress
-- Find new attack paths
-- Identify lateral movement opportunities
+## Model Evaluation and Validation
 
-## CTF-Specific Tips
+After training, you need to evaluate how well your model performs. This involves:
 
-### 1. Start with Pre-built Queries
+### Performance Metrics
 
-- "Find all Domain Admins"
-- "Find Shortest Paths to Domain Admins"
-- "Find Principals with DCSync Rights"
+Different metrics suit different types of problems.
 
-### 2. Look for Easy Wins
+**For Classification:**
 
-- Users with "Password Never Expires"
-- Kerberoastable accounts
-- Users with admin rights on multiple machines
+- **Accuracy:** Percentage of correct predictions.
+- **Precision:** Of positive predictions, how many were correct?
+- **Recall:** Of actual positive cases, how many were identified?
+- **F1-Score:** Harmonic mean of precision and recall.
 
-### 3. Analyze Group Memberships
+**For Regression:**
 
-- Nested group memberships
-- High-value groups
-- Custom groups with elevated privileges
+- **Mean Squared Error (MSE):** Average of squared differences.
+- **Root Mean Squared Error (RMSE):** Square root of MSE.
+- **Mean Absolute Error (MAE):** Average of absolute differences.
 
-### 4. Check for Misconfigurations
+### Cross-Validation
 
-- Excessive local admin rights
-- Dangerous ACLs
-- Overprivileged service accounts
+To ensure your model generalizes well to new data, you should use techniques like:
 
-## Common Pitfalls
+- **Train-Test Split:** Divide data into training and testing sets.
+- **K-Fold Cross-Validation:** Split data into k parts, train on k-1, test on 1, repeat.
+- **Hold-Out Validation:** Keep a separate validation set for final evaluation.
 
-### Data Collection Issues
+## Inferencing: Putting Models to Work
 
-- Insufficient privileges for complete enumeration
-- Network connectivity problems
-- AV/EDR detection
+After training and validation, it's time to use your model to make predictions or decisions. This process is called inferencing.
 
-### Analysis Mistakes
+![Machine Learning Process](https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80)
 
-- Not marking owned principals
-- Ignoring indirect relationships
-- Focusing only on obvious paths
+### Types of Inferencing
 
-## Practical Example
+**Batch Inferencing:**
 
-Let's walk through a typical CTF scenario:
+Batch inferencing processes large amounts of data all at once to provide a set of results. This approach is ideal for tasks like data analysis, where accuracy is more important than speed. Examples include:
 
-1. **Initial Access**: You've compromised a low-privilege user
-2. **Data Collection**: Run SharpHound from the compromised machine
-3. **Import Data**: Load the ZIP file into BloodHound
-4. **Mark Owned**: Right-click your compromised user and mark as owned
-5. **Find Paths**: Use "Shortest Paths to Domain Admins from Owned Principals"
-6. **Analyze Results**: Look for exploitable relationships in the path
+- Monthly customer segmentation analysis.
+- Quarterly financial forecasting.
+- Daily recommendation updates.
 
-## Defensive Considerations
+**Real-Time Inferencing:**
 
-Understanding BloodHound helps defenders too:
+Real-time inferencing makes decisions quickly in response to new information as it arrives. This is crucial for applications requiring immediate responses, such as:
 
-- Identify dangerous privilege escalation paths
-- Reduce attack surface
-- Monitor for data collection activities
-- Implement proper access controls
+- Chatbots responding to user queries.
+- Self-driving cars making split-second decisions.
+- Fraud detection systems flagging suspicious transactions.
+- Medical diagnosis systems providing instant results.
 
-## Conclusion
+## Common Challenges and Solutions
 
-BloodHound is an invaluable tool for understanding Active Directory environments. In CTF contexts, it can quickly reveal attack paths that might take hours to discover manually. Practice with different datasets and scenarios to become proficient with its capabilities.
+### Overfitting and Underfitting
 
-Remember: Always use these techniques ethically and only in authorized environments!
+- **Overfitting:** Model memorizes training data but fails on new data.
+  - **Solution:** Use regularization, cross-validation, or simpler models.
+- **Underfitting:** Model is too simple to capture underlying patterns.
+  - **Solution:** Use more complex models, add features, or train longer.
 
-## Resources
+### Data Quality Issues
 
-- [BloodHound Documentation](https://bloodhound.readthedocs.io/)
-- [SharpHound Collectors](https://github.com/BloodHoundAD/SharpHound)
-- [Cypher Query Language](https://neo4j.com/developer/cypher/)
-      `
-    },
-    'building-secure-ssl-chatroom-in-c': {
-      title: 'Building a Secure SSL Chatroom in C',
-      author: 'Ananya Sharma',
-      date: '5 Jan 2025',
-      readTime: '15 min read',
-      category: 'Programming',
-      tags: ['C Programming', 'SSL/TLS', 'Network Security', 'Socket Programming'],
-      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      content: `
-# Building a Secure SSL Chatroom in C
+- **Missing data:** Use imputation techniques or algorithms that handle missing values.
+- **Outliers:** Identify and handle extreme values appropriately.
+- **Bias:** Ensure your data represents the problem you're solving.
 
-Creating a secure chatroom application requires understanding both network programming and cryptographic protocols. In this tutorial, we'll build a multi-client chatroom server using C with SSL/TLS encryption.
+### Scalability
 
-## Prerequisites
+- **Large datasets:** Use distributed computing, cloud platforms, or streaming algorithms.
+- **Real-time requirements:** Optimize models for speed, use edge computing.
 
-- Basic knowledge of C programming
-- Understanding of socket programming
-- Familiarity with SSL/TLS concepts
-- Linux development environment
+## Getting Started: Your First Steps
 
-## Required Libraries
+- **Learn the basics:** Understand statistics, probability, and programming (Python or R).
+- **Practice with datasets:** Start with clean, well-documented datasets.
+- **Use tools and libraries:** Leverage scikit-learn, TensorFlow, or PyTorch.
+- **Join communities:** Participate in Kaggle competitions, forums, and meetups.
+- **Work on projects:** Apply your knowledge to real-world problems.
 
-\`\`\`bash
-# Install OpenSSL development libraries
-sudo apt-get install libssl-dev
+## Key Takeaways
 
-# Install pthread library (usually included)
-sudo apt-get install libc6-dev
-\`\`\`
+Machine learning is a powerful tool that can solve complex problems across various domains. Success depends on:
 
-## Project Structure
+- **Quality data:** Clean, relevant, and representative datasets.
+- **Appropriate algorithms:** Choosing the right approach for your problem.
+- **Proper evaluation:** Using robust validation techniques.
+- **Continuous learning:** The field evolves rapidly, so stay updated.
 
-\`\`\`
-chatroom/
-├── server.c
-├── client.c
-├── ssl_utils.c
-├── ssl_utils.h
-├── Makefile
-├── certs/
-│   ├── server.crt
-│   └── server.key
-\`\`\`
+Remember that machine learning is both an art and a science. While understanding the theory is important, practical experience through hands-on projects will accelerate your learning journey.
 
-## SSL Utilities Header
+The field of machine learning offers endless possibilities for innovation and problem-solving. Whether you're interested in healthcare, finance, technology, or any other domain, ML skills can help you unlock valuable insights from data and create intelligent systems that make a real difference.
 
-First, let's create our SSL utility functions:
-
-\`\`\`c
-// ssl_utils.h
-#ifndef SSL_UTILS_H
-#define SSL_UTILS_H
-
-#include <openssl/ssl.h>
-#include <openssl/err.h>
-#include <openssl/bio.h>
-
-#define MAX_CLIENTS 10
-#define BUFFER_SIZE 1024
-
-typedef struct {
-    SSL *ssl;
-    int socket;
-    char username[50];
-} client_t;
-
-// Function declarations
-SSL_CTX* create_server_context(void);
-SSL_CTX* create_client_context(void);
-void configure_server_context(SSL_CTX *ctx);
-void configure_client_context(SSL_CTX *ctx);
-void cleanup_openssl(void);
-void init_openssl(void);
-
-#endif
-\`\`\`
-
-## SSL Utilities Implementation
-
-\`\`\`c
-// ssl_utils.c
-#include "ssl_utils.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-void init_openssl() {
-    SSL_load_error_strings();
-    OpenSSL_add_ssl_algorithms();
-}
-
-void cleanup_openssl() {
-    EVP_cleanup();
-}
-
-SSL_CTX* create_server_context() {
-    const SSL_METHOD *method;
-    SSL_CTX *ctx;
-
-    method = TLS_server_method();
-    ctx = SSL_CTX_new(method);
-    if (!ctx) {
-        perror("Unable to create SSL context");
-        ERR_print_errors_fp(stderr);
-        exit(EXIT_FAILURE);
-    }
-
-    return ctx;
-}
-
-SSL_CTX* create_client_context() {
-    const SSL_METHOD *method;
-    SSL_CTX *ctx;
-
-    method = TLS_client_method();
-    ctx = SSL_CTX_new(method);
-    if (!ctx) {
-        perror("Unable to create SSL context");
-        ERR_print_errors_fp(stderr);
-        exit(EXIT_FAILURE);
-    }
-
-    return ctx;
-}
-
-void configure_server_context(SSL_CTX *ctx) {
-    // Set the key and cert
-    if (SSL_CTX_use_certificate_file(ctx, "certs/server.crt", SSL_FILETYPE_PEM) <= 0) {
-        ERR_print_errors_fp(stderr);
-        exit(EXIT_FAILURE);
-    }
-
-    if (SSL_CTX_use_PrivateKey_file(ctx, "certs/server.key", SSL_FILETYPE_PEM) <= 0) {
-        ERR_print_errors_fp(stderr);
-        exit(EXIT_FAILURE);
-    }
-
-    // Verify private key
-    if (!SSL_CTX_check_private_key(ctx)) {
-        fprintf(stderr, "Private key does not match the public certificate\\n");
-        exit(EXIT_FAILURE);
-    }
-}
-
-void configure_client_context(SSL_CTX *ctx) {
-    // For this example, we'll skip certificate verification
-    // In production, you should verify the server certificate
-    SSL_CTX_set_verify(ctx, SSL_VERIFY_NONE, NULL);
-}
-\`\`\`
-
-## Server Implementation
-
-\`\`\`c
-// server.c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <pthread.h>
-#include "ssl_utils.h"
-
-client_t *clients[MAX_CLIENTS];
-int client_count = 0;
-pthread_mutex_t clients_mutex = PTHREAD_MUTEX_INITIALIZER;
-
-void add_client(client_t *client) {
-    pthread_mutex_lock(&clients_mutex);
-    for (int i = 0; i < MAX_CLIENTS; i++) {
-        if (!clients[i]) {
-            clients[i] = client;
-            client_count++;
-            break;
-        }
-    }
-    pthread_mutex_unlock(&clients_mutex);
-}
-
-void remove_client(client_t *client) {
-    pthread_mutex_lock(&clients_mutex);
-    for (int i = 0; i < MAX_CLIENTS; i++) {
-        if (clients[i] == client) {
-            clients[i] = NULL;
-            client_count--;
-            break;
-        }
-    }
-    pthread_mutex_unlock(&clients_mutex);
-}
-
-void broadcast_message(char *message, client_t *sender) {
-    pthread_mutex_lock(&clients_mutex);
-    for (int i = 0; i < MAX_CLIENTS; i++) {
-        if (clients[i] && clients[i] != sender) {
-            if (SSL_write(clients[i]->ssl, message, strlen(message)) <= 0) {
-                printf("Failed to send message to client\\n");
-            }
-        }
-    }
-    pthread_mutex_unlock(&clients_mutex);
-}
-
-void* handle_client(void *arg) {
-    client_t *client = (client_t*)arg;
-    char buffer[BUFFER_SIZE];
-    char message[BUFFER_SIZE + 100];
-    int bytes_received;
-
-    // Get username
-    if (SSL_read(client->ssl, client->username, sizeof(client->username)) <= 0) {
-        printf("Failed to receive username\\n");
-        goto cleanup;
-    }
-
-    printf("User %s connected\\n", client->username);
-    
-    // Notify other clients
-    snprintf(message, sizeof(message), "%s joined the chat\\n", client->username);
-    broadcast_message(message, client);
-
-    // Handle messages
-    while ((bytes_received = SSL_read(client->ssl, buffer, BUFFER_SIZE - 1)) > 0) {
-        buffer[bytes_received] = '\\0';
-        
-        if (strcmp(buffer, "/quit") == 0) {
-            break;
-        }
-        
-        snprintf(message, sizeof(message), "%s: %s", client->username, buffer);
-        printf("%s", message);
-        broadcast_message(message, client);
-    }
-
-cleanup:
-    printf("User %s disconnected\\n", client->username);
-    snprintf(message, sizeof(message), "%s left the chat\\n", client->username);
-    broadcast_message(message, client);
-    
-    remove_client(client);
-    SSL_shutdown(client->ssl);
-    SSL_free(client->ssl);
-    close(client->socket);
-    free(client);
-    
-    return NULL;
-}
-
-int main() {
-    int server_socket, client_socket;
-    struct sockaddr_in server_addr, client_addr;
-    socklen_t client_len = sizeof(client_addr);
-    SSL_CTX *ctx;
-    
-    init_openssl();
-    ctx = create_server_context();
-    configure_server_context(ctx);
-
-    // Create socket
-    server_socket = socket(AF_INET, SOCK_STREAM, 0);
-    if (server_socket < 0) {
-        perror("Socket creation failed");
-        exit(EXIT_FAILURE);
-    }
-
-    // Configure server address
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_addr.s_addr = INADDR_ANY;
-    server_addr.sin_port = htons(8443);
-
-    // Bind socket
-    if (bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr)) < 0) {
-        perror("Bind failed");
-        exit(EXIT_FAILURE);
-    }
-
-    // Listen for connections
-    if (listen(server_socket, MAX_CLIENTS) < 0) {
-        perror("Listen failed");
-        exit(EXIT_FAILURE);
-    }
-
-    printf("SSL Chatroom Server listening on port 8443...\\n");
-
-    while (1) {
-        client_socket = accept(server_socket, (struct sockaddr*)&client_addr, &client_len);
-        if (client_socket < 0) {
-            perror("Accept failed");
-            continue;
-        }
-
-        // Create SSL connection
-        SSL *ssl = SSL_new(ctx);
-        SSL_set_fd(ssl, client_socket);
-
-        if (SSL_accept(ssl) <= 0) {
-            ERR_print_errors_fp(stderr);
-            SSL_free(ssl);
-            close(client_socket);
-            continue;
-        }
-
-        // Create client structure
-        client_t *client = malloc(sizeof(client_t));
-        client->ssl = ssl;
-        client->socket = client_socket;
-        
-        add_client(client);
-
-        // Create thread for client
-        pthread_t thread_id;
-        pthread_create(&thread_id, NULL, handle_client, client);
-        pthread_detach(thread_id);
-    }
-
-    close(server_socket);
-    SSL_CTX_free(ctx);
-    cleanup_openssl();
-    
-    return 0;
-}
-\`\`\`
-
-## Client Implementation
-
-\`\`\`c
-// client.c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <pthread.h>
-#include "ssl_utils.h"
-
-SSL *ssl;
-int running = 1;
-
-void* receive_messages(void *arg) {
-    char buffer[BUFFER_SIZE];
-    int bytes_received;
-    
-    while (running && (bytes_received = SSL_read(ssl, buffer, BUFFER_SIZE - 1)) > 0) {
-        buffer[bytes_received] = '\\0';
-        printf("%s", buffer);
-        fflush(stdout);
-    }
-    
-    return NULL;
-}
-
-int main() {
-    int client_socket;
-    struct sockaddr_in server_addr;
-    SSL_CTX *ctx;
-    char username[50];
-    char message[BUFFER_SIZE];
-    
-    init_openssl();
-    ctx = create_client_context();
-    configure_client_context(ctx);
-
-    // Create socket
-    client_socket = socket(AF_INET, SOCK_STREAM, 0);
-    if (client_socket < 0) {
-        perror("Socket creation failed");
-        exit(EXIT_FAILURE);
-    }
-
-    // Configure server address
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(8443);
-    inet_pton(AF_INET, "127.0.0.1", &server_addr.sin_addr);
-
-    // Connect to server
-    if (connect(client_socket, (struct sockaddr*)&server_addr, sizeof(server_addr)) < 0) {
-        perror("Connection failed");
-        exit(EXIT_FAILURE);
-    }
-
-    // Create SSL connection
-    ssl = SSL_new(ctx);
-    SSL_set_fd(ssl, client_socket);
-
-    if (SSL_connect(ssl) <= 0) {
-        ERR_print_errors_fp(stderr);
-        exit(EXIT_FAILURE);
-    }
-
-    printf("Connected to SSL Chatroom Server\\n");
-    printf("Enter your username: ");
-    fgets(username, sizeof(username), stdin);
-    username[strcspn(username, "\\n")] = 0; // Remove newline
-
-    // Send username to server
-    SSL_write(ssl, username, strlen(username));
-
-    printf("Welcome to the chatroom! Type '/quit' to exit.\\n");
-
-    // Start receiving thread
-    pthread_t receive_thread;
-    pthread_create(&receive_thread, NULL, receive_messages, NULL);
-
-    // Send messages
-    while (running) {
-        fgets(message, sizeof(message), stdin);
-        
-        if (strncmp(message, "/quit", 5) == 0) {
-            running = 0;
-            SSL_write(ssl, "/quit", 5);
-            break;
-        }
-        
-        SSL_write(ssl, message, strlen(message));
-    }
-
-    pthread_join(receive_thread, NULL);
-    
-    SSL_shutdown(ssl);
-    SSL_free(ssl);
-    close(client_socket);
-    SSL_CTX_free(ctx);
-    cleanup_openssl();
-    
-    return 0;
-}
-\`\`\`
-
-## Makefile
-
-\`\`\`makefile
-CC=gcc
-CFLAGS=-Wall -Wextra -std=c99 -pthread
-LIBS=-lssl -lcrypto
-
-all: server client
-
-server: server.c ssl_utils.c
-	$(CC) $(CFLAGS) -o server server.c ssl_utils.c $(LIBS)
-
-client: client.c ssl_utils.c
-	$(CC) $(CFLAGS) -o client client.c ssl_utils.c $(LIBS)
-
-clean:
-	rm -f server client
-
-.PHONY: all clean
-\`\`\`
-
-## Generating SSL Certificates
-
-\`\`\`bash
-# Create certificates directory
-mkdir certs
-
-# Generate private key
-openssl genrsa -out certs/server.key 2048
-
-# Generate certificate
-openssl req -new -x509 -key certs/server.key -out certs/server.crt -days 365
-\`\`\`
-
-## Security Considerations
-
-### 1. Certificate Validation
-In production, always validate server certificates:
-
-\`\`\`c
-SSL_CTX_set_verify(ctx, SSL_VERIFY_PEER, verify_callback);
-\`\`\`
-
-### 2. Input Validation
-Always validate and sanitize user input:
-
-\`\`\`c
-// Sanitize username
-for (int i = 0; username[i]; i++) {
-    if (!isalnum(username[i]) && username[i] != '_') {
-        username[i] = '_';
-    }
-}
-\`\`\`
-
-### 3. Buffer Overflow Protection
-Use safe string functions:
-
-\`\`\`c
-strncpy(dest, src, sizeof(dest) - 1);
-dest[sizeof(dest) - 1] = '\\0';
-\`\`\`
-
-## Building and Running
-
-\`\`\`bash
-# Compile
-make
-
-# Run server
-./server
-
-# Run client (in another terminal)
-./client
-\`\`\`
-
-## Conclusion
-
-This secure chatroom demonstrates key concepts in network programming and SSL/TLS implementation. The application provides:
-
-- Encrypted communication using SSL/TLS
-- Multi-client support with threading
-- Basic chat functionality
-- Proper resource cleanup
-
-For production use, consider adding:
-- User authentication
-- Message persistence
-- Rate limiting
-- Better error handling
-- Certificate validation
-
-The complete source code provides a solid foundation for building more complex secure network applications.
+Start with the fundamentals, practice regularly, and don't be afraid to experiment. The journey of mastering machine learning is challenging but incredibly rewarding.
       `
     }
   };
@@ -1082,6 +439,13 @@ The complete source code provides a solid foundation for building more complex s
                   >
                     {children}
                   </a>
+                ),
+                img: ({ src, alt }) => (
+                  <img
+                    src={src}
+                    alt={alt}
+                    className="w-full rounded-lg my-8 shadow-lg"
+                  />
                 )
               }}
             >
@@ -1115,7 +479,9 @@ The complete source code provides a solid foundation for building more complex s
                   {post.author}
                 </h4>
                 <p className="text-primary-gray-300 font-inter">
-                  Active member of Neural Hive, passionate about sharing knowledge and building the AI community at PESU EC.
+                  {post.author === 'Diya Prakash' 
+                    ? '3rd Year CSE student passionate about AI/ML and sharing honest insights about college life.'
+                    : 'Active member of Neural Hive, passionate about sharing knowledge and building the AI community at PESU EC.'}
                 </p>
               </div>
             </div>

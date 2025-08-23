@@ -37,96 +37,32 @@ const Blog = () => {
 
   const blogPosts = [
     {
+      title: 'Welcome to College: You\'re Now in the Algorithm',
+      author: 'Diya Prakash',
+      date: '1 Aug 2025',
+      readTime: '5 min read',
+      category: 'College Life',
+      excerpt: 'Hey freshers, and hello to the rest of you seniors who are basically running on caffeine, deadlines, and whatever confidence you had before grades humbled you into oblivion.',
+      tags: ['College', 'Life', 'Freshers', 'Algorithm'],
+      image: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=800',
+      featured: true,
+      slug: 'welcome-to-college-youre-now-in-the-algorithm'
+    },
+    {
       title: 'Machine Learning Fundamentals: A Beginner\'s Complete Guide',
       author: 'AI/ML Team',
       date: '31 Jul 2025',
       readTime: '12 min read',
       category: 'Machine Learning',
-      excerpt: 'Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles. This comprehensive guide will walk you through the essential concepts, processes, and terminology you need to know.',
+      excerpt: 'Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles.',
       tags: ['Machine Learning', 'AI Fundamentals', 'Data Science', 'Beginner Guide'],
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
       featured: true,
       slug: 'machine-learning-fundamentals-beginners-guide'
     }
-    // Commented out other blog posts to show only ML Fundamentals
-    /*
-    {
-      title: 'Getting Started with PyTorch',
-      author: 'Rithvik Matta',
-      date: '15 Jan 2025',
-      readTime: '8 min read',
-      category: 'Deep Learning',
-      excerpt: 'A comprehensive guide to setting up PyTorch and building your first neural network from scratch.',
-      tags: ['PyTorch', 'Deep Learning', 'Neural Networks', 'Python'],
-      image: 'https://images.pexels.com/photos/7661980/pexels-photo-7661980.jpeg?auto=compress&cs=tinysrgb&w=800',
-      featured: false,
-      slug: 'getting-started-with-pytorch'
-    },
-    {
-      title: 'Intro to CTF Recon with BloodHound',
-      author: 'Karthik Venkat',
-      date: '10 Jan 2025',
-      readTime: '12 min read',
-      category: 'Cybersecurity AI',
-      excerpt: 'Learn reconnaissance techniques using BloodHound for cybersecurity competitions and ethical hacking.',
-      tags: ['CTF', 'AI Security', 'BloodHound', 'Reconnaissance'],
-      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
-      featured: false,
-      slug: 'intro-to-ctf-recon-with-bloodhound'
-    },
-    {
-      title: 'Building a Secure SSL Chatroom in C',
-      author: 'Ananya Sharma',
-      date: '5 Jan 2025',
-      readTime: '15 min read',
-      category: 'AI Development',
-      excerpt: 'Deep dive into implementing secure client-server communication using SSL/TLS protocols in C.',
-      tags: ['C Programming', 'SSL/TLS', 'Network Security', 'Socket Programming'],
-      image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800',
-      featured: false,
-      slug: 'building-secure-ssl-chatroom-in-c'
-    },
-    {
-      title: 'Computer Vision for Beginners',
-      author: 'Priya Nair',
-      date: '28 Dec 2024',
-      readTime: '10 min read',
-      category: 'Computer Vision',
-      excerpt: 'Introduction to computer vision concepts, OpenCV basics, and practical image processing techniques.',
-      tags: ['Computer Vision', 'OpenCV', 'Image Processing', 'Python'],
-      image: 'https://images.pexels.com/photos/7048047/pexels-photo-7048047.jpeg?auto=compress&cs=tinysrgb&w=800',
-      featured: true,
-      slug: 'computer-vision-for-beginners'
-    },
-    {
-      title: 'Ethical AI: Building Responsible Systems',
-      author: 'Shreya Patel',
-      date: '20 Dec 2024',
-      readTime: '6 min read',
-      category: 'AI Ethics',
-      excerpt: 'Exploring the importance of ethical considerations in AI development and deployment.',
-      tags: ['AI Ethics', 'Responsible AI', 'Machine Learning', 'Society'],
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-      featured: false,
-      slug: 'ethical-ai-building-responsible-systems'
-    },
-    {
-      title: 'Deploying ML Models with FastAPI',
-      author: 'Arjun Reddy',
-      date: '15 Dec 2024',
-      readTime: '11 min read',
-      category: 'MLOps',
-      excerpt: 'Learn how to create production-ready APIs for your machine learning models using FastAPI.',
-      tags: ['FastAPI', 'ML Deployment', 'Python', 'REST API'],
-      image: 'https://images.pexels.com/photos/7662235/pexels-photo-7662235.jpeg?auto=compress&cs=tinysrgb&w=800',
-      featured: false,
-      slug: 'deploying-ml-models-with-fastapi'
-    }
-    */
   ];
 
-  // Updated categories with AIML keywords
-  const categories = ['All', 'Machine Learning', 'Deep Learning', 'Computer Vision', 'Natural Language Processing', 'AI Ethics', 'MLOps', 'Data Science', 'Neural Networks', 'Reinforcement Learning'];
+  const categories = ['All', 'College Life', 'Machine Learning', 'Deep Learning', 'Computer Vision', 'Natural Language Processing', 'AI Ethics', 'MLOps', 'Data Science', 'Neural Networks', 'Reinforcement Learning'];
   const [activeCategory, setActiveCategory] = React.useState('All');
 
   const filteredPosts = activeCategory === 'All' 
@@ -147,10 +83,10 @@ const Blog = () => {
           >
             <BookOpen className="h-20 w-20 text-primary-accent mx-auto mb-6" />
             <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6 glow-text">
-              AI/ML Blog & Resources
+              Neural Hive Blog
             </h1>
             <p className="text-xl text-primary-gray-300 font-inter">
-              Knowledge sharing from our AI/ML community - tutorials, insights, and technical deep-dives
+              Knowledge sharing from our AI/ML community - tutorials, insights, and real college experiences
             </p>
           </motion.div>
         </div>
@@ -170,7 +106,7 @@ const Blog = () => {
               Featured Posts
             </h2>
             <p className="text-xl text-primary-gray-400 font-inter">
-              Hand-picked articles from our AI/ML technical contributors
+              Latest articles from our community contributors
             </p>
           </motion.div>
 
@@ -257,7 +193,7 @@ const Blog = () => {
               All Posts
             </h2>
             <p className="text-xl text-primary-gray-400 font-inter mb-8">
-              Explore our complete collection of AI/ML articles and tutorials
+              Explore our complete collection of articles and tutorials
             </p>
 
             {/* Category Filter */}
@@ -366,7 +302,7 @@ const Blog = () => {
               Stay Updated
             </h2>
             <p className="text-xl text-primary-gray-300 mb-8 font-inter">
-              Subscribe to get notified when we publish new AI/ML articles and tutorials
+              Subscribe to get notified when we publish new articles and tutorials
             </p>
             
             {subscribed ? (
