@@ -71,6 +71,7 @@ And if you remember nothing else from this rant, remember this: it's better to t
       content: `
 # Machine Learning Fundamentals: A Beginner's Complete Guide
 
+
 Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles. If you're new to this field, understanding the fundamentals is crucial for building a solid foundation. This comprehensive guide will walk you through the essential concepts, processes, and terminology you need to know.
 
 ## What is Machine Learning?
@@ -79,6 +80,9 @@ Machine learning is a subset of artificial intelligence (AI) that enables comput
 
 Think of it like teaching a child to recognize animals. Instead of describing every possible feature of a cat, you show them hundreds of cat pictures. Eventually, they learn to identify cats on their own by recognizing common patterns and features.
 
+![Simple Supervised Learning Example](https://media.geeksforgeeks.org/wp-content/uploads/20250428163955355688/Flowchart-of-Machine-Learning-Model.webp)
+
+
 ## The Machine Learning Process
 
 Building a machine learning model involves several key stages that work together to create an intelligent system:
@@ -86,6 +90,9 @@ Building a machine learning model involves several key stages that work together
 ### 1. Data Collection and Preparation
 
 The machine learning process starts with collecting and processing training data. There's a famous saying in the ML community: "garbage in, garbage out." This means that an ML model is only as good as the data used to train it. Data preparation and processing might seem routine, but it's arguably the most critical stage that can make or break your model's performance.
+
+![Machine Learning Process](/pictures/training-data.png)
+
 
 #### Types of Data
 
@@ -110,6 +117,9 @@ The machine learning process starts with collecting and processing training data
 
 Once your data is prepared, you need to choose an appropriate machine learning algorithm. The choice depends on several factors:
 
+![Machine Learning Process](/pictures/machine-learning-process.png)
+
+
 - **Problem type:** Classification, regression, clustering, or other tasks.
 - **Data size:** Some algorithms work better with large datasets, others with smaller ones.
 - **Interpretability needs:** Some algorithms provide clear explanations, others are "black boxes."
@@ -119,7 +129,13 @@ Once your data is prepared, you need to choose an appropriate machine learning a
 
 Training is where the magic happens. The algorithm analyzes your data to learn patterns and relationships. This process varies depending on the learning approach.
 
+![Simple ML Workflow](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2AVUzIPOx0QuAub6tGLIQy2A.png)
+
+
 ## Types of Machine Learning
+
+![Types of ML](https://blog.infodiagram.com/wp-content/uploads/2024/09/predictive-ai-model-development-process-diagram-1024x576.png)
+
 
 ### Supervised Learning
 
@@ -203,6 +219,32 @@ To ensure your model generalizes well to new data, you should use techniques lik
 - **K-Fold Cross-Validation:** Split data into k parts, train on k-1, test on 1, repeat.
 - **Hold-Out Validation:** Keep a separate validation set for final evaluation.
 
+## Inferencing: Putting Models to Work
+
+After training and validation, it's time to use your model to make predictions or decisions. This process is called inferencing.
+
+![Machine Learning Process](/pictures/inferencing.png)
+
+
+### Types of Inferencing
+
+**Batch Inferencing:**
+
+Batch inferencing processes large amounts of data all at once to provide a set of results. This approach is ideal for tasks like data analysis, where accuracy is more important than speed. Examples include:
+
+- Monthly customer segmentation analysis.
+- Quarterly financial forecasting.
+- Daily recommendation updates.
+
+**Real-Time Inferencing:**
+
+Real-time inferencing makes decisions quickly in response to new information as it arrives. This is crucial for applications requiring immediate responses, such as:
+
+- Chatbots responding to user queries.
+- Self-driving cars making split-second decisions.
+- Fraud detection systems flagging suspicious transactions.
+- Medical diagnosis systems providing instant results.
+
 ## Common Challenges and Solutions
 
 ### Overfitting and Underfitting
@@ -245,6 +287,7 @@ Remember that machine learning is both an art and a science. While understanding
 The field of machine learning offers endless possibilities for innovation and problem-solving. Whether you're interested in healthcare, finance, technology, or any other domain, ML skills can help you unlock valuable insights from data and create intelligent systems that make a real difference.
 
 Start with the fundamentals, practice regularly, and don't be afraid to experiment. The journey of mastering machine learning is challenging but incredibly rewarding.
+
       `
     },
     'deep-learning-neural-networks-explained': {
