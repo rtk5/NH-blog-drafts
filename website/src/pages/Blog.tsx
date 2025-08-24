@@ -44,7 +44,7 @@ const Blog = () => {
       category: 'College Life',
       excerpt: 'Hey freshers, and hello to the rest of you seniors who are basically running on caffeine, deadlines, and whatever confidence you had before grades humbled you into oblivion.',
       tags: ['College', 'Life', 'Freshers', 'Algorithm'],
-      image: 'https://media.canva.com/v2/files/uri:ifs%3A%2F%2FS%2F1f69dbc8-f321-4ace-b082-b8e19b6309f6_00000041_001?csig=AAAAAAAAAAAAAAAAAAAAADIU_j8Cda5Zmeo5ZnPRX2A9VblfAeO05PhZvF0hpbGI&exp=1755969116&signer=assistant-rpc&token=AAIAAVMAMTFmNjlkYmM4LWYzMjEtNGFjZS1iMDgyLWI4ZTE5YjYzMDlmNl8wMDAwMDA0MV8wMDEAAAAAAZjX6lpAcTScmvYkiVcVOgry1GoN1j-Ck5Lw7xx6gDbGK-ywpxY',
+      image: 'https://pictures-for-websites.vercel.app/welc.jpg',
       featured: true,
       slug: 'welcome-to-college-youre-now-in-the-algorithm'
     },

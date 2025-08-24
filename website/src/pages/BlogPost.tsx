@@ -21,7 +21,7 @@ const BlogPost = () => {
       readTime: '5 min read',
       category: 'College Life',
       tags: ['College', 'Life', 'Freshers', 'Algorithm'],
-      image: 'https://media.canva.com/v2/files/uri:ifs%3A%2F%2FS%2F1f69dbc8-f321-4ace-b082-b8e19b6309f6_00000041_001?csig=AAAAAAAAAAAAAAAAAAAAADIU_j8Cda5Zmeo5ZnPRX2A9VblfAeO05PhZvF0hpbGI&exp=1755969116&signer=assistant-rpc&token=AAIAAVMAMTFmNjlkYmM4LWYzMjEtNGFjZS1iMDgyLWI4ZTE5YjYzMDlmNl8wMDAwMDA0MV8wMDEAAAAAAZjX6lpAcTScmvYkiVcVOgry1GoN1j-Ck5Lw7xx6gDbGK-ywpxY',
+      image: 'https://pictures-for-websites.vercel.app/welc.jpg',
       content: `
 # Welcome to College: You're Now in the Algorithm
 
