@@ -17,7 +17,7 @@ const BlogPost = () => {
         image: 'https://pictures-for-websites.vercel.app/diya.webp',
         bio: '3rd Year CSE student passionate about AI/ML and sharing honest insights about college life. Currently running on caffeine and confusion, but making it work!'
       },
-      date: '1 Aug 2025',
+      date: '25 Aug 2025',
       readTime: '5 min read',
       category: 'College Life',
       tags: ['College', 'Life', 'Freshers', 'Algorithm'],
@@ -63,7 +63,7 @@ And if you remember nothing else from this rant, remember this: it's better to t
         image: 'https://pictures-for-websites.vercel.app/rtk.webp',
         bio: 'ML enthusiast and active member of Neural Hive. Passionate about making complex AI concepts accessible to beginners. When not coding, you can find him explaining algorithms with coffee analogies.'
       },
-      date: '31 Jul 2025',
+      date: '25 Aug 2025',
       readTime: '12 min read',
       category: 'Machine Learning',
       tags: ['Machine Learning', 'AI Fundamentals', 'Data Science', 'Beginner Guide'],

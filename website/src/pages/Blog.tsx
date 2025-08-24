@@ -39,7 +39,7 @@ const Blog = () => {
     {
       title: 'Welcome to College: You\'re Now in the Algorithm',
       author: 'Diya Prakash',
-      date: '1 Aug 2025',
+      date: '25 Aug 2025',
       readTime: '5 min read',
       category: 'College Life',
       excerpt: 'Hey freshers, and hello to the rest of you seniors who are basically running on caffeine, deadlines, and whatever confidence you had before grades humbled you into oblivion.',
@@ -51,7 +51,7 @@ const Blog = () => {
     {
       title: 'Machine Learning Fundamentals: A Beginner\'s Complete Guide',
       author: 'Rithvik Matta',
-      date: '31 Jul 2025',
+      date: '25 Aug 2025',
       readTime: '12 min read',
       category: 'Machine Learning',
       excerpt: 'Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles.',
