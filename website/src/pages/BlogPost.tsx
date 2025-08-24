@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { ArrowLeft, Calendar, User, Clock, Tag, Share2 } from 'lucide-react';
+import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -454,13 +454,6 @@ Deep learning continues to evolve rapidly, with new architectures and techniques
                   <span>{tag}</span>
                 </span>
               ))}
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <button className="flex items-center space-x-2 text-primary-gray-400 hover:text-primary-accent transition-colors">
-                <Share2 className="h-4 w-4" />
-                <span>Share</span>
-              </button>
             </div>
           </motion.div>
         </div>
