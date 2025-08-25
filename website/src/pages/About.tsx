@@ -27,7 +27,7 @@ const About = () => {
   ];
 
   const affiliations = [
-    { name: 'IEEE Student Branch', description: 'Technical excellence and innovation' },
+    // { name: 'IEEE Student Branch', description: 'Technical excellence and innovation' },
     { name: 'Department of CSE', description: 'Academic support and mentorship' },
     { name: 'PESU Research Center', description: 'Advanced research opportunities' }
   ];
