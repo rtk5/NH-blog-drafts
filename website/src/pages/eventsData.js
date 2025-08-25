@@ -14,6 +14,11 @@ export const upcomingEvents = [
     status: 'completed',
     description: 'To be announced soon!!',
     highlights: [
+      'pre-hackathon workshop designed for beginners',
+      'Large Language Models (LLMs)',
+      'Retrieval-Augmented Generation (RAG)',
+      'prompt engineering',
+      'guided hands-on lab'
       
     ],
     image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
