@@ -6,8 +6,8 @@ export const upcomingEvents = [
   // Example structure:
   {
     title: 'PreHack Workshop',
-    date: '20th August, 2025',
-    time: '10:00 AM - 3:00 PM',
+    date: '10th Sep, 2025',
+    time: '2:00 PM - 4:00 PM',
     type: 'workshop',
     location: 'Seminar Hall 2 - Electronic City Campus',
     attendees: 65,
