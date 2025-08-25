@@ -12,14 +12,36 @@ const Home = () => {
 
  const events = [
   {
+    title: 'Pixels2Patterns',
+    date: '20th August, 2025',
+    time: '2:00 PM - 5:00 PM',
+    type: 'Hands-on workshop',
+    description: 'Pixels2Patterns was an engaging and hands-on workshop organized by Neural Hive (AI & ML Club) that introduced students to the fundamentals of Convolutional Neural Networks (CNN) and their real-world applications. The workshop was designed for AI & ML enthusiasts eager to explore how machines interpret images and extract meaningful patterns. Through two interactive sessions, participants gained both theoretical understanding and practical experience in computer vision and deep learning.',
+    image: 'https://pictures-for-websites.vercel.app/P2P.jpg', 
+    attendees: 65,
+    location: "Seminar Hall 1 - Electronic City Campus",
+    time: "2:00 PM - 4:30 PM",
+    status: "completed",
+    highlights: [
+      'Convolutional Neural Networks (CNN) ',
+      'Computer vision fundamentals ',
+      'Traditional image processing methods',
+      'Modern neural network ',
+      'CNN components: convolution, activation functions, pooling, flattening, fully connected layers',
+      'Hands-on implementation of vanilla CNN on MNIST dataset',
+      'Training models for handwritten digit recognition',
+      'Understanding optimizers, loss functions, and softmax in deep learning context'
+    ]
+  },
+  {
     title: "Reinforcement Learning Rewired",
     date: "Feb 12, 2025",
-    type: "Competition",
+    type: "Workshop",
     description: "Interactive workshop on RL fundamentals with Q-Learning and DeepSeek LLM experimentation",
     image: "https://i.postimg.cc/1tNSHRXV/rlr.jpg",
     attendees: 65,
     location: "Seminar Hall 1 - Electronic City Campus",
-    time: "10:00 AM - 3:00 PM",
+    time: "2:00 PM - 4:30 PM",
     status: "completed",
     highlights: [
       "Reinforcement Learning (Q-Learning)",
