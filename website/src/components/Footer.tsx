@@ -29,7 +29,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/neural-hive-pesu/" target="_blank" rel="noopener noreferrer" className="p-2 text-primary-gray-400 hover:text-primary-accent transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://github.com/NeuralHive-PESU" target="_blank" rel="noopener noreferrer" className="p-2 text-primary-gray-400 hover:text-primary-accent transition-colors">
+              <a href="https://github.com/Neural-Hive-PESU" target="_blank" rel="noopener noreferrer" className="p-2 text-primary-gray-400 hover:text-primary-accent transition-colors">
                 <Github className="h-5 w-5" />
               </a>
             </div>
