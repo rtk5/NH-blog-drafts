@@ -100,7 +100,7 @@ const Events: React.FC = () => {
                         {event.description}
                       </p>
                       
-                      <div className="mb-6">
+                      <div>
                         <h4 className="text-sm font-semibold text-primary-accent mb-3">Event Highlights:</h4>
                         <div className="grid grid-cols-2 gap-2">
                           {event.highlights && event.highlights.map((highlight, highlightIndex) => (
@@ -111,10 +111,6 @@ const Events: React.FC = () => {
                           ))}
                         </div>
                       </div>
-                      
-                      <button className="w-full btn-primary">
-                        Register Now
-                      </button>
                     </div>
                   </motion.div>
                 );

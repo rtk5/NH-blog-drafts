@@ -21,7 +21,7 @@ export const upcomingEvents = [
       'guided hands-on lab'
       
     ],
-    image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://specials-images.forbesimg.com/imageserve/61d52d4e3a76ed81ac034ea8/The-10-Tech-Trends-That-Will-Transform-Our-World/960x0.jpg?fit=scale',
     icon: Trophy,
     featured: true
   }
