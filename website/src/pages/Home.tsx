@@ -16,7 +16,7 @@ const Home = () => {
     date: '20th August, 2025',
     time: '2:00 PM - 5:00 PM',
     type: 'Hands-on workshop',
-    description: 'Pixels2Patterns was an engaging and hands-on workshop organized by Neural Hive (AI & ML Club) that introduced students to the fundamentals of Convolutional Neural Networks (CNN) and their real-world applications. The workshop was designed for AI & ML enthusiasts eager to explore how machines interpret images and extract meaningful patterns. Through two interactive sessions, participants gained both theoretical understanding and practical experience in computer vision and deep learning.',
+    description: 'Interactive workshop on CNNs, computer vision and a hands on implemntation of vanilaa CNN on MNIST dataset',
     image: 'https://pictures-for-websites.vercel.app/P2P.jpg', 
     attendees: 65,
     location: "Seminar Hall 1 - Electronic City Campus",
@@ -68,23 +68,6 @@ const Home = () => {
       "Python-based Implementation Frameworks"
     ]
   },
-  {
-    title: "Canvas Clue",
-    date: "Nov 6, 2024",
-    type: "Workshop",
-    description: "Data-driven mystery event combining ML techniques with art heist storytelling during Maaya fest",
-    image: "https://i.postimg.cc/mgkz3MYd/can.jpg",
-    attendees: 45,
-    location: "Seminar Hall 1 - Electronic City Campus",
-    time: "1:30 PM - 5:00 PM",
-    status: "completed",
-    highlights: [
-      "Python (Pandas, Scikit-Learn)",
-      "Outlier Detection Algorithms",
-      "Exploratory Data Analysis (EDA)",
-      "Classification & Predictive Modeling"
-    ]
-  }
 ];
 
   return (
