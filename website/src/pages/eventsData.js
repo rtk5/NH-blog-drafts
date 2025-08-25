@@ -5,23 +5,16 @@ export const upcomingEvents = [
   // Add upcoming events here as they are announced
   // Example structure:
   {
-    title: 'Workshop1',
+    title: 'PreHack Workshop',
     date: '20th August, 2025',
     time: '10:00 AM - 3:00 PM',
-    type: 'Competition',
-    location: 'Seminar Hall 1 - Electronic City Campus',
+    type: 'workshop',
+    location: 'Seminar Hall 2 - Electronic City Campus',
     attendees: 65,
     status: 'completed',
-    description: 'Reinforcement Learning Rewired was an interactive, hands-on workshop hosted by Neural Hive that introduced students to the fundamentals of Reinforcement Learning (RL) and its growing real-world applications. Designed around the concept of building intelligent agents, the session offered a fun, game-based approach to learning how AI makes decisions through trial and error. Participants got to experiment with DeepSeek, an open-source LLM that runs locally—giving them insights into GenAI while also highlighting the value of data privacy. They then built their own RL-powered agents using Q-Learning algorithms, putting theory into practice through mini-games like Tic-Tac-Toe, where the AI learned and improved with every move.',
+    description: 'To be announced soon!!',
     highlights: [
-      'Reinforcement Learning (Q-Learning)',
-      'DeepSeek (Local LLMs)',
-      'Python & OpenAI Gym-style Environments',
-      'Agent Training Pipelines',
-      'Game-based Simulation Environments',
-      'Understanding how RL enables agents to make autonomous decisions based on rewards and feedback',
-      'Hands-on experience in implementing RL algorithms in gaming scenarios',
-      'Understanding how local LLMs like DeepSeek support privacy-friendly AI experimentation'
+      
     ],
     image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=800',
     icon: Trophy,
@@ -32,10 +25,33 @@ export const upcomingEvents = [
 // Past Events Data
 export const pastEvents = [
   {
+    title: 'Pixels2Patterns',
+    date: '20th August, 2025',
+    time: '2:00 PM - 5:00 PM',
+    type: 'Hands-on workshop',
+    location: 'PES University',
+    attendees: 60,
+    status: 'completed',
+    description: 'Pixels2Patterns was an engaging and hands-on workshop organized by Neural Hive (AI & ML Club) that introduced students to the fundamentals of Convolutional Neural Networks (CNN) and their real-world applications. The workshop was designed for AI & ML enthusiasts eager to explore how machines interpret images and extract meaningful patterns. Through two interactive sessions, participants gained both theoretical understanding and practical experience in computer vision and deep learning.',
+    highlights: [
+      'Convolutional Neural Networks (CNN) architecture and implementation',
+      'Computer vision fundamentals including feature extraction, detection, and classification',
+      'Traditional image processing methods: edge, corner, and texture detection',
+      'Modern neural network approaches and different network architectures',
+      'CNN components: convolution, activation functions, pooling, flattening, fully connected layers',
+      'Hands-on implementation of vanilla CNN on MNIST dataset',
+      'Training models for handwritten digit recognition',
+      'Understanding optimizers, loss functions, and softmax in deep learning context'
+    ],
+    image: 'https://pictures-for-websites.vercel.app/P2P.jpg', 
+    icon: Code, 
+    featured: false // Not specified as featured
+  },
+  {
     title: 'Reinforcement Learning Rewired',
     date: '12th February, 2025',
     time: '10:00 AM - 3:00 PM',
-    type: 'Competition',
+    type: 'Hands-on workshop',
     location: 'Seminar Hall 1 - Electronic City Campus',
     attendees: 65,
     status: 'completed',
