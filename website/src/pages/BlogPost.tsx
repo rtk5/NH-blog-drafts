@@ -391,260 +391,235 @@ Deep learning continues to evolve rapidly, with new architectures and techniques
       tags: ['NLP', 'Natural Language Processing', 'LLMs', 'Text Processing', 'Tokenization'],
       image: 'https://pictures-for-websites.vercel.app/malya/Picture1.jpg',
       content: `
-**NLP: From Foundations to LLMs**  
-   
-![Picture1](https://pictures-for-websites.vercel.app/malya/Picture1.png)  
-   
-You obviously by now have abused ChatGPT enough to sometimes wonder how it does it all.  
-For such curious ones,  
-   
-Enter, **Natural Language Processing (NLP)** where we teach machines to understand, interpret, and generate "human" language.  
-   
-   
-This will be the first in a series of bi-weekly blogs that will go from basic NLP to GPT architecture **with** the Math behind it. Stick till the end to Know It All !  
-General path we take in this series:  
- 1.  <ins>Basics</ins>  
-2.    <ins>Vector Space Models and Word Representation</ins>  
-3.    <ins>Language Models</ins>  
-4.    <ins>Neural Networks</ins>  
-5.    <ins>Sequential Models</ins>  
-6.    **<ins>Attention</ins>**  
-7.    **<ins>Transformers</ins>**  
-8.    **<ins>LLM Architecture</ins>**  
-9.    <ins>Finale</ins>  
-** **  
-*(Each topic above will have multiple blogs under them depending on the complexity and size of the topic.)*  
-Think of this series as a guided tour:  
-* We'll start with the simple stuff (cleaning and processing text).  
-* We'll level up into **word embeddings, neural networks, and sequential models**.  
-* Then we'll unlock **attention mechanisms, transformers, and GPT itself**.  
-** **  
-** **  
-** **  
-**1. Introduction**  
-   
-First question should be why should you even care? You've already clicked on the blog is reason enough, but assuming a curious 'you' pressed it just to find out what its all about,  
-* NLP is everywhere! From your **autocorrect** to **Google Translate** to **Netflix recommendations**.  
-* Understanding NLP is the first step toward building your own cool stuff.  
-* And honestly… it's just plain cool to know how machines "read" and "write."  
-   
-In this blog, we'll go through and break down the NLP pipeline, the set of steps that transform raw human language to meaningful (to a machine) stuff a machine can use and get back.  
-   
-** **  
-**2. What is NLP Really Doing?**  
-** **  
-**At the core of NLP is the process to make machines emulate "human-like"- "thinking" so that it can produce results that look like it has some understanding.**  
-** **  
-This sentence sounds pessimistic and rebellious towards the AGI(Artificial General Intelligence) overlords because it might well be the case that AI is not understanding anything at all.You might wonder why. But that's another story for another blog.Y<ins>ou might want to check it out here! </ins>Do that later, finish reading this first!  
-<ins> </ins>  
-But for this time, lets keep it simple, and assume it (the *model*) "learns" from training.If you got stuck at "model", my friend has written out an awesome blog to get you through the basics.<ins>Go there and come back!</ins>  
-<ins> </ins>  
-We as humans have huge context window. When someone says "bank", we will immediately know from context whether they mean a financial institution or the side of a river.  
-   
-But machines work on bits as you already know.So how DO you make it learn?  
-   
-Before that, something to take note, sometimes we misunderstand stuff.  
-What I mean is, when someone says, "I saw the man with the telescope."  
-1. Did I use a telescope to see the man?  
-2. Or did the man have a telescope?  
-How do we deal with such deviations.  
-This simple example tells why NLP is challenging & why we need a structured pipeline to help machines make sense of language.  
-   
-So back to how it learns: We break it down into stages:  
-<ins>3.1 Text Collection & Input</ins>  
-<ins>3.2 Text Preprocessing</ins>  
-<ins>3.3 Text Representation</ins>  
-<ins>3.4 Modeling & Learning</ins>  
-<ins>3.5 Evaluation</ins>  
-<ins>3.6 Deployment & Applications</ins>  
-<ins> </ins>  
-In this blog we will keep it light (for you & I both) and learn till 3.3. Text Representation.  
-   
-   
-   
-   
-   
-**3. The General NLP Pipeline**  
-   
-The NLP pipeline is like a recipe that takes in raw text, cleans it up, represents it in a way machines can understand, and then uses it for predictions or tasks.  
-   
-The boiled down end goal after processing Natural Language is to do "Next word prediction". Hold that thought for now.  
-   
-   
-**3.1 Text Collection & Input**  
-   
-Let not go too much into detail here.  
-Okay, so everything starts with **data**.   
-The data that is required to train an LLM like ChatGPT is really huge.  
-Legacy models like GPT3 were trained on 45TB or raw plain -text.And about 570GB of filtered quality text.  
-Guess how much GPT-4 was? 1000TB.  Yes 1000TB!! (i.e 1PetaByte)  
-As we see the data size plays an important role in the quality of the model.  
-   
-OpenAI collected data using WebCrawlers, "Licensed" Datasets, Human Annotators who manually rated outputs.  
-   
-Peasants like us usually search datasets in websites like Kaggle, HuggingFace, Roboflow, Stanford Open NLP datasets, Web Crawlers, Open Source websites who have their own APIs that help us scrape their website, maybe surveys…  
-![Picture 2](https://pictures-for-websites.vercel.app/malya/Picture11.jpg)  
-   
-   
-**3.2 Text Preprocessing**  
-   
-Raw text randomly picked up from websites are usually messy.  
-Pre-processeing cleans and purifies this data for further processing and makes it   
-suitable for consumption by the model.  
-   
-**3.2.1 Tokenization**  
-Why tokenization? To understand that we must first ask:  
-What is tokenization?  
-Tokenization usually involves breaking down sentences into words, phrases or sentences.   
-The actual implementation depends on the requirement of the model which you will learn  
-later.  
-If you want to try, you can copy the code below:(make sure you have python installed   
-and are in an environment)  
-** **  
-**Word Tokenization:**  
-```python
-from nltk.tokenize import word_tokenize  
-text = "This is Neural Hive!"  
-print(word_tokenize(text))  
-# Output: ['NLP', 'is', 'amazing', '!']  
-```
+# NLP: From Foundations to LLMs
 
-**Sentence Tokenization:**  
-```python
-from nltk.tokenize import sent_tokenize  
-text = "NLP is amazing! It powers chatbots."  
-print(sent_tokenize(text))  
-# Output: ['NLP is amazing!', 'It powers chatbots.']  
-```  
-   
-**Subword Tokenization:**(used in GPT/BERT):   
-Breaks rare words into smaller units like "unhappiness" → "un", "happiness". Helps handle  
-unknown words.  
-              
-  
-![Picture 3](https://pictures-for-websites.vercel.app/malya/Picture3.jpg)
-![Picture 4](https://pictures-for-websites.vercel.app/malya/Picture4.jpg)  
-Coming to "why",  
-In the next process of the NLP pipeline, there are models for Text Representation that need distinct meaningful words, for that we need sentences to be broken down to words or phrases.  
-   
-**3.2.2 Lowercasing**  
-Text is case-sensitive. "Apple" and "apple" would be treated as different tokens. To avoid unnecessary duplication, we often lowercase everything.  
-   
-**3.2.3 Stopwords**  
-If I say, "Rahul was running very fast.He won the race", now if I say "Rahul running fast won race", would you get the meaning. Hopefully yes.In the same way, model doesn't understand anything meaningful with words like "he","she", "the" called stopwords. So we omit them while processing data.Try it out  
-```python
-from nltk.corpus import stopwords  
-stop_words = set(stopwords.words("english"))  
-words = word_tokenize("This is a simple sentence")  
-filtered = [w for w in words if w.lower() not in stop_words]  
-print(filtered)  # ['This', 'simple', 'sentence']  
-```  
-   
-   
-**3.2.4 Stemming**  
-** **  
-Reduces words into its stems/ root words which removes the unncessary information and provides easier processing further.  
-   
-running -> run  
-   
-The problem is, its not that good. It converts some words into meaningless stems.  
-   
-studies -> studi (not usefull)  
-![Picture 5](https://pictures-for-websites.vercel.app/malya/Picture5.jpg)  
-   
-   
-   
-**3.2.5 Lemmatization**  
-Lemmatization is more advanced—it uses dictionaries and grammar to reduce words to their **valid base form (lemma)**.  
-"runnig" -> "run"  
-"better"->"good"  
-   
-```python
-from nltk.stem import WordNetLemmatizer  
-lemmatizer = WordNetLemmatizer()  
-print(lemmatizer.lemmatize("running", pos="v"))  # run  
-print(lemmatizer.lemmatize("better", pos="a"))   # good  
-```  
-   
-You might ask whats the big difference. Lemmatization just performs better!Why?  
-Lemmatization is often better than Stemming because it produces meaningful, dictionary-defined words (lemmas) by looking at context and part-of-speech, whereas stemming produces a simplified root that may not be a real word and can be less accurate.  
-   
-   
-![Picture 6](https://pictures-for-websites.vercel.app/malya/Picture6.jpg)
-![Picture 7](https://pictures-for-websites.vercel.app/malya/Picture7.jpg)  
-   
-   
-** **  
-**3.2.6 Handling Emojis and Special Characters**  
-** **  
-Modern NLP uses emojis heavily (social media).  
-<Add happy face> "happy", <Add sad face> = "sad"  
-Emojis can be mapped to words or removed depending on task.  
-   
-** **  
-**3.2.7. Handling Out-of-Vocabulary (OOV) Words**  
-** **  
-Older models (like Word2Vec which you will learn later) fail on unseen words. Solution:  
-Subword tokenization (BPE, WordPiece).  
-Or Replace with <UNK> (short for unknown)  token.  
-   
-** **  
-**3.2.8 Part-of-Speech (POS) Tagging (Optional Preprocessing)**  
-** **  
-Sometimes we enrich tokens with their grammatical roles.  
-"run (verb)" vs "run (noun)"  
-   
-```python
-import nltk  
-nltk.download('averaged_perceptron_tagger')  
-print(nltk.pos_tag(word_tokenize("I am running fast")))  
-# [('I', 'PRP'), ('am', 'VBP'), ('running', 'VBG'), ('fast', 'RB')]  
-```   
-![Picture 8](https://pictures-for-websites.vercel.app/malya/Picture8.jpg)  
-   
-   
-   
-** **  
-**3.2.9 Named Entity Recognition (NER) Cleaning**  
-** **  
-Entities like "New York" or "Barack Obama" should stay intact. Tokenization can break them and they will lose their meaning, so we apply NER tagging before processing.  
-** **  
-** **  
-**3.2.10 Language-Specific Preprocessing**  
-   
-Different languages need different rules.  
-Chinese/Japanese: No spaces between words, so tokenization is harder.  
-Languages (Turkish, Finnish): Need morphological analyzers as they express words in complex terms.  
-   
-All in all, Text preprocessing doesn't add new meaning, but it makes text ready for representation and modeling.  
-   
-**3.2.11 Noramlization/ Standardization**  
-You know that USA, U.S.A, usa, the us all mean the same right. But the model might stumble so we reduuce all these forms to a standard word  
-"U.S.A.", "USA", "us" → "usa"  
-   
-   
-We just built the **foundation of NLP**:  
-·                How raw text is collected  
-·                How preprocessing cleans and prepares it  
-·                Why tokenization, lemmatization, and normalization are essential  
-   
-![Picture 9](https://pictures-for-websites.vercel.app/malya/Picture9.jpg)  
-   
-You now understand *how* machines get text ready for modeling.  
-In the **next post**, we'll turn this clean text into **mathematical vector, **the secret sauce behind models like GPT, BERT, and beyond. By following this series, you'll be able to **understand the math and logic** powering them.  
-*<ins>Stay tuned for: Text Representation & Vector Space Models.</ins>*  
-   
-   
-   
-   
-   
-   
-   
-   
-Here are two memes for finishing the blog  
-  
-![Picture 10](https://pictures-for-websites.vercel.app/malya/Picture10.jpg)
-![Picture 11](https://pictures-for-websites.vercel.app/malya/Picture11.jpg)
+
+You obviously by now have abused ChatGPT enough to sometimes wonder how it does it all.
+For such curious ones,
+
+Enter, **Natural Language Processing (NLP)** where we teach machines to understand, interpret, and generate "human" language.
+
+This will be the first in a series of bi-weekly blogs that will go from basic NLP to GPT architecture **with** the Math behind it. Stick till the end to Know It All !
+
+General path we take in this series:
+1. <ins>Basics</ins>
+2. <ins>Vector Space Models and Word Representation</ins>
+3. <ins>Language Models</ins>
+4. <ins>Neural Networks</ins>
+5. <ins>Sequential Models</ins>
+6. <ins>Attention</ins>
+7. <ins>Transformers</ins>
+8. <ins>LLM Architecture</ins>
+9. <ins>Finale</ins>
+
+*(Each topic above will have multiple blogs under them depending on the complexity and size of the topic.)*
+
+Think of this series as a guided tour:
+* We'll start with the simple stuff (cleaning and processing text).
+* We'll level up into **word embeddings, neural networks, and sequential models**.
+* Then we'll unlock **attention mechanisms, transformers, and GPT itself**.
+
+## 1. Introduction
+
+First question should be why should you even care? You've already clicked on the blog is reason enough, but assuming a curious 'you' pressed it just to find out what its all about,
+* NLP is everywhere! From your **autocorrect** to **Google Translate** to **Netflix recommendations**.
+* Understanding NLP is the first step toward building your own cool stuff.
+* And honestly… it's just plain cool to know how machines "read" and "write."
+
+In this blog, we'll go through and break down the NLP pipeline, the set of steps that transform raw human language to meaningful (to a machine) stuff a machine can use and get back.
+
+## 2. What is NLP Really Doing?
+
+**At the core of NLP is the process to make machines emulate "human-like"- "thinking" so that it can produce results that look like it has some understanding.**
+
+This sentence sounds pessimistic and rebellious towards the AGI(Artificial General Intelligence) overlords because it might well be the case that AI is not understanding anything at all.You might wonder why. But that's another story for another blog.You might want to check it out here! Do that later, finish reading this first!
+
+But for this time, lets keep it simple, and assume it (the *model*) "learns" from training.If you got stuck at "model", my friend has written out an awesome blog to get you through the basics.Go there and come back!
+
+We as humans have huge context window. When someone says "bank", we will immediately know from context whether they mean a financial institution or the side of a river.
+
+But machines work on bits as you already know.So how DO you make it learn?
+
+Before that, something to take note, sometimes we misunderstand stuff.
+What I mean is, when someone says, "I saw the man with the telescope."
+1. Did I use a telescope to see the man?
+2. Or did the man have a telescope?
+
+How do we deal with such deviations.
+This simple example tells why NLP is challenging & why we need a structured pipeline to help machines make sense of language.
+
+So back to how it learns: We break it down into stages:
+- 3.1 Text Collection & Input
+- 3.2 Text Preprocessing
+- 3.3 Text Representation
+- 3.4 Modeling & Learning
+- 3.5 Evaluation
+- 3.6 Deployment & Applications
+
+In this blog we will keep it light (for you & I both) and learn till 3.3. Text Representation.
+
+## 3. The General NLP Pipeline
+
+The NLP pipeline is like a recipe that takes in raw text, cleans it up, represents it in a way machines can understand, and then uses it for predictions or tasks.
+
+The boiled down end goal after processing Natural Language is to do "Next word prediction". Hold that thought for now.
+
+### 3.1 Text Collection & Input
+
+Let not go too much into detail here.
+Okay, so everything starts with **data**.
+The data that is required to train an LLM like ChatGPT is really huge.
+Legacy models like GPT3 were trained on 45TB or raw plain -text.And about 570GB of filtered quality text.
+Guess how much GPT-4 was? 1000TB. Yes 1000TB!! (i.e 1PetaByte)
+As we see the data size plays an important role in the quality of the model.
+
+OpenAI collected data using WebCrawlers, "Licensed" Datasets, Human Annotators who manually rated outputs.
+
+Peasants like us usually search datasets in websites like Kaggle, HuggingFace, Roboflow, Stanford Open NLP datasets, Web Crawlers, Open Source websites who have their own APIs that help us scrape their website, maybe surveys…
+
+![Data Collection](https://pictures-for-websites.vercel.app/malya/Picture1.png)
+
+### 3.2 Text Preprocessing
+
+Raw text randomly picked up from websites are usually messy.
+Pre-processeing cleans and purifies this data for further processing and makes it
+suitable for consumption by the model.
+
+#### 3.2.1 Tokenization
+Why tokenization? To understand that we must first ask:
+What is tokenization?
+Tokenization usually involves breaking down sentences into words, phrases or sentences.
+The actual implementation depends on the requirement of the model which you will learn
+later.
+If you want to try, you can copy the code below:(make sure you have python installed
+and are in an environment)
+
+**Word Tokenization:**
+\`\`\`python
+from nltk.tokenize import word_tokenize
+text = "This is Neural Hive!"
+print(word_tokenize(text))
+# Output: ['NLP', 'is', 'amazing', '!']
+\`\`\`
+
+**Sentence Tokenization:**
+\`\`\`python
+from nltk.tokenize import sent_tokenize
+text = "NLP is amazing! It powers chatbots."
+print(sent_tokenize(text))
+# Output: ['NLP is amazing!', 'It powers chatbots.']
+\`\`\`
+
+**Subword Tokenization:**(used in GPT/BERT):
+Breaks rare words into smaller units like "unhappiness" → "un", "happiness". Helps handle
+unknown words.
+
+![Tokenization Examples](https://pictures-for-websites.vercel.app/malya/Picture3.png)
+![Tokenization Process](https://pictures-for-websites.vercel.app/malya/Picture4.png)
+
+Coming to "why",
+In the next process of the NLP pipeline, there are models for Text Representation that need distinct meaningful words, for that we need sentences to be broken down to words or phrases.
+
+#### 3.2.2 Lowercasing
+Text is case-sensitive. "Apple" and "apple" would be treated as different tokens. To avoid unnecessary duplication, we often lowercase everything.
+
+#### 3.2.3 Stopwords
+If I say, "Rahul was running very fast.He won the race", now if I say "Rahul running fast won race", would you get the meaning. Hopefully yes.In the same way, model doesn't understand anything meaningful with words like "he","she", "the" called stopwords. So we omit them while processing data.Try it out
+
+\`\`\`python
+from nltk.corpus import stopwords
+stop_words = set(stopwords.words("english"))
+words = word_tokenize("This is a simple sentence")
+filtered = [w for w in words if w.lower() not in stop_words]
+print(filtered)  # ['This', 'simple', 'sentence']
+\`\`\`
+
+#### 3.2.4 Stemming
+
+Reduces words into its stems/ root words which removes the unncessary information and provides easier processing further.
+
+running -> run
+
+The problem is, its not that good. It converts some words into meaningless stems.
+
+studies -> studi (not usefull)
+
+![Stemming Process](https://pictures-for-websites.vercel.app/malya/Picture5.png)
+
+#### 3.2.5 Lemmatization
+Lemmatization is more advanced—it uses dictionaries and grammar to reduce words to their **valid base form (lemma)**.
+"runnig" -> "run"
+"better"->"good"
+
+\`\`\`python
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+print(lemmatizer.lemmatize("running", pos="v"))  # run
+print(lemmatizer.lemmatize("better", pos="a"))   # good
+\`\`\`
+
+You might ask whats the big difference. Lemmatization just performs better!Why?
+Lemmatization is often better than Stemming because it produces meaningful, dictionary-defined words (lemmas) by looking at context and part-of-speech, whereas stemming produces a simplified root that may not be a real word and can be less accurate.
+
+![Lemmatization vs Stemming](https://pictures-for-websites.vercel.app/malya/Picture5.jpg)
+![Lemmatization Examples](https://pictures-for-websites.vercel.app/malya/Picture6.jpg)
+
+#### 3.2.6 Handling Emojis and Special Characters
+
+Modern NLP uses emojis heavily (social media).
+😊 "happy", 😢 = "sad"
+Emojis can be mapped to words or removed depending on task.
+
+#### 3.2.7. Handling Out-of-Vocabulary (OOV) Words
+
+Older models (like Word2Vec which you will learn later) fail on unseen words. Solution:
+Subword tokenization (BPE, WordPiece).
+Or Replace with <UNK> (short for unknown) token.
+
+#### 3.2.8 Part-of-Speech (POS) Tagging (Optional Preprocessing)
+
+Sometimes we enrich tokens with their grammatical roles.
+"run (verb)" vs "run (noun)"
+
+\`\`\`python
+import nltk
+nltk.download('averaged_perceptron_tagger')
+print(nltk.pos_tag(word_tokenize("I am running fast")))
+# [('I', 'PRP'), ('am', 'VBP'), ('running', 'VBG'), ('fast', 'RB')]
+\`\`\`
+
+![POS Tagging](https://pictures-for-websites.vercel.app/malya/Picture7.jpg)
+
+#### 3.2.9 Named Entity Recognition (NER) Cleaning
+
+Entities like "New York" or "Barack Obama" should stay intact. Tokenization can break them and they will lose their meaning, so we apply NER tagging before processing.
+
+#### 3.2.10 Language-Specific Preprocessing
+
+Different languages need different rules.
+Chinese/Japanese: No spaces between words, so tokenization is harder.
+Languages (Turkish, Finnish): Need morphological analyzers as they express words in complex terms.
+
+All in all, Text preprocessing doesn't add new meaning, but it makes text ready for representation and modeling.
+
+#### 3.2.11 Noramlization/ Standardization
+You know that USA, U.S.A, usa, the us all mean the same right. But the model might stumble so we reduuce all these forms to a standard word
+"U.S.A.", "USA", "us" → "usa"
+
+We just built the **foundation of NLP**:
+- How raw text is collected
+- How preprocessing cleans and prepares it
+- Why tokenization, lemmatization, and normalization are essential
+
+![NLP Pipeline Summary](https://pictures-for-websites.vercel.app/malya/Picture8.png)
+
+You now understand *how* machines get text ready for modeling.
+In the **next post**, we'll turn this clean text into **mathematical vector, **the secret sauce behind models like GPT, BERT, and beyond. By following this series, you'll be able to **understand the math and logic** powering them.
+*Stay tuned for: Text Representation & Vector Space Models.*
+
+Here are two memes for finishing the blog
+
+![NLP Meme 1](https://pictures-for-websites.vercel.app/malya/Picture9.jpg)
       `
     }
   };
