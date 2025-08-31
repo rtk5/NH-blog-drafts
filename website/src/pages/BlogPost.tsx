@@ -400,20 +400,19 @@ For such curious ones,
 Enter, **Natural Language Processing (NLP)** where we teach machines to understand, interpret, and generate "human" language.
 
 This will be the first in a series of bi-weekly blogs that will go from basic NLP to GPT architecture **with** the Math behind it. Stick till the end to Know It All !
+# General path we take in this series:
 
-General path we take in this series:
-1. <ins>Basics</ins>
-2. <ins>Vector Space Models and Word Representation</ins>
-3. <ins>Language Models</ins>
-4. <ins>Neural Networks</ins>
-5. <ins>Sequential Models</ins>
-6. <ins>Attention</ins>
-7. <ins>Transformers</ins>
-8. <ins>LLM Architecture</ins>
-9. <ins>Finale</ins>
+1. **Basics**
+2. **Vector Space Models and Word Representation**
+3. **Language Models**
+4. **Neural Networks**
+5. **Sequential Models**
+6. **Attention**
+7. **Transformers**
+8. **LLM Architecture**
+9. **Finale**
 
 *(Each topic above will have multiple blogs under them depending on the complexity and size of the topic.)*
-
 Think of this series as a guided tour:
 * We'll start with the simple stuff (cleaning and processing text).
 * We'll level up into **word embeddings, neural networks, and sequential models**.
