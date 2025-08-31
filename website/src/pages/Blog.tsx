@@ -37,6 +37,18 @@ const Blog = () => {
 
   const blogPosts = [
     {
+      title: 'NLP: From Foundations to LLMs',
+      author: 'Adithya Mallya',
+      date: '1 Sep 2025',
+      readTime: '10 min read',
+      category: 'Natural Language Processing',
+      excerpt: 'You obviously by now have abused ChatGPT enough to sometimes wonder how it does it all. Enter, Natural Language Processing (NLP) where we teach machines to understand, interpret, and generate "human" language.',
+      tags: ['NLP', 'Natural Language Processing', 'LLMs', 'Text Processing', 'Tokenization'],
+      image: 'https://pictures-for-websites.vercel.app/malya/Picture1.jpg',
+      featured: true,
+      slug: 'nlp-from-foundations-to-llms'
+    },
+    {
       title: 'Welcome to College: You\'re Now in the Algorithm',
       author: 'Diya Prakash',
       date: '25 Aug 2025',
