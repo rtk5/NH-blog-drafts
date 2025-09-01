@@ -618,7 +618,9 @@ In the **next post**, we'll turn this clean text into **mathematical vector, **t
 
 Here are two memes for finishing the blog
 
-![NLP Meme 1](https://pictures-for-websites.vercel.app/malya/Picture9.jpg)
+![NLP Meme 1](https://pictures-for-websites.vercel.app/malya/pic10.jpg)
+![NLP Meme 1](https://pictures-for-websites.vercel.app/malya/pic11.jpg)
+
       `
     }
   };
