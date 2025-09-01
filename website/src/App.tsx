@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';  // 👈 import here
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -42,6 +43,7 @@ function App() {
           </Routes>
         </motion.main>
         <Footer />
+        <Analytics /> {/* 👈 add it once at the root */}
       </div>
     </Router>
   );
