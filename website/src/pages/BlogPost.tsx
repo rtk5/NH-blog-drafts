@@ -814,7 +814,7 @@ Here are two memes for finishing the blog
               <img
                 src={post.author.image}
                 alt={post.author.name}
-                className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                className="w-24 h-24 rounded-full object-cover flex-shrink-0"
               />
               <div>
                 <h4 className="text-xl font-poppins font-semibold mb-2 text-primary-accent">
