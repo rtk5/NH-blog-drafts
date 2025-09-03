@@ -382,8 +382,8 @@ Deep learning continues to evolve rapidly, with new architectures and techniques
       title: 'NLP: From Foundations to LLMs',
       author: {
         name: 'Adithya Mallya',
-        image: 'https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=400',
-        bio: 'NLP enthusiast and Neural Hive contributor. Passionate about breaking down complex language models and making AI accessible. Currently exploring the intersection of linguistics and machine learning.'
+        image: 'https://pictures-for-websites.vercel.app/malya/adimallya.jpg',
+        bio: 'Tech enthusiast who likes working on ML. Currently in 3rd Year and doing Research involving NLP. Loves exploring new tech stuff.'
       },
       date: '1 Sep 2025',
       readTime: '10 min read',
