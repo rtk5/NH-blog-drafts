@@ -117,7 +117,7 @@ const Contact = () => {
     {
       name: 'Siddartha AY',
       role: 'Tech Head',
-      email: 'idk yet',
+      email: 'siddartha_ay@protonmail.com',
       focus: 'Hackathon coordination'
     }
   ];
