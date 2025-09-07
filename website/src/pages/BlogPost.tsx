@@ -640,7 +640,7 @@ Here are two memes for finishing the blog
 
 So you’ve heard about Data Science everywhere—Netflix uses it, doctors use it, even sports teams use it. But how do you get started? Don’t worry, you don’t need a PhD or fancy math to begin.
 
-![Machine Learning](Images/machine_learning.png)
+![Machine Learning](https://pictures-for-websites.vercel.app/rithvik-jr/Images/machine_learning.png)
 
 Today, we’ll do a super simple project:
 1. Load Data  
@@ -754,7 +754,7 @@ Then, we fit a **linear regression line**:
 
 You can practice some problems on Linear Regression here: 
 
-📂 [Linear Regression Problems](linear_regression_practice_problems.md)
+📂 [Linear Regression Problems](https://pictures-for-websites.vercel.app/rithvik-jr/linear_regression_practice_problems.html)
 
 ---
 
