@@ -80,7 +80,7 @@ const Blog = () => {
       category: 'Data Science',
       excerpt: 'You’ve heard about Data Science everywhere—Netflix uses it, doctors use it, even sports teams use it. But how do you get started? In this blog, we’ll walk through a simple project: loading data, training a model, and drawing graphs—all in Python.',
       tags: ['Data Science', 'Python', 'Machine Learning', 'Beginners'],
-      image: 'Images/Cover_Image.png',
+      image: 'https://pictures-for-websites.vercel.app/rithvik-jr/Images/Cover_Image.png',
       featured: true,
       slug: 'your-first-data-science-project-from-csv-to-graphs'
     }
