@@ -71,6 +71,18 @@ const Blog = () => {
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
       featured: true,
       slug: 'machine-learning-fundamentals-beginners-guide'
+    },
+    {
+      title: 'Your First Data Science Project: From CSV to Graphs in Python',
+      author: 'Rithvik AM',
+      date: '8 Sept 2025',
+      readTime: '7 min read',
+      category: 'Data Science',
+      excerpt: 'You’ve heard about Data Science everywhere—Netflix uses it, doctors use it, even sports teams use it. But how do you get started? In this blog, we’ll walk through a simple project: loading data, training a model, and drawing graphs—all in Python.',
+      tags: ['Data Science', 'Python', 'Machine Learning', 'Beginners'],
+      image: 'Images/Cover_Image.png',
+      featured: true,
+      slug: 'your-first-data-science-project-from-csv-to-graphs'
     }
   ];
 
