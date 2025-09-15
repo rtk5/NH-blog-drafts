@@ -49,6 +49,18 @@ const Blog = () => {
       slug: 'neural-networks-brains-in-silicon'
     },
     {
+      title: 'Your First Data Science Project: From CSV to Graphs in Python',
+      author: 'Rithvik AM',
+      date: '8 Sept 2025',
+      readTime: '7 min read',
+      category: 'Data Science',
+      excerpt: 'You’ve heard about Data Science everywhere—Netflix uses it, doctors use it, even sports teams use it. But how do you get started? In this blog, we’ll walk through a simple project: loading data, training a model, and drawing graphs—all in Python.',
+      tags: ['Data Science', 'Python', 'Machine Learning', 'Beginners'],
+      image: 'https://pictures-for-websites.vercel.app/rithvik-jr/Images/Cover_Image.png',
+      featured: false,
+      slug: 'your-first-data-science-project-from-csv-to-graphs'
+    },
+    {
       title: 'NLP: From Foundations to LLMs',
       author: 'Adithya Mallya',
       date: '1 Sep 2025',
@@ -59,18 +71,6 @@ const Blog = () => {
       image: 'https://pictures-for-websites.vercel.app/malya/Picture1.jpg',
       featured: false,
       slug: 'nlp-from-foundations-to-llms'
-    },
-    {
-      title: 'Welcome to College: You\'re Now in the Algorithm',
-      author: 'Diya Prakash',
-      date: '25 Aug 2025',
-      readTime: '5 min read',
-      category: 'College Life',
-      excerpt: 'Hey freshers, and hello to the rest of you seniors who are basically running on caffeine, deadlines, and whatever confidence you had before grades humbled you into oblivion.',
-      tags: ['College', 'Life', 'Freshers', 'Algorithm'],
-      image: 'https://pictures-for-websites.vercel.app/welc.jpg',
-      featured: false,
-      slug: 'welcome-to-college-youre-now-in-the-algorithm'
     },
     {
       title: 'Machine Learning Fundamentals: A Beginner\'s Complete Guide',
@@ -85,16 +85,16 @@ const Blog = () => {
       slug: 'machine-learning-fundamentals-beginners-guide'
     },
     {
-      title: 'Your First Data Science Project: From CSV to Graphs in Python',
-      author: 'Rithvik AM',
-      date: '8 Sept 2025',
-      readTime: '7 min read',
-      category: 'Data Science',
-      excerpt: 'You’ve heard about Data Science everywhere—Netflix uses it, doctors use it, even sports teams use it. But how do you get started? In this blog, we’ll walk through a simple project: loading data, training a model, and drawing graphs—all in Python.',
-      tags: ['Data Science', 'Python', 'Machine Learning', 'Beginners'],
-      image: 'https://pictures-for-websites.vercel.app/rithvik-jr/Images/Cover_Image.png',
+      title: 'Welcome to College: You\'re Now in the Algorithm',
+      author: 'Diya Prakash',
+      date: '25 Aug 2025',
+      readTime: '5 min read',
+      category: 'College Life',
+      excerpt: 'Hey freshers, and hello to the rest of you seniors who are basically running on caffeine, deadlines, and whatever confidence you had before grades humbled you into oblivion.',
+      tags: ['College', 'Life', 'Freshers', 'Algorithm'],
+      image: 'https://pictures-for-websites.vercel.app/welc.jpg',
       featured: false,
-      slug: 'your-first-data-science-project-from-csv-to-graphs'
+      slug: 'welcome-to-college-youre-now-in-the-algorithm'
     }
   ];
 
