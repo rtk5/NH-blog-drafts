@@ -21,7 +21,7 @@ const BlogPost = () => {
   readTime: '10 min read',
   category: 'Machine Learning',
   tags: ['Neural Networks', 'Machine Learning', 'Deep Learning', 'AI Basics', 'Backpropagation'],
-  image: 'https:/pictuimages/helley.jpg',
+  image: 'https://pictures-for-websites.vercel.app/arun-images/helley.jpg',
   content: `
 # Neural Networks
 
@@ -86,7 +86,7 @@ Over time, the network learns:
 Now toss in weird combos. The network will guess. Not always right, but often surprisingly close, especially with enough training data.  
 (*also cold soups are disgusting, this is unrelated btw I just hate cold soups*)
 
-![dum](images/https://pictures-for-websites.vercel.app/arun-dumm.jpg)
+![dum](https://pictures-for-websites.vercel.app/arun-images/dumm.jpg)
 ---
 
 ### Activation Functions
@@ -98,7 +98,7 @@ We talked about activation functions earlier and it's basically a **greenlight**
 Without activation functions, neural networks would basically just be a fancy spreadsheet, spewing out data at random. Imagine trying to use 100% of your brain, at the same time, but instead of Scarlett Johannson from *Lucy*, you would end up like my Intel Pentium processor trying to run **Cyberpunk 2077**.
 
 ---
-![samurai](images/https://pictures-for-websites.vercel.app/arun-silverhand.jpg)
+![samurai](https://pictures-for-websites.vercel.app/arun-images/silverhand.jpg)
 
 ---
 
@@ -733,8 +733,8 @@ Here are two memes for finishing the blog
   title: 'Your First Data Science Project: From CSV to Graphs in Python',
   author: {
     name: 'Rithvik AM',
-    image: 'https://pictures-for-websites.vercel.app/rithvik-jr/Images/Cover_Image.png',
-    bio: 'Beginner-friendly data science writer who loves simplifying Python, Pandas, and ML concepts. Passionate about helping students take their first step into AI with hands-on projects.'
+    image: 'https://pictures-for-websites.vercel.app/rithvik-jr/pic.jpg',
+    bio: 'I’m a second-year ECE student who loves simplifying complex concepts and integrating ideas to build scalable, unique solutions. I enjoy helping beginners explore AI and technology through hands-on learning.'
   },
   date: '8 Sept 2025',
   readTime: '7 min read',
