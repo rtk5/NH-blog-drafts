@@ -37,6 +37,18 @@ const Blog = () => {
 
   const blogPosts = [
     {
+      title: 'Neural Networks: Brains in Silicon',
+      author: 'Arun H',
+      date: '15 Sep 2025',
+      readTime: '10 min read',
+      category: 'Machine Learning',
+      excerpt: 'Neural networks are our best attempt at simulating the messiness of human brains with math. Inspired by biological neurons, they allow machines to learn from patterns, adapt, and make decisions—though not without quirks like overfitting and limited “understanding.”',
+      tags: ['Neural Networks', 'Machine Learning', 'Deep Learning', 'AI Basics', 'Backpropagation'],
+      image: 'images/helley.jpg',
+      featured: true,
+      slug: 'neural-networks-brains-in-silicon'
+    },
+    {
       title: 'NLP: From Foundations to LLMs',
       author: 'Adithya Mallya',
       date: '1 Sep 2025',
