@@ -14,18 +14,19 @@ const BlogPost = () => {
   title: 'Neural Networks: Brains in Silicon',
   author: {
     name: 'Arun H',
-    image: 'https://pictures-for-websites.vercel.app/arun-images/helley.jpg', // substitute a proper author image if needed
+    image: 'https://pictures-for-websites.vercel.app/arun-images/arun2.jpg', // substitute a proper author image if needed
     bio: 'AI enthusiast and passionate explainer of “brains made in silicon”. Likes neural nets, bad puns, and writing deep learning blogs for humanity before the machines take over.'
   },
   date: '15 Sep 2025',
   readTime: '10 min read',
   category: 'Machine Learning',
   tags: ['Neural Networks', 'Machine Learning', 'Deep Learning', 'AI Basics', 'Backpropagation'],
-  image: 'https://pictures-for-websites.vercel.app/arun-images/helley.jpg',
+  image: 'https://pictures-for-websites.vercel.app/arun-images/cover.jpg',
   content: `
 # Neural Networks
 
 We live in a society, and naturally, that comes with the consequence of living with other human beings. But in reality, society is just a large group of neuron clusters deciding to tolerate each other for the sake of survival. Neural networks are humanity's attempt at playing god, which, if sci-fi is to be used as a consensus, never ends well for us. Regardless, it's our attempt to simulate biological computation because of how strict machine algorithms fail to handle ambiguity and messy data. Instead, neural networks act as an extension, a crankshaft to an engine, in our attempts to teach computers to be closer to human intelligence than ever before.
+![helley](https://pictures-for-websites.vercel.app/arun-images/helley.jpg)
 
 A **neural network** is a machine learning model inspired by our brains. It is made up of **nodes** (basically our idea of neurons but digital, just weights and functions in a trench coat), which when connected to other nodes, much like actual neurons, can learn complex patterns and processes. On a more technical plane of thought, it works something like this:
 
