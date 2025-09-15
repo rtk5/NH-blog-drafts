@@ -10,6 +10,114 @@ const BlogPost = () => {
 
   // Sample blog posts data - in a real app, this would come from a CMS or API
   const blogPosts = {
+    'neural-networks-brains-in-silicon': {
+  title: 'Neural Networks: Brains in Silicon',
+  author: {
+    name: 'Arun H',
+    image: 'images/helley.jpg', // substitute a proper author image if needed
+    bio: 'AI enthusiast and passionate explainer of “brains made in silicon”. Likes neural nets, bad puns, and writing deep learning blogs for humanity before the machines take over.'
+  },
+  date: '15 Sep 2025',
+  readTime: '10 min read',
+  category: 'Machine Learning',
+  tags: ['Neural Networks', 'Machine Learning', 'Deep Learning', 'AI Basics', 'Backpropagation'],
+  image: 'images/helley.jpg',
+  content: `
+# Neural Networks
+
+We live in a society, and naturally, that comes with the consequence of living with other human beings. But in reality, society is just a large group of neuron clusters deciding to tolerate each other for the sake of survival. Neural networks are humanity's attempt at playing god, which, if sci-fi is to be used as a consensus, never ends well for us. Regardless, it's our attempt to simulate biological computation because of how strict machine algorithms fail to handle ambiguity and messy data. Instead, neural networks act as an extension, a crankshaft to an engine, in our attempts to teach computers to be closer to human intelligence than ever before.
+![helleyante](images/helley.jpg)
+
+A **neural network** is a machine learning model inspired by our brains. It is made up of **nodes** (basically our idea of neurons but digital, just weights and functions in a trench coat), which when connected to other nodes, much like actual neurons, can learn complex patterns and processes. On a more technical plane of thought, it works something like this:
+
+- **Input Layer:** Takes input in the form of numbers.  
+- **Hidden Layer:** Where the magic happens (the magic in question being the multiplication of weights and inputs, bias addition and activation functions).  
+- **Output Layer:** Where it tells us what it figured out.
+
+![belikeNN](images/like.jpg)
+
+The objective of this 'training' exercise is the determination of the correct **weights**. A weight is not dissimilar to a control knob, where the higher the knob is cranked up (larger the weight), the more each input is amplified (through multiplication). The reason we need to change the weights is to ensure that the network makes good decisions. Think of it like tuning a guitar, at first, it all off-key, random even. You pluck, you play around with the tune and adjust accordingly. Not immediately, but over time your guitar sounds like how you want it, and your neural network makes better and better decisions.
+
+![stack](images/layers.jpg)
+---
+
+### Example: Cats vs Dogs
+
+---
+
+Let’s say you want to build an app that can tell whether a picture contains a cat or a dog.
+
+Here’s what you’d do:
+1. Gather lots of labeled images (thousands of cats and dogs).  
+2. Convert each image into pixel data (literally just a lot of numbers).  
+3. Feed this into a neural network. (P.S. – This is a highly simplified explanation)  
+4. The network learns from the examples—adjusting weights using something called **backpropagation** and **gradient ascent** (more on that further down :] ).  
+5. After training, show it a new image, and it’ll bark (or meow) out the correct answer.
+
+However, neural networks do not truly **understand**, it is very fancy maths adapting to what it experiences through labelled observation. It does not understand the concept of canines and felines, just recognizes patterns through data. This distinction is important because people often assume AI “knows” things. Nope. It doesn’t know that a dog wags its tail or that cats are better than dogs, it only knows that certain pixel arrangements or features correlate with “dog” or “cat.”
+
+---
+![car or doge](images/mem.jpg)
+
+### Backpropagation & Gradient Ascent
+
+---
+
+Backpropagation is the **feedback system**. Imagine the network guesses “dog” but the image is a cat.
+
+**oops.**
+
+Backpropagation calculates the error (how wrong it was), and works backward through the network to adjust the weights. The idea is to minimize the error over time by learning from boat-loads of these little failures. Gradient Ascent meanwhile is about the maximization of the correct output and it's application, like increasing a weight after it produces a favourable output.
+
+---
+
+### A Sillier Example
+
+---
+Let's say I create a network with the purpose of identifying if something is a soup or juice.
+
+- **Input:** Hot/Cold, Sweet/Savory, Thick/Thin  
+- **Output:** Juice or Soup  
+
+Over time, the network learns:
+
+- Cold + Sweet = Juice  
+- Hot + Savory = Soup  
+
+Now toss in weird combos. The network will guess. Not always right, but often surprisingly close, especially with enough training data.  
+(*also cold soups are disgusting, this is unrelated btw I just hate cold soups*)
+
+![dum](images/dumm.jpg)
+---
+
+### Activation Functions
+
+---
+
+We talked about activation functions earlier and it's basically a **greenlight** for whether a node can fire or not. Activation functions like **ReLU**, **sigmoid**, and **tanh** (the names seem complex but the use cases are fairly mundane) add **non-linearity** to the model, basically giving it the ability to second guess and adapt, closer to how we do it.
+
+Without activation functions, neural networks would basically just be a fancy spreadsheet, spewing out data at random. Imagine trying to use 100% of your brain, at the same time, but instead of Scarlett Johannson from *Lucy*, you would end up like my Intel Pentium processor trying to run **Cyberpunk 2077**.
+
+---
+![samurai](images/silverhand.jpg)
+
+---
+
+### Overfitting & Limits
+
+---
+
+Neural networks get better as they train more, but they still have limits and run the risk of being **overfitted**. An overfit neural network is like a student who memorized the entire math textbook, examples and all; but then the exam gave slightly different values and oops, **system.exe has stopped working**. (This just further demonstrates why good quality training data and backpropagation runs are so important.) But the ceiling for our synthetic think tanks is extremely high, and every day we explore new ways to exploit them, just to make our lives a little less inconvenient.
+
+However, it is only a matter of time before some genius makes millions of these nodes and puts them into a **clanker**, and as much hope as **Wall-E**, **Baymax** and the good version of **Chitti** the robot instill in me, I still can't trust an unsupervised rust bucket imitating us flesh people.
+
+---
+
+I would like to end this blog before I am put on an **anti-wireback hit list**. And in case I don't see you, **good afternoon, good evening, and good night.**
+
+  `
+},
+
     'welcome-to-college-youre-now-in-the-algorithm': {
       title: 'Welcome to College: You\'re Now in the Algorithm',
       author: {

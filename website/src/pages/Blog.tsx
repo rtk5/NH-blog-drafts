@@ -38,7 +38,7 @@ const Blog = () => {
   const blogPosts = [
     {
       title: 'Neural Networks: Brains in Silicon',
-      author: 'Arun H',
+      author: 'Arun Hariharan',
       date: '15 Sep 2025',
       readTime: '10 min read',
       category: 'Machine Learning',
@@ -57,7 +57,7 @@ const Blog = () => {
       excerpt: 'You obviously by now have abused ChatGPT enough to sometimes wonder how it does it all. Enter, Natural Language Processing (NLP) where we teach machines to understand, interpret, and generate "human" language.',
       tags: ['NLP', 'Natural Language Processing', 'LLMs', 'Text Processing', 'Tokenization'],
       image: 'https://pictures-for-websites.vercel.app/malya/Picture1.jpg',
-      featured: true,
+      featured: false,
       slug: 'nlp-from-foundations-to-llms'
     },
     {
@@ -69,7 +69,7 @@ const Blog = () => {
       excerpt: 'Hey freshers, and hello to the rest of you seniors who are basically running on caffeine, deadlines, and whatever confidence you had before grades humbled you into oblivion.',
       tags: ['College', 'Life', 'Freshers', 'Algorithm'],
       image: 'https://pictures-for-websites.vercel.app/welc.jpg',
-      featured: true,
+      featured: false,
       slug: 'welcome-to-college-youre-now-in-the-algorithm'
     },
     {
@@ -81,7 +81,7 @@ const Blog = () => {
       excerpt: 'Machine learning has become one of the most transformative technologies of our time, powering everything from recommendation systems to autonomous vehicles.',
       tags: ['Machine Learning', 'AI Fundamentals', 'Data Science', 'Beginner Guide'],
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-      featured: true,
+      featured: false,
       slug: 'machine-learning-fundamentals-beginners-guide'
     },
     {
@@ -93,7 +93,7 @@ const Blog = () => {
       excerpt: 'You’ve heard about Data Science everywhere—Netflix uses it, doctors use it, even sports teams use it. But how do you get started? In this blog, we’ll walk through a simple project: loading data, training a model, and drawing graphs—all in Python.',
       tags: ['Data Science', 'Python', 'Machine Learning', 'Beginners'],
       image: 'https://pictures-for-websites.vercel.app/rithvik-jr/Images/Cover_Image.png',
-      featured: true,
+      featured: false,
       slug: 'your-first-data-science-project-from-csv-to-graphs'
     }
   ];
