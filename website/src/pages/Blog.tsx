@@ -44,7 +44,7 @@ const Blog = () => {
       category: 'Machine Learning',
       excerpt: 'Neural networks are our best attempt at simulating the messiness of human brains with math. Inspired by biological neurons, they allow machines to learn from patterns, adapt, and make decisions—though not without quirks like overfitting and limited “understanding.”',
       tags: ['Neural Networks', 'Machine Learning', 'Deep Learning', 'AI Basics', 'Backpropagation'],
-      image: 'images/helley.jpg',
+      image: 'https://pictures-for-websites.vercel.app/arun-images/helley.jpg',
       featured: true,
       slug: 'neural-networks-brains-in-silicon'
     },

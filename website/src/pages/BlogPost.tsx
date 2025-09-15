@@ -14,19 +14,18 @@ const BlogPost = () => {
   title: 'Neural Networks: Brains in Silicon',
   author: {
     name: 'Arun H',
-    image: 'images/helley.jpg', // substitute a proper author image if needed
+    image: 'https://pictures-for-websites.vercel.app/arun-images/helley.jpg', // substitute a proper author image if needed
     bio: 'AI enthusiast and passionate explainer of “brains made in silicon”. Likes neural nets, bad puns, and writing deep learning blogs for humanity before the machines take over.'
   },
   date: '15 Sep 2025',
   readTime: '10 min read',
   category: 'Machine Learning',
   tags: ['Neural Networks', 'Machine Learning', 'Deep Learning', 'AI Basics', 'Backpropagation'],
-  image: 'images/helley.jpg',
+  image: 'https:/pictuimages/helley.jpg',
   content: `
 # Neural Networks
 
 We live in a society, and naturally, that comes with the consequence of living with other human beings. But in reality, society is just a large group of neuron clusters deciding to tolerate each other for the sake of survival. Neural networks are humanity's attempt at playing god, which, if sci-fi is to be used as a consensus, never ends well for us. Regardless, it's our attempt to simulate biological computation because of how strict machine algorithms fail to handle ambiguity and messy data. Instead, neural networks act as an extension, a crankshaft to an engine, in our attempts to teach computers to be closer to human intelligence than ever before.
-![helleyante](images/helley.jpg)
 
 A **neural network** is a machine learning model inspired by our brains. It is made up of **nodes** (basically our idea of neurons but digital, just weights and functions in a trench coat), which when connected to other nodes, much like actual neurons, can learn complex patterns and processes. On a more technical plane of thought, it works something like this:
 
@@ -34,11 +33,11 @@ A **neural network** is a machine learning model inspired by our brains. It is m
 - **Hidden Layer:** Where the magic happens (the magic in question being the multiplication of weights and inputs, bias addition and activation functions).  
 - **Output Layer:** Where it tells us what it figured out.
 
-![belikeNN](images/like.jpg)
+![belikeNN](https://pictures-for-websites.vercel.app/arun-images/like.jpg)
 
 The objective of this 'training' exercise is the determination of the correct **weights**. A weight is not dissimilar to a control knob, where the higher the knob is cranked up (larger the weight), the more each input is amplified (through multiplication). The reason we need to change the weights is to ensure that the network makes good decisions. Think of it like tuning a guitar, at first, it all off-key, random even. You pluck, you play around with the tune and adjust accordingly. Not immediately, but over time your guitar sounds like how you want it, and your neural network makes better and better decisions.
 
-![stack](images/layers.jpg)
+![stack](https://pictures-for-websites.vercel.app/arun-images/layers.jpg)
 ---
 
 ### Example: Cats vs Dogs
@@ -57,7 +56,7 @@ Here’s what you’d do:
 However, neural networks do not truly **understand**, it is very fancy maths adapting to what it experiences through labelled observation. It does not understand the concept of canines and felines, just recognizes patterns through data. This distinction is important because people often assume AI “knows” things. Nope. It doesn’t know that a dog wags its tail or that cats are better than dogs, it only knows that certain pixel arrangements or features correlate with “dog” or “cat.”
 
 ---
-![car or doge](images/mem.jpg)
+![car or doge](https://pictures-for-websites.vercel.app/arun-images/mem.jpg)
 
 ### Backpropagation & Gradient Ascent
 
@@ -87,7 +86,7 @@ Over time, the network learns:
 Now toss in weird combos. The network will guess. Not always right, but often surprisingly close, especially with enough training data.  
 (*also cold soups are disgusting, this is unrelated btw I just hate cold soups*)
 
-![dum](images/dumm.jpg)
+![dum](images/https://pictures-for-websites.vercel.app/arun-dumm.jpg)
 ---
 
 ### Activation Functions
@@ -99,7 +98,7 @@ We talked about activation functions earlier and it's basically a **greenlight**
 Without activation functions, neural networks would basically just be a fancy spreadsheet, spewing out data at random. Imagine trying to use 100% of your brain, at the same time, but instead of Scarlett Johannson from *Lucy*, you would end up like my Intel Pentium processor trying to run **Cyberpunk 2077**.
 
 ---
-![samurai](images/silverhand.jpg)
+![samurai](images/https://pictures-for-websites.vercel.app/arun-silverhand.jpg)
 
 ---
 
