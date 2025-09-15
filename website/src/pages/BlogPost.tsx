@@ -15,7 +15,7 @@ const BlogPost = () => {
   author: {
     name: 'Arun H',
     image: 'https://pictures-for-websites.vercel.app/arun-images/arun2.jpg', // substitute a proper author image if needed
-    bio: 'AI enthusiast and passionate explainer of “brains made in silicon”. Likes neural nets, bad puns, and writing deep learning blogs for humanity before the machines take over.'
+    bio: "I am a tech enthusiast and a computer science student who believes that there should be balance in learning and humour. When I'm not being suspicious of the tech around me, I am often motorsports(like everything engines related) and looking up obscure facts about the world around us."
   },
   date: '15 Sep 2025',
   readTime: '10 min read',

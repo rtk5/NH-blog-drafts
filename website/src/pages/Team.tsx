@@ -66,18 +66,18 @@ const Team = () => {
       },
       specialties: ['Canva', 'Figma', 'React.js', 'Node.js', 'C/C++', 'Python', 'IoT']
     },
-    {
-      name: 'Saijyoti Panda',
-      role: 'Events Head',
-      image: 'https://pictures-for-websites.vercel.app/SaijyotiPanda.webp',
-      bio: 'Handles event planning and execution with an engineering mindset. Interested in low-level systems, AI, and cybersecurity.',
-      links: {
-        github: 'https://www.github.com/sxijyoti',
-        linkedin: 'https://www.linkedin.com/in/saijyoti-panda',
-        email: 'NA'
-      },
-      specialties: ['Systems Programming', 'AI/ML', 'Web Dev', 'Go', 'Python']
-    },
+    // {
+    //   name: 'Saijyoti Panda',
+    //   role: 'Events Head',
+    //   image: 'https://pictures-for-websites.vercel.app/SaijyotiPanda.webp',
+    //   bio: 'Handles event planning and execution with an engineering mindset. Interested in low-level systems, AI, and cybersecurity.',
+    //   links: {
+    //     github: 'https://www.github.com/sxijyoti',
+    //     linkedin: 'https://www.linkedin.com/in/saijyoti-panda',
+    //     email: 'NA'
+    //   },
+    //   specialties: ['Systems Programming', 'AI/ML', 'Web Dev', 'Go', 'Python']
+    // },
     {
       name: 'Aditya D Rao',
       role: 'Social Media and Marketing',
