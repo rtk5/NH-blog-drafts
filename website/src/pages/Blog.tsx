@@ -110,7 +110,21 @@ const Blog = () => {
     }
   ];
 
-  const categories = ['All', 'Machine Learning', 'Data Science', 'Natural Language Processing', 'College Life'];  const [activeCategory, setActiveCategory] = React.useState('All');
+const categories = [
+    'All',
+    'Machine Learning',
+    'Deep Learning',
+    'Reinforcement Learning',
+    'Natural Language Processing',
+    'Computer Vision',
+    'Data Science',
+    'AI Ethics',
+    'MLOps',
+    'Neural Networks',
+    'Robotics',
+    'College Life'
+  ];
+  const [activeCategory, setActiveCategory] = React.useState('All');
   const filteredPosts = activeCategory === 'All' 
     ? blogPosts 
     : blogPosts.filter(post => post.category === activeCategory);
