@@ -37,6 +37,18 @@ const Blog = () => {
 
   const blogPosts = [
     {
+      title: 'Reinforcement Learning Demystified',
+      author: 'Yajat Soni',
+      date: '29 Sep 2025',
+      readTime: '12 min read',
+      category: 'Machine Learning',
+      excerpt: 'Dive into reinforcement learning—where agents learn through trial and error, not labeled data. From AlphaGo defeating Go masters to robotic hands solving Rubik\'s Cubes, discover how RL is powering autonomous decision-making in robotics, self-driving cars, and the latest AI breakthroughs.',
+      tags: ['Reinforcement Learning', 'Machine Learning', 'AI', 'Deep Learning', 'Markov Decision Process', 'RLHF', 'Autonomous Systems'],
+      image: 'https://pictures-for-websites.vercel.app/yajat-pics/cover.jpg',
+      featured: true,
+      slug: 'reinforcement-learning-demystified'
+    },
+    {
       title: 'Neural Networks: Brains in Silicon',
       author: 'Arun Hariharan',
       date: '15 Sep 2025',
