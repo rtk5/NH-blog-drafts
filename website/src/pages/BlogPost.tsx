@@ -22,16 +22,13 @@ const BlogPost = () => {
   category: 'Machine Learning',
   tags: ['Reinforcement Learning', 'Machine Learning', 'AI', 'Deep Learning', 'Markov Decision Process', 'RLHF', 'Autonomous Systems'],
   image: 'https://pictures-for-websites.vercel.app/yajat-pics/cover.jpg',
-  content: `# **Reinforcement Learning Demystified:**
+  content: `# **Reinforcement Learning Demystified: How Machines Learn from Experience**
 
-# **How Machines Learn from Experience**
-
-
-I think you’ve heard enough of Machine Learning, it’s been all there is to talk about in the tech world and on social media lately. ML models developed using supervised or unsupervised learning approaches that usually require large labelled/ unlabelled datasets, are able to recognize recurring patterns and minimizing prediction errors over that data. 
+I think you’ve heard enough of Machine Learning — it’s been all there is to talk about in the tech world and on social media lately. ML models developed using supervised or unsupervised learning approaches that usually require large labelled/unlabelled datasets are able to recognize recurring patterns and minimize prediction errors over that data.
 
 Pretty cool, but something’s missing……
 
-What if the task **requires autonomous, adaptive decision making under changing circumstances**—where feedback is **sparse** or **delayed**, and the solution depends on optimizing a full sequence of actions rather than just learning a static mapping and regular classification, regression, clustering algorithms? 
+What if the task **requires autonomous, adaptive decision-making under changing circumstances** — where feedback is **sparse** or **delayed**, and the solution depends on optimizing a full sequence of actions rather than just learning a static mapping and regular classification, regression, or clustering algorithms?
 
 Enter, ***Reinforcement Learning***
 
@@ -39,231 +36,230 @@ Reinforcement learning (RL) is a branch of machine learning where an ***agent***
 
 ![Overview of Reinforcement Learning](https://pictures-for-websites.vercel.app/yajat-pics/overview.png)
 
-In contrast to supervised learning, where the objective is to learn from labelled examples, or unsupervised learning, which is based on detecting patterns in the data, RL deals with an ***autonomous agent*** that must make intuitive decisions and consequently learn from its actions, often without existing data. 
+In contrast to supervised learning, where the objective is to learn from labelled examples, or unsupervised learning, which is based on detecting patterns in the data, RL deals with an ***autonomous agent*** that must make intuitive decisions and consequently learn from its actions, often without existing data.
 
-*So without further ado let’s go ahead and begin our thrilling journey into the world of Reinforcement Learning\!*
+*So without further ado, let’s go ahead and begin our thrilling journey into the world of Reinforcement Learning!*
 
-**What we’ll cover** 
+---
+
+## **What We’ll Cover**
 
 1. **Key Concepts**  
 2. **Core Components of RL**  
 3. **How Things Work**  
-4. **Algorithms and Approaches to Modern RL**   
+4. **Algorithms and Approaches to Modern RL**  
 5. **RL IRL**  
-6. **Recent Developments and Updates in the world of RL**  
-7. **Conclusion, What We Learnt**
+6. **Recent Developments and Updates in the World of RL**  
+7. **Conclusion — What We Learnt**
 
-1. **The Foundation** 
+---
+
+## **1. The Foundation**
 
 Reinforcement learning is an interdisciplinary area of Machine Learning and optimal control concerned with how an ***intelligent agent*** should take actions in a dynamic environment in order to maximize a ***reward signal***. Reinforcement learning is one of the three basic machine learning paradigms, alongside supervised learning and unsupervised learning.
 
-RL is based on an ***agent*** that guides itself through an environment by making intuitive decisions and consequently learning from its actions, often without existing data. The agent’s goal is to discover a **policy**—a strategy mapping states to actions—that yields the highest possible long-term reward.
+RL is based on an ***agent*** that guides itself through an environment by making intuitive decisions and consequently learning from its actions, often without existing data. The agent’s goal is to discover a **policy** — a strategy mapping states to actions — that yields the highest possible long-term reward.
 
 ![3 Things to Know About Reinforcement Learning | TDWI](https://pictures-for-websites.vercel.app/yajat-pics/agents.jpg)
 
-Alright alright, we get it, RL is cool and all, but **what exactly makes this different from theregular Machine Learning** we learnt in school? 
+Alright alright, we get it, RL is cool and all, but **what exactly makes this different from the regular Machine Learning** we learnt in school?
 
-Reinforcement learning differs from tradition ML methods and ***supervised learning*** in not needing **labelled input-output pairs to be presented**, and in not needing **sub-optimal actions to be explicitly corrected**. Instead, the focus is on finding a balance between **exploration** (of uncharted territory) and **exploitation** (of current knowledge) with the goal of maximizing the cumulative reward (the feedback of which might be incomplete or delayed).
+Reinforcement learning differs from traditional ML methods and ***supervised learning*** in not needing **labelled input-output pairs to be presented**, and in not needing **sub-optimal actions to be explicitly corrected**. Instead, the focus is on finding a balance between **exploration** (of uncharted territory) and **exploitation** (of current knowledge) with the goal of maximizing the cumulative reward (the feedback of which might be incomplete or delayed).
 
-RL learns by ***direct interaction***—an agent makes decisions in an environment and receives **feedback** as rewards or penalties, with the goal of optimizing cumulative rewards over time. This trial-and-error process is fundamentally different from other ML paradigms, which typically learn from static datasets of examples.
-
+RL learns by ***direct interaction*** — an agent makes decisions in an environment and receives **feedback** as rewards or penalties, with the goal of optimizing cumulative rewards over time. This trial-and-error process is fundamentally different from other ML paradigms, which typically learn from static datasets of examples.
 
 ![MDP](https://pictures-for-websites.vercel.app/yajat-pics/mdp.png)
 
-*F, P is the transition dynamics, R is the Reward function, and γ is the discount factor, a parameter that determines how much importance is given to future rewards compared to immediate rewards.*
+*F, P is the transition dynamics, R is the Reward function, and γ is the discount factor — a parameter that determines how much importance is given to future rewards compared to immediate rewards.*
 
-But why do these parameters matter here? Because together they make up the ***Markov Decision Process (MDP),***  a crucial part of Reinforcement Learning, that explains that future outcomes depend only on the *current state and action*, not the prior sequence of events. Why is it called a “decision process”? because it involves *making decisions that influence these state transitions*, extending the concept into the realm of decision-making under uncertainty. 
+But why do these parameters matter here? Because together they make up the ***Markov Decision Process (MDP)*** — a crucial part of Reinforcement Learning that explains that future outcomes depend only on the *current state and action*, not the prior sequence of events. Why is it called a “decision process”? Because it involves *making decisions that influence these state transitions*, extending the concept into the realm of decision-making under uncertainty.
 
 ![Markov Decision Processes - The Decision Lab](https://pictures-for-websites.vercel.app/yajat-pics/markov.png)
 
-2. **How RL Models Work** 
+---
+
+## **2. How RL Models Work**
 
 Let’s get into the actual working principles of Reinforcement Learning and understand how it’s applied to language models and their environments.
 
-***The Agent at Work***
+### ***The Agent at Work***
 
 RL models, as we discussed previously, work by training an agent to interact with an environment, take actions, and learn strategies that maximize cumulative future rewards, often through trial-and-error and feedback. The process is iterative and driven by the parameters from MDP.
 
-![RL \#6 — Reinforcement Learning Explained | by Rakib.ai | Generative AI](https://pictures-for-websites.vercel.app/yajat-pics/agentwork.png)
-
- 
+![RL #6 — Reinforcement Learning Explained | by Rakib.ai | Generative AI](https://pictures-for-websites.vercel.app/yajat-pics/agentwork.png)
 
 At every step, the agent takes a ***new action*** that results in a ***new environment state*** and the agent then updates its knowledge (policy, value function) based on the reward received and the new state. Similarly, the current state is attributed to the sequence of previous actions.
 
-***The Cycle***
+### ***The Cycle***
 
-Over many episodes, the agent explores different actions, learns from results, and gradually improves its policy to maximize total rewards. Learning involves balancing exploration (trying new actions to find even better rewards) and exploitation (choosing the best-known actions)
+Over many episodes, the agent explores different actions, learns from results, and gradually improves its policy to maximize total rewards. Learning involves balancing exploration (trying new actions to find even better rewards) and exploitation (choosing the best-known actions).
 
-Through trial and error in moving through the environment, the agent builds a set of if-then rules or policies. The policies help it decide which action to take next for optimal cumulative reward. The agent must also choose between further environment exploration to learn new state-action rewards or select known high-reward actions from a given state. This is called the ***exploration-exploitation trade-off***. 
+Through trial and error in moving through the environment, the agent builds a set of if-then rules or policies. The policies help it decide which action to take next for optimal cumulative reward. The agent must also choose between further environment exploration to learn new state-action rewards or select known high-reward actions from a given state. This is called the ***exploration-exploitation trade-off***.
 
 **Taking a real-life example:**
 
-Let’s say you’re deciding where to go for dinner in a new city: 
+Let’s say you’re deciding where to go for dinner in a new city:
 
-Do you want to try a new, lesser-known restaurant (explore- maybe you discover a hidden gem or sample new cuisine that becomes your new favourite, exciting result, or risk disappointment), or go with a familiar chain that offers reliable food (exploit- you spent a few nights there and you found a great local spot, repeatedly dining there would be exploitation—capitalizing on gained knowledge for consistent satisfaction)?
+Do you want to try a new, lesser-known restaurant (explore — maybe you discover a hidden gem or sample new cuisine that becomes your new favourite, exciting result, or risk disappointment), or go with a familiar chain that offers reliable food (exploit — you spent a few nights there and you found a great local spot, repeatedly dining there would be exploitation — capitalizing on gained knowledge for consistent satisfaction)?
 
-![Reinforcement Learning – Exploration vs Exploitation Tradeoff - AI ML  Analytics](https://ai-ml-analytics.com/wp-content/uploads/2020/12/Screenshot-2024-12-12-at-9.16.01-PM.png)
+![Reinforcement Learning – Exploration vs Exploitation Tradeoff - AI ML Analytics](https://ai-ml-analytics.com/wp-content/uploads/2020/12/Screenshot-2024-12-12-at-9.16.01-PM.png)
 
-3. **Approaches and Algorithms in RL**   
-     
-   Here we’ll discuss about how to actually begin using our knowledge of RL in solving real world problems using algorithms. Algorithms and Approaches to using in RL are through trial-and-error interactions with the environment, aiming to maximize cumulative rewards over time. The main RL algorithm families include:  
-     
-* **Value-Based** **Methods**  
-* **Policy-Based** **Methods**  
-* **Model-Based Methods**  
-* And further ***hybrid*** approaches that enhance efficiency and stability.
+---
+
+## **3. Approaches and Algorithms in RL**
+
+Here we’ll discuss how to actually begin using our knowledge of RL in solving real-world problems using algorithms. Algorithms and approaches in RL rely on trial-and-error interactions with the environment, aiming to maximize cumulative rewards over time. The main RL algorithm families include:
+
+- **Value-Based Methods**  
+- **Policy-Based Methods**  
+- **Model-Based Methods**  
+- And further ***hybrid*** approaches that enhance efficiency and stability.
 
 ![RL Algorithms](https://pictures-for-websites.vercel.app/yajat-pics/rlalgo.png)
 
-**Value-Based Methods**
+### **Value-Based Methods**
 
-Value-based methods are a class of algorithms that focus on learning the **value** of states or actions to guide an agent’s decision-making. Instead of directly optimizing a policy (a mapping from states to actions), these methods estimate **how beneficial it is for the agent to be in a specific state or take a specific action** by estimating value functions that determine optimal actions, focusing on the expected reward, measured by expected cumulative future rewards. 
+Value-based methods are a class of algorithms that focus on learning the **value** of states or actions to guide an agent’s decision-making. Instead of directly optimizing a policy (a mapping from states to actions), these methods estimate **how beneficial it is for the agent to be in a specific state or take a specific action** by estimating value functions that determine optimal actions, focusing on the expected reward measured by expected cumulative future rewards.
 
-The core idea is to build a ***value function*** and use estimates to select the best actions. Like, an agent might always choose the action with the highest Q-value (a thing in Q-Learning) in a given state.
+The core idea is to build a ***value function*** and use estimates to select the best actions. For example, an agent might always choose the action with the highest Q-value (a concept in Q-Learning) in a given state.
 
-Some popular Value-Based Method approaches include but are not limited to:
+Some popular Value-Based Method approaches include:
 
-* ***Q-learning***: Instead of needing a model of the environment the agent learns purely from experience by trying different actions and seeing their results  
-* ***Deep Q Networks***: uses deep learning to help machines make decisions in complicated situations.  
-* ***SARSA***: **S**tate-**A**ction-**R**eward-**S**tate-**A**ction, an on-policy algorithm that helps an agent to learn an optimal policy by interacting with its environment.
+- ***Q-learning***: Instead of needing a model of the environment, the agent learns purely from experience by trying different actions and seeing their results.  
+- ***Deep Q Networks (DQN)***: Uses deep learning to help machines make decisions in complicated situations.  
+- ***SARSA***: **S**tate-**A**ction-**R**eward-**S**tate-**A**ction — an on-policy algorithm that helps an agent learn an optimal policy by interacting with its environment.
 
-**Policy-Based Methods**
+### **Policy-Based Methods**
 
-Policy Gradient methods to directly optimize the agent’s **policy**, in order to maximize rewards, unlike value-based methods that estimate the value of states. 
+Policy Gradient methods directly optimize the agent’s **policy** in order to maximize rewards, unlike value-based methods that estimate the value of states.
 
-These methods are suitable for continuous or high-dimensional action spaces or complex tasks where value-based approaches may struggle. (This method has a bunch of math stuff so here goes..) 
+These methods are suitable for continuous or high-dimensional action spaces or complex tasks where value-based approaches may struggle.
 
-* First we directly learn to approximate  without having to learn a value function. The idea is **to parameterize the policy**. For instance, using a neural network **π**θ, this policy will output a probability distribution over actions (***stochastic policy***).
+- First, we directly learn to approximate the policy without having to learn a value function. The idea is **to parameterize the policy**. For instance, using a neural network **πθ**, this policy will output a probability distribution over actions (***stochastic policy***).
 
-  ![Stochastic Policy](https://pictures-for-websites.vercel.app/yajat-pics/stochastic.png)
+![Stochastic Policy](https://pictures-for-websites.vercel.app/yajat-pics/stochastic.png)
 
-* Simply, we directly optimize our policy πθ​ to output a probability distribution over actions πθ (a ∣ s) \[**a neural network policy that outputs probabilities of actions for each state**\] that leads to the best cumulative return. 
+- Simply put, we directly optimize our policy πθ to output a probability distribution over actions πθ(a ∣ s) — **a neural network policy that outputs probabilities of actions for each state** — that leads to the best cumulative return.
 
-In simple words, the core idea behind policy gradient methods is to compute the **gradient** of the objective function with respect to the policy parameters. The general algorithm involves the following steps follows the agent interacting with the environment. The return of the cumulative reward obtained which is computed as the sum of rewards, which is further computed as the gradient of the objective function with respect to the policy parameters using the collected data. Finally, the policy parameters are updated using ***gradient ascent*** to improve the expected return.
+The core idea behind policy gradient methods is to compute the **gradient** of the objective function with respect to the policy parameters. The general algorithm involves the agent interacting with the environment, computing the cumulative reward (sum of rewards), calculating the gradient of the objective function with respect to the policy parameters using the collected data, and finally updating the policy parameters using ***gradient ascent*** to improve the expected return.
 
-**Model-Based Methods**
+### **Model-Based Methods**
 
-Last but not the least, Model-Based Methods in RL also called MBRL build explicit **models** of the environment or the system and use planning strategies for efficient policy development.
+Model-Based Methods in RL, also called MBRL, build explicit **models** of the environment or system and use planning strategies for efficient policy development.
 
-Specifically, the model is **predictive** so we can enable planning, simulation, and decision-making, thereby improving data efficiency and allowing for look-ahead by learning dynamics and rewards. The agent constructs an *internal model* of the environment's dynamics and uses it to simulate future states, predict rewards and optimize actions efficiently. MBRL includes: 
+Specifically, the model is **predictive**, enabling planning, simulation, and decision-making, thereby improving data efficiency and allowing for look-ahead by learning dynamics and rewards. The agent constructs an *internal model* of the environment's dynamics and uses it to simulate future states, predict rewards, and optimize actions efficiently. MBRL includes:
 
-* **Model of the Environment:** This is the predictive model we were talking about, which can forecast the next state and rewards given the current state and action.
+- **Model of the Environment:** The predictive model can forecast the next state and rewards given the current state and action.  
+- **Planning Algorithm:** Once the model is done learning, a planning algorithm evaluates the model to decide the optimal sequence of actions.
 
-* **Planning Algorithm:** Once the model is done learning, a planning algorithm evaluates the model to decide the optimal sequence of actions. 
+Model-based algorithms like ***Dyna***, ***Model-Based Policy Optimization (MBPO)***, ***Dreamer***, and ***Probabilistic Inference for Learning Control (PILCO)*** are used often in this domain. They prioritize **sample efficiency** by using the learned model to **simulate experiences**, reducing the need for costly real-world interactions.
 
-Model based algorithms like ***Dyna***, ***Model-Based Policy Optimization (MBPO)***, ***Dreamer***, and ***Probabilistic Inference for Learning Control (PILCO)*** are used often in this domain, they prioritize **sample efficiency** by using the learned model to **simulate** **experiences**, reducing the need for costly real-world interactions.
+---
 
-4. **RL, IRL**
+## **4. RL IRL**
 
-Why not take a peek into the real world? See how bright minds across the world have utilized the approach of Reinforcement Learning to build solutions to creative problem statements. 
+Why not take a peek into the real world? See how bright minds across the world have utilized the approach of Reinforcement Learning to build solutions to creative problem statements.
 
-* **Google DeepMind’s AlphaGo**
+### **Google DeepMind’s AlphaGo**
 
-  Google DeepMind's AlphaGo was program that made a historic breakthrough in 2016 by becoming the first computer program to **defeat a top professional human player** at the complex Chinese strategy game of Go. It was a monumental achievement for AI research, as experts previously believed this milestone was **at least a decade away**.
+Google DeepMind's AlphaGo made a historic breakthrough in 2016 by becoming the first computer program to **defeat a top professional human player** at the complex Chinese strategy game of Go. It was a monumental achievement for AI research, as experts previously believed this milestone was **at least a decade away**.
 
+![Google AI vs. Human – History Making Go Competition in Seoul](https://pictures-for-websites.vercel.app/yajat-pics/alphago.jpeg)
 
-      ![Google AI vs. Human – History Making Go Competition in Seoul | The Center  for Brains, Minds & Machines](https://pictures-for-websites.vercel.app/yajat-pics/alphago.jpeg)
+![Google's AlphaGo Defeats Chinese Go Master](https://pictures-for-websites.vercel.app/yajat-pics/gomaster.png)
 
+*[Google's AlphaGo Defeats Chinese Go Master](https://www.nytimes.com/2017/05/23/business/google-deepmind-alphago-go-champion-defeat.html)*
 
-  
+> “Initially, we introduced AlphaGo to numerous amateur games of Go so the system could learn how humans play the game. Then we instructed AlphaGo to play against different versions of itself thousands of times, each time learning from its mistakes — a method known as ***reinforcement learning***. Over time, AlphaGo ***improved and became a better player***.” — Developers of AlphaGo
 
-      ![Google's AlphaGo Defeats Chinese Go Master in Win for A.I. - The New York  Times](https://pictures-for-websites.vercel.app/yajat-pics/gomaster.png)
+---
 
-      *[Google's AlphaGo Defeats Chinese Go Master](https://www.nytimes.com/2017/05/23/business/google-deepmind-alphago-go-champion-defeat.html)* 
+### **OpenAI’s Dactyl**
 
-*“*Initially, we introduced AlphaGo to numerous amateur games of Go so the system could learn how humans play the game. Then we instructed AlphaGo to play against different versions of itself thousands of times, each time learning from its mistakes — a method known as ***reinforcement learning***. Over time, AlphaGo ***improved and became a better player***.”- Developers of AlphaGo
+OpenAI’s robotic hand, known as “***Dactyl***,” is a project showcasing human-like dexterity in robotic manipulation. Dactyl is capable of manipulating and solving objects such as a Rubik’s Cube — a task that demonstrates unprecedented motor and decision-making skills for a robotic system trained using reinforcement learning methods.
 
-	
+![Dactyl by OpenAI](https://pictures-for-websites.vercel.app/yajat-pics/dactyl.png)
 
-* **OpenAI’s Dactyl**
+![Dactyl's workflow](https://pictures-for-websites.vercel.app/yajat-pics/workflow.png)
 
-  OpenAI’s robotic hand, known as “***Dactyl***,” is a project showcasing human-like dexterity in robotic manipulation. Dactyl is capable of manipulating and solving objects such as a Rubik’s Cube—a task that demonstrates unprecedented motor and decision-making skills for a robotic system trained using reinforcement learning methods
+> “We’ve trained a pair of neural networks to solve the Rubik’s Cube with a human-like robot hand. The neural networks are trained entirely in simulation, using ***reinforcement learning code*** paired with a new technique called Automatic Domain Randomization (ADR). The system can handle situations it never saw during training. This shows that reinforcement learning isn’t just a tool for virtual tasks, ***but can solve physical-world problems*** requiring unprecedented dexterity.” — OpenAI
 
+---
 
-  ![Dactyl by OpenAI](https://pictures-for-websites.vercel.app/yajat-pics/dactyl.png)
+### **Wayve and Google’s Waymo**
 
-  ![Dactyl's workflow](https://pictures-for-websites.vercel.app/yajat-pics/workflow.png)
-
-  OpenAI’s approach – *“*We’ve trained a pair of neural networks to solve the Rubik’s Cube with a human-like robot hand. The neural networks are trained entirely in simulation, using ***reinforcement learning code*** paired with a new technique called Automatic Domain Randomization (ADR). The system can handle situations it never saw during training. This shows that reinforcement learning isn’t just a tool for virtual tasks, ***but can solve physical-world problems*** requiring unprecedented dexterity.”
-
-
-  
-
-*  **Wayve and Google’s Waymo**
-
-
-  Wayve and Google’s Waymo have both conducted prominent research on reinforcement learning (RL) for urban autonomous driving, but with key differences in philosophy and implementation.
-
+Wayve and Google’s Waymo have both conducted prominent research on reinforcement learning (RL) for urban autonomous driving, but with key differences in philosophy and implementation.
 
 ![Waymo](https://pictures-for-websites.vercel.app/yajat-pics/wyamo.png)
 
 *Diagram of how Waymo turns a text LLM like Gemini into a driving system, turning things into text.*
 
-*“*Machine learning methods can broadly be categorised as either supervised learning, unsupervised learning, or reinforcement learning. In our very first technical demonstration, we showed that we can use [***reinforcement learning to learn to lane follow***](https://wayve.ai/thinking/learning-to-drive-in-a-day/) [***from scratch***](https://wayve.ai/thinking/learning-to-drive-in-a-day/) using sparse safety driver interventions. Here we focused on **learning by copying human driving**. An extension to this is conditional learning, which **trains a neural network to perform different actions given some input in addition to the observed state**. We use this to direct the car to follow a user-defined route. This means collecting human driving data and training a machine learning model to copy this behaviour.*”*
+> “Machine learning methods can broadly be categorised as either supervised learning, unsupervised learning, or reinforcement learning. In our very first technical demonstration, we showed that we can use [***reinforcement learning to learn to lane follow***](https://wayve.ai/thinking/learning-to-drive-in-a-day/) [***from scratch***](https://wayve.ai/thinking/learning-to-drive-in-a-day/) using sparse safety driver interventions. Here we focused on **learning by copying human driving**. An extension to this is conditional learning, which **trains a neural network to perform different actions given some input in addition to the observed state**. We use this to direct the car to follow a user-defined route. This means collecting human driving data and training a machine learning model to copy this behaviour.” — Wayve
 
-Wayve pioneered end-to-end deep learning approaches where a neural network directly maps sensory input (camera images) to vehicle control commands, handling both lateral and longitudinal control. Their model learns **driving policies** **directly from** **reinforcement learning** (using sparse feedback/interventions). 
+Wayve pioneered end-to-end deep learning approaches where a neural network directly maps sensory input (camera images) to vehicle control commands, handling both lateral and longitudinal control. Their model learns **driving policies** **directly from** **reinforcement learning** (using sparse feedback/interventions).
 
-Notable research includes using RL for training cars to follow lanes or routes with reward signals from safety driver interventions, and adaptive learning in diverse simulated worlds using ***multi-agent RL***. 
+Notable research includes using RL for training cars to follow lanes or routes with reward signals from safety driver interventions, and adaptive learning in diverse simulated worlds using ***multi-agent RL***.
 
 Systems like MILE (Model-based Imitation Learning) build a representation of the world and **anticipate future actions**, with the ability to drive in novel cities well outside the training distribution.
 
-5. **Recent Developments and Updates in the world of RL**  
-   The tech scene is constantly buzzing with new technologies, frameworks, algorithms and training methods. Here’s where RL is dominating the ball:   
-   
+---
 
-***Integration with LLMs and AI Agents***
+## **5. Recent Developments and Updates in the World of RL**
 
-RL's role in ***post-training*** LLMs and building "agentic" AI (e.g., models like o3, Claude 3.5 Sonnet, or R1 that plan and act autonomously).
+The tech scene is constantly buzzing with new technologies, frameworks, algorithms, and training methods. Here’s where RL is dominating the ball:
 
-* Surveys and papers dominate [arXiv](https://d.docs.live.net/6b65e4828bd4b2c3/Desktop/arxiv.org) mentions.
+### ***Integration with LLMs and AI Agents***
 
-* RLVMR: Rewards verifiable reasoning to avoid shortcuts, boosting generalization (83.6% success on unseen tasks).
+RL's role in ***post-training*** LLMs and building "agentic" AI (e.g., models like o3, Claude 3.5 Sonnet, or R1 that plan and act autonomously):
 
-* RL for ML engineering agents: Small models (e.g., 3B Qwen) outperform larger ones via RL, fixing sparse rewards with milestones.
+- Surveys and papers dominate [arXiv](https://d.docs.live.net/6b65e4828bd4b2c3/Desktop/arxiv.org) mentions.  
+- **RLVMR:** Rewards verifiable reasoning to avoid shortcuts, boosting generalization (83.6% success on unseen tasks).  
+- **RL for ML engineering agents:** Small models (e.g., 3B Qwen) outperform larger ones via RL, fixing sparse rewards with milestones.  
+- Frameworks like Agent Lightning use RL to train any LLM as an agent.
 
-* Frameworks like Agent Lightning use RL to train any LLM as an agent.
-
-Deepseek Artificial Intelligence Basic Technology Research Co., whose reasoning model DeepSeek-R1 took the world by storm in early 2025 when it reportedly performed on par with **OpenAI's most powerful models** in some benchmarks while costing **a fraction of the price** **to train**, released a research paper on how they improved the reasoning abilities of language models ***purely through reinforcement learning (RL)*** instead of traditional supervised learning. 
+Deepseek Artificial Intelligence Basic Technology Research Co., whose reasoning model DeepSeek-R1 took the world by storm in early 2025 when it reportedly performed on par with **OpenAI's most powerful models** in some benchmarks while costing **a fraction of the price** to train, released a research paper on how they improved the reasoning abilities of language models ***purely through reinforcement learning (RL)*** instead of traditional supervised learning.
 
 ![DeepSeek- R1](https://pictures-for-websites.vercel.app/yajat-pics/deepseek.png)
 
-What we see is that **RL \+ LLMs/Agents** are dominating with 2025 papers on reasoning, generalization, and frameworks. RL is seen as the **key** to human-like decision-making. 
+What we see is that **RL + LLMs/Agents** are dominating 2025 papers on reasoning, generalization, and frameworks. RL is seen as the **key** to human-like decision-making.
 
-***Reinforcement Learning from Human Feedback (RLHF)***
+---
 
-Reinforcement Learning from Human Feedback (RLHF) is a reinforcement learning technique used to align AI systems with complex human values and preferences by ***training models using direct human feedback*** rather than predefined rules or rewards. 
+### ***Reinforcement Learning from Human Feedback (RLHF)***
+
+Reinforcement Learning from Human Feedback (RLHF) is a reinforcement learning technique used to align AI systems with complex human values and preferences by ***training models using direct human feedback*** rather than predefined rules or rewards.
 
 **The process:**
 
-* *Pretraining* a foundational model, often a large language model, on diverse data.
+- *Pretraining* a foundational model, often a large language model, on diverse data.  
+- Building a *reward model* by collecting and labelling outputs, then ranking these outputs according to human preferences.  
+- *Fine-tuning the original model* through reinforcement learning, using the reward model as the objective function for optimization.
 
-* Building a *reward model* by collecting and labelling outputs, then ranking these outputs according to human preferences
+Unlike traditional RL, where rewards are predefined, **RLHF gathers feedback from humans who compare AI-generated outputs and indicate which ones better match their expectations or values**. These rankings create a dataset used to train a reward model that predicts how satisfactory future outputs will be. The AI model is then optimized to maximize this predicted human-centric reward.
 
-* *Fine-tuning the original model* through reinforcement learning, using the reward model as the objective function for optimization.
-
-Unlike traditional RL, where rewards are predefined**, RLHF gathers feedback from humans who compare AI-generated outputs and indicate which ones better match their expectations or values**. These rankings create a dataset used to train a reward model that predicts how satisfactory future outputs will be. The AI model is then optimized to maximize this predicted human-centric reward.
-
-Anthropic, widely seen as the foremost challenger to OpenAI, is one of the leading companies that prioritize the responsible development and deployment of advanced AI systems. They published a research paper on the use of RLHF to train AI assistants to be both ***helpful*** (useful, responsive, and honest) and ***harmless*** (avoid harmful, toxic, or dangerous outputs). They demonstrated practical methods for aligning AI assistants with human values by making them both more helpful and more harmless, using human feedback at scale.
+Anthropic, widely seen as the foremost challenger to OpenAI, is one of the leading companies that prioritize the responsible development and deployment of advanced AI systems. They published a research paper on the use of RLHF to train AI assistants to be both ***helpful*** (useful, responsive, and honest) and ***harmless*** (avoid harmful, toxic, or dangerous outputs). They demonstrated practical methods for aligning AI assistants with human values by making them both more helpful and more harmless, using human feedback at scale.
 
 ![Anthropic Study](https://pictures-for-websites.vercel.app/yajat-pics/study.png)
 
-![Anthropic Model Traingin Workflow](https://pictures-for-websites.vercel.app/yajat-pics/Anthropic%20Model%20Traingin%20Workflow.png)
+![Anthropic Model Training Workflow](https://pictures-for-websites.vercel.app/yajat-pics/Anthropic%20Model%20Traingin%20Workflow.png)
 
-6. **Conclusion**
+---
 
-Reinforcement learning has rapidly evolved from playing games and solving puzzles to **powering some of the most innovative and world-leading technologies of our time**. As we just saw with recent breakthroughs, RL is no longer just a research curiosity—it’s **changing the landscape** of robotics, autonomous vehicles, recommendation engines, healthcare, finance, and several more fields.
+## **6. Conclusion**
+
+Reinforcement learning has rapidly evolved from playing games and solving puzzles to **powering some of the most innovative and world-leading technologies of our time**. As we just saw with recent breakthroughs, RL is no longer just a research curiosity — it’s **changing the landscape** of robotics, autonomous vehicles, recommendation engines, healthcare, finance, and several more fields.
 
 With ongoing rapid advancements in algorithms, multi-agent systems, and integration with large AI models, we’re pushing the boundaries of what machines can learn and achieve. Yet, challenges remain: making RL more sample-efficient, explainable, and robust in the real world. Researchers and developers are working toward making RL **safer, more accessible, and truly generalizable**.
 
-As someone once said— “The right time is now.”, no matter who you are or what your background is, right now is probably the most exciting time to dive into Reinforcement Learning.
+As someone once said — “The right time is now.” No matter who you are or what your background is, right now is probably the most exciting time to dive into Reinforcement Learning.
 
-The next generation of AI—smarter, more adaptive, and collaborative—is being built on these very foundations. 
+The next generation of AI — smarter, more adaptive, and collaborative — is being built on these very foundations.
 
-So don’t miss the bus, by staying curious and engaged, you can help shape the future of intelligent systems.
+So don’t miss the bus — by staying curious and engaged, you can help shape the future of intelligent systems.
 
-*Reinforcement learning isn’t just about agents earning high scores—it’s about empowering machines (and people) to learn from experience and make smarter decisions, step by step, reward by reward.*
+*Reinforcement learning isn’t just about agents earning high scores — it’s about empowering machines (and people) to learn from experience and make smarter decisions, step by step, reward by reward.*
 
-Well, here we are, we made it to the end of our tremendous journey through the enthralling world of Reinforcement Learning. I hope you enjoyed it as much as I did and I also hope to see you around here again *very* soon :D 
+Well, here we are — we made it to the end of our tremendous journey through the enthralling world of Reinforcement Learning. I hope you enjoyed it as much as I did and I also hope to see you around here again *very* soon :D
 
 `
     },

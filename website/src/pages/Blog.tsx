@@ -52,7 +52,7 @@ const Blog = () => {
       title: 'Neural Networks: Brains in Silicon',
       author: 'Arun Hariharan',
       date: '15 Sep 2025',
-      readTime: '10 min read',
+      readTime: '5 min read',
       category: 'Machine Learning',
       excerpt: 'Neural networks are our best attempt at simulating the messiness of human brains with math. Inspired by biological neurons, they allow machines to learn from patterns, adapt, and make decisions—though not without quirks like overfitting and limited “understanding.”',
       tags: ['Neural Networks', 'Machine Learning', 'Deep Learning', 'AI Basics', 'Backpropagation'],
