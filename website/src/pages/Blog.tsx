@@ -49,6 +49,18 @@ const Blog = () => {
       slug: 'reinforcement-learning-demystified'
     },
     {
+      title: 'Text Representation: From One-Hot to Word2Vec',
+      author: 'Adithya Mallya',
+      date: '22 Sep 2025',
+      readTime: '15 min read',
+      category: 'Natural Language Processing',
+      excerpt: 'Dive deep into the mathematical foundations of text representation. From sparse one-hot encodings to dense word embeddings, discover how we transform human language into vectors that machines can understand and operate on.',
+      tags: ['Word Embeddings', 'Word2Vec', 'TF-IDF', 'NLP', 'Vector Representations', 'Skip-Gram', 'CBOW'],
+      image: 'https://pictures-for-websites.vercel.app/malya/2/cover.jpg',
+      featured: true,
+      slug: 'text-representation-one-hot-to-word2vec'
+    },
+    {
       title: 'Neural Networks: Brains in Silicon',
       author: 'Arun Hariharan',
       date: '15 Sep 2025',
