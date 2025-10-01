@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
+import { BlockMath, InlineMath } from 'react-katex';
+import 'katex/dist/katex.min.css';
 
 const BlogPost = () => {
   const { slug } = useParams();
