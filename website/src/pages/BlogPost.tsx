@@ -264,561 +264,561 @@ Well, here we are — we made it to the end of our tremendous journey through th
 `
     },
 
-//   'text-representation-one-hot-to-word2vec': {
-//     title: 'Text Representation: From One-Hot to Word2Vec',
-//     author: {
-//       name: 'Adithya Mallya',
-//       image: 'https://pictures-for-websites.vercel.app/malya/adimallya.jpg',
-//       bio: "Deep learning enthusiast exploring the mathematical foundations of NLP and machine learning. I believe in understanding the 'why' behind every algorithm, not just the 'how'. When I'm not diving into research papers, I'm probably explaining complex ML concepts with terrible analogies."
-//     },
-//     date: '30 Sep 2025',
-//     readTime: '15 min read',
-//     category: 'Natural Language Processing',
-//     tags: ['Word Embeddings', 'Word2Vec', 'TF-IDF', 'NLP', 'Vector Representations', 'Skip-Gram', 'CBOW', 'Negative Sampling'],
-//     image: 'https://pictures-for-websites.vercel.app/malya/2/cover.jpg',
-//     content: `
-//     **Okay so let's start where we left off.**
+  'text-representation-one-hot-to-word2vec': {
+    title: 'Text Representation: From One-Hot to Word2Vec',
+    author: {
+      name: 'Adithya Mallya',
+      image: 'https://pictures-for-websites.vercel.app/malya/adimallya.jpg',
+      bio: "Deep learning enthusiast exploring the mathematical foundations of NLP and machine learning. I believe in understanding the 'why' behind every algorithm, not just the 'how'. When I'm not diving into research papers, I'm probably explaining complex ML concepts with terrible analogies."
+    },
+    date: '30 Sep 2025',
+    readTime: '15 min read',
+    category: 'Natural Language Processing',
+    tags: ['Word Embeddings', 'Word2Vec', 'TF-IDF', 'NLP', 'Vector Representations', 'Skip-Gram', 'CBOW', 'Negative Sampling'],
+    image: 'https://pictures-for-websites.vercel.app/malya/2/cover.jpg',
+    content: `
+    **Okay so let's start where we left off.**
 
-// **Continuing with Text Representation. From this point onwards its going to get interesting**
+**Continuing with Text Representation. From this point onwards its going to get interesting**
 
-// # **3.3 Text Representation**
+# **3.3 Text Representation**
 
-// Now that text is cleaned and tokenized, we must convert tokens into numbers that models can operate on. This section gives a mathematically detailed walk-through of every major representation method you'll see in modern NLP, from one-hot vectors and TF–IDF to Word2Vec, GloVe, FastText, and contextual embeddings (ELMo / BERT / GPT / Transformers).
+Now that text is cleaned and tokenized, we must convert tokens into numbers that models can operate on. This section gives a mathematically detailed walk-through of every major representation method you'll see in modern NLP, from one-hot vectors and TF–IDF to Word2Vec, GloVe, FastText, and contextual embeddings (ELMo / BERT / GPT / Transformers).
 
-// **Why we need good representations**
+**Why we need good representations**
 
-// A representation maps a token (word / subword / sentence) w to a vector $\mathbf{v}_w \in \mathbb{R}^d$. Where $\mathbb{R}^d$ is a 'd-dimensional' space of Real Numbers.
+A representation maps a token (word / subword / sentence) w to a vector $\mathbf{v}_w \in \mathbb{R}^d$. Where $\mathbb{R}^d$ is a 'd-dimensional' space of Real Numbers.
 
-// Good vector representations would generally follow these two things:
+Good vector representations would generally follow these two things:
 
-// - **Similarity**: semantically similar words have small distances or large cosine similarities.
+- **Similarity**: semantically similar words have small distances or large cosine similarities.
 
-//   $$\text{cosine}(\mathbf{u},\mathbf{v}) = \frac{\mathbf{u}^\top \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}$$
+  $$\text{cosine}(\mathbf{u},\mathbf{v}) = \frac{\mathbf{u}^\top \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}$$
 
-// - **Linearity**: simple arithmetic on vectors encodes relations
+- **Linearity**: simple arithmetic on vectors encodes relations
 
-//   (e.g., $\mathbf{v}_{\text{king}} - \mathbf{v}_{\text{man}} + \mathbf{v}_{\text{woman}} \approx \mathbf{v}_{\text{queen}}$).$_{\text{Foreshadowing}}$
+  (e.g., $\mathbf{v}_{\text{king}} - \mathbf{v}_{\text{man}} + \mathbf{v}_{\text{woman}} \approx \mathbf{v}_{\text{queen}}$).$_{\text{Foreshadowing}}$
 
-// ![Image 1](https://pictures-for-websites.vercel.app/malya/2/image.png)
+![Image 1](https://pictures-for-websites.vercel.app/malya/2/image.png)
 
-// ## **1) One-Hot Encoding**
+## **1) One-Hot Encoding**
 
-// ### **1. Definition**
+### **1. Definition**
 
-// If your vocabulary has size V (say 10,000 unique words), then each word is represented as a vector of length V:
+If your vocabulary has size V (say 10,000 unique words), then each word is represented as a vector of length V:
 
-// $$\mathbf{e}_i = [0,0,\dots,1,0,\dots,0]^\top$$
+$$\mathbf{e}_i = [0,0,\dots,1,0,\dots,0]^\top$$
 
-// - The "1" sits in the position corresponding to word i.
-// - All other entries are 0.
+- The "1" sits in the position corresponding to word i.
+- All other entries are 0.
 
-// Example: Vocabulary = [cat, dog, apple].
+Example: Vocabulary = [cat, dog, apple].
 
-// - "cat" = $[1,0,0]^\top$
-// - "dog" = $[0,1,0]^\top$
-// - "apple" = $[0,0,1]^\top$
+- "cat" = $[1,0,0]^\top$
+- "dog" = $[0,1,0]^\top$
+- "apple" = $[0,0,1]^\top$
 
-// Vocabulary size V. One-hot vector for word i is the standard basis vector:
+Vocabulary size V. One-hot vector for word i is the standard basis vector:
 
-// $$\mathbf{e}_i = [0,\dots,0,1,0,\dots,0]^\top \in \{0,1\}^V$$
+$$\mathbf{e}_i = [0,\dots,0,1,0,\dots,0]^\top \in \{0,1\}^V$$
 
-// Properties:
+Properties:
 
-// - $\mathbf{e}_i^\top \mathbf{e}_j = 0$ for $i\neq j$.
-// - Norm $\|\mathbf{e}_i\|_2 = 1$.
+- $\mathbf{e}_i^\top \mathbf{e}_j = 0$ for $i\neq j$.
+- Norm $\|\mathbf{e}_i\|_2 = 1$.
 
-// **Limit**: Orthogonality ⇒ no notion of semantic similarity.
+**Limit**: Orthogonality ⇒ no notion of semantic similarity.
 
-// ### 2. Intuition:
+### 2. Intuition:
 
-// 1. **Orthogonality**
+1. **Orthogonality**
     
-//     $$\mathbf{e}_i^\top \mathbf{e}_j = 0 \quad \text{for } i \neq j$$
+    $$\mathbf{e}_i^\top \mathbf{e}_j = 0 \quad \text{for } i \neq j$$
     
-//     - Dot product measures similarity.
-//     - Since different words' one-hot vectors have no overlap, similarity = 0.
-//     - This encodes: "Every word is completely different from every other word."
+    - Dot product measures similarity.
+    - Since different words' one-hot vectors have no overlap, similarity = 0.
+    - This encodes: "Every word is completely different from every other word."
 
-// 2. **Norm**
+2. **Norm**
     
-//     $$\|\mathbf{e}_i\|_2 = 1$$
+    $$\|\mathbf{e}_i\|_2 = 1$$
     
-//     - Each one-hot vector has exactly one entry equal to 1, so its Euclidean length is always 1.
-//     - All words lie on the corners of a high-dimensional cube.
+    - Each one-hot vector has exactly one entry equal to 1, so its Euclidean length is always 1.
+    - All words lie on the corners of a high-dimensional cube.
 
-// ## **3. The Limitation**
+## **3. The Limitation**
 
-// That's why we say:
+That's why we say:
 
-// > "One-hot encodings have orthogonality → no notion of semantic similarity."
+> "One-hot encodings have orthogonality → no notion of semantic similarity."
 
-// This limitation motivated the development of **dense embeddings** (Word2Vec, GloVe, BERT), where words get mapped into a lower-dimensional continuous space where "king" is closer to "queen" than to "carburetor."
+This limitation motivated the development of **dense embeddings** (Word2Vec, GloVe, BERT), where words get mapped into a lower-dimensional continuous space where "king" is closer to "queen" than to "carburetor."
 
-// ![Image 2](https://pictures-for-websites.vercel.app/malya/2/image1.png)
+![Image 2](https://pictures-for-websites.vercel.app/malya/2/image1.png)
 
-// ## **2) Bag of Words (BoW)**
+## **2) Bag of Words (BoW)**
 
-// When we process text for machines, we must **convert words into numbers**. One of the simplest methods is the **Bag of Words (BoW)** representation.
+When we process text for machines, we must **convert words into numbers**. One of the simplest methods is the **Bag of Words (BoW)** representation.
 
-// Some important properties:
+Some important properties:
 
-// 1. **High Dimensionality**
-//     - Each document is a point in V-dimensional space.
-//     - For vocab of 50,000 words → each document vector is length 50,000.
-//     - Most entries are 0 → **sparse vector**.
+1. **High Dimensionality**
+    - Each document is a point in V-dimensional space.
+    - For vocab of 50,000 words → each document vector is length 50,000.
+    - Most entries are 0 → **sparse vector**.
 
-// 2. **No Word Order**
-//     - "dog bites man" and "man bites dog" → same BoW vector.
-//     - Word sequence information is lost.
+2. **No Word Order**
+    - "dog bites man" and "man bites dog" → same BoW vector.
+    - Word sequence information is lost.
 
-// 3. **Similarity**
-//     - We can measure similarity between two docs using dot product or cosine similarity.
-//     - Example:
-//         - Doc1 = [2,1,0]
-//         - Doc2 = [0,1,1]
-//         - Dot product = $2\cdot 0 + 1\cdot 1 + 0\cdot 1 = 1$.
-//         - This shows some overlap ("dog"), but no semantic understanding beyond counts.
+3. **Similarity**
+    - We can measure similarity between two docs using dot product or cosine similarity.
+    - Example:
+        - Doc1 = [2,1,0]
+        - Doc2 = [0,1,1]
+        - Dot product = $2\cdot 0 + 1\cdot 1 + 0\cdot 1 = 1$.
+        - This shows some overlap ("dog"), but no semantic understanding beyond counts.
 
-// - $c_{t,d}$: number of times term t appears in document d.
-// - Each position in the vector maps to a word in the vocabulary.
-// - The document is reduced to just "**word counts**", ignoring grammar and order.
+- $c_{t,d}$: number of times term t appears in document d.
+- Each position in the vector maps to a word in the vocabulary.
+- The document is reduced to just "**word counts**", ignoring grammar and order.
 
-// For a document d, define counts $c_{t,d}$ = number of times term t appears in document d. The BoW vector:
+For a document d, define counts $c_{t,d}$ = number of times term t appears in document d. The BoW vector:
 
-// $$\mathbf{v}_d = [c_{1,d}, c_{2,d}, \dots, c_{V,d}]^\top$$
+$$\mathbf{v}_d = [c_{1,d}, c_{2,d}, \dots, c_{V,d}]^\top$$
 
-// Normalized term frequency (TF):
+Normalized term frequency (TF):
 
-// $$\text{TF}_{(t,d)} = \frac{c_{t,d}}{\sum_{k} c_{k,d}}$$
+$$\text{TF}_{(t,d)} = \frac{c_{t,d}}{\sum_{k} c_{k,d}}$$
 
-// **An example,**
+**An example,**
 
-// Document: "I love NLP. I love AI." → tokens: I (2), love (2), NLP (1), AI (1).
+Document: "I love NLP. I love AI." → tokens: I (2), love (2), NLP (1), AI (1).
 
-// Total tokens = 2 + 2 + 1 + 1 = 6.
+Total tokens = 2 + 2 + 1 + 1 = 6.
 
-// $$\text{TF for I} = \frac{2}{6} = 0.333333\ldots \text{ (we can round to 0.3333)}$$
+$$\text{TF for I} = \frac{2}{6} = 0.333333\ldots \text{ (we can round to 0.3333)}$$
 
-// $$\text{TF for love} = \frac{2}{6} = 0.3333$$
+$$\text{TF for love} = \frac{2}{6} = 0.3333$$
 
-// $$\text{TF for NLP} = \frac{1}{6} = 0.166666\ldots \text{ (≈ 0.1667)}$$
+$$\text{TF for NLP} = \frac{1}{6} = 0.166666\ldots \text{ (≈ 0.1667)}$$
 
-// $$\text{TF for AI} = \frac{1}{6} \approx 0.1667$$
+$$\text{TF for AI} = \frac{1}{6} \approx 0.1667$$
 
-// ![Image 3](https://pictures-for-websites.vercel.app/malya/2/image2.png)
+![Image 3](https://pictures-for-websites.vercel.app/malya/2/image2.png)
 
-// ### **Intuition**
+### **Intuition**
 
-// 1. **What BoW means:**
-//     - It's like a **shopping list** of words: you only know how many times each word occurred, not where.
-//     - If "cat" appears 10 times in a document, the model knows it's important.
+1. **What BoW means:**
+    - It's like a **shopping list** of words: you only know how many times each word occurred, not where.
+    - If "cat" appears 10 times in a document, the model knows it's important.
 
-// 2. **Geometry intuition:**
-//     - Each doc is a vector in a huge space.
-//     - Documents with similar word usage end up closer.
-//     - But closeness only reflects **word overlap**, not deeper meaning.
+2. **Geometry intuition:**
+    - Each doc is a vector in a huge space.
+    - Documents with similar word usage end up closer.
+    - But closeness only reflects **word overlap**, not deeper meaning.
 
-// ### **Limitations**
+### **Limitations**
 
-// - **Sparsity:** Vectors are huge but mostly zeros.
-// - **No semantics:** "good" and "great" are totally different axes.
-// - **Length bias:** Longer documents tend to have larger counts (fixed partly by TF).
+- **Sparsity:** Vectors are huge but mostly zeros.
+- **No semantics:** "good" and "great" are totally different axes.
+- **Length bias:** Longer documents tend to have larger counts (fixed partly by TF).
 
-// **What BoW misses:**
+**What BoW misses:**
 
-// - Relationships between words.
-// - "Cat eats fish" vs "Fish eats cat" have very different meanings but identical BoW counts.
-// - Words like "king" and "queen" are treated as unrelated unless they appear in similar documents.
+- Relationships between words.
+- "Cat eats fish" vs "Fish eats cat" have very different meanings but identical BoW counts.
+- Words like "king" and "queen" are treated as unrelated unless they appear in similar documents.
 
-// ## **3) TF–IDF**
+## **3) TF–IDF**
 
-// - Term Frequency (TF) tells us how common a word is **within a document**.
-// - But some words (like *the, is, and*) appear in **almost every document, so** not useful for distinguishing meaning.
-// - We need a measure that **downweights very common terms** and **upweights rare, informative terms**.
+- Term Frequency (TF) tells us how common a word is **within a document**.
+- But some words (like *the, is, and*) appear in **almost every document, so** not useful for distinguishing meaning.
+- We need a measure that **downweights very common terms** and **upweights rare, informative terms**.
 
-// That's where **Inverse Document Frequency (IDF)** comes in.
+That's where **Inverse Document Frequency (IDF)** comes in.
 
-// TF–IDF weighs term frequency by how rare a term is across the corpus.
+TF–IDF weighs term frequency by how rare a term is across the corpus.
 
-// Definitions:
+Definitions:
 
-// - N = number of documents.
-// - $\text{DF}(t)$ = number of documents containing term t.
-// - A common smoothed IDF:
+- N = number of documents.
+- $\text{DF}(t)$ = number of documents containing term t.
+- A common smoothed IDF:
 
-// $$\text{IDF}_{(t)} = \log\!\left(\frac{N}{1 + \text{DF}(t)}\right) + 1$$
+$$\text{IDF}_{(t)} = \log\!\left(\frac{N}{1 + \text{DF}(t)}\right) + 1$$
 
-// (adding 1 prevents division by zero and small-sample issues)
+(adding 1 prevents division by zero and small-sample issues)
 
-// Then
+Then
 
-// $$\text{TF–IDF}(t,d) = \text{TF}(t,d) \times \text{IDF}(t)$$
+$$\text{TF–IDF}(t,d) = \text{TF}(t,d) \times \text{IDF}(t)$$
 
-// **Numeric worked example:**
+**Numeric worked example:**
 
-// Corpus N=4 documents:
+Corpus N=4 documents:
 
-// - Doc1: apple apple banana → counts: apple:2, banana:1 (total words 3)
-// - Doc2: apple orange → apple:1, orange:1 (total words 2)
-// - Doc3: banana orange orange orange → banana:1, orange:3 (total words 4)
-// - Doc4: kiwi kiwi apple → kiwi:2, apple:1 (total words 3)
+- Doc1: apple apple banana → counts: apple:2, banana:1 (total words 3)
+- Doc2: apple orange → apple:1, orange:1 (total words 2)
+- Doc3: banana orange orange orange → banana:1, orange:3 (total words 4)
+- Doc4: kiwi kiwi apple → kiwi:2, apple:1 (total words 3)
 
-// Compute $\text{DF}$:
+Compute $\text{DF}$:
 
-// - $\text{DF}(\text{apple}) = 3$ (Doc1, Doc2, Doc4)
-// - $\text{DF}(\text{banana}) = 2$ (Doc1, Doc3)
-// - $\text{DF}(\text{orange}) = 2$ (Doc2, Doc3)
-// - $\text{DF}(\text{kiwi}) = 1$ (Doc4)
+- $\text{DF}(\text{apple}) = 3$ (Doc1, Doc2, Doc4)
+- $\text{DF}(\text{banana}) = 2$ (Doc1, Doc3)
+- $\text{DF}(\text{orange}) = 2$ (Doc2, Doc3)
+- $\text{DF}(\text{kiwi}) = 1$ (Doc4)
 
-// Compute IDF with formula:
+Compute IDF with formula:
 
-// - $\text{IDF}(\text{apple}) = \log\!\left(\frac{4}{1+3}\right) + 1 = \log(1) + 1 = 0 + 1 = 1.000000$
+- $\text{IDF}(\text{apple}) = \log\!\left(\frac{4}{1+3}\right) + 1 = \log(1) + 1 = 0 + 1 = 1.000000$
 
-// - $\text{IDF}(\text{banana}) = \log\!\left(\frac{4}{1+2}\right) + 1 = \log\!\left(\frac{4}{3}\right) + 1$
+- $\text{IDF}(\text{banana}) = \log\!\left(\frac{4}{1+2}\right) + 1 = \log\!\left(\frac{4}{3}\right) + 1$
 
-//   Compute $\frac{4}{3} = 1.333333\ldots$. Natural log of 1.33333 is approximately 0.287682072.
+  Compute $\frac{4}{3} = 1.333333\ldots$. Natural log of 1.33333 is approximately 0.287682072.
   
-//   Add 1 ⇒ $\text{IDF}(\text{banana})$ ≈ 1.287682072.
+  Add 1 ⇒ $\text{IDF}(\text{banana})$ ≈ 1.287682072.
 
-// - $\text{IDF}(\text{orange})$ is the same as banana ⇒ ≈ 1.287682072.
+- $\text{IDF}(\text{orange})$ is the same as banana ⇒ ≈ 1.287682072.
 
-// - $\text{IDF}(\text{kiwi}) = \log\!\left(\frac{4}{1+1}\right) + 1 = \log(2) + 1$
+- $\text{IDF}(\text{kiwi}) = \log\!\left(\frac{4}{1+1}\right) + 1 = \log(2) + 1$
 
-//   $\log(2) \approx 0.693147181$. Add 1 ⇒ $\text{IDF}(\text{kiwi}) \approx 1.693147181$
+  $\log(2) \approx 0.693147181$. Add 1 ⇒ $\text{IDF}(\text{kiwi}) \approx 1.693147181$
 
-// Now TF–IDF for Doc1: $\text{TF}(\text{apple},\text{Doc1}) = 2/3 \approx 0.666666\ldots$
+Now TF–IDF for Doc1: $\text{TF}(\text{apple},\text{Doc1}) = 2/3 \approx 0.666666\ldots$
 
-// Compute $\text{TF–IDF}(\text{apple},\text{Doc1}) = 0.666666\ldots \times 1.000000 = 0.666666\ldots \text{ (≈ 0.666667)}$
+Compute $\text{TF–IDF}(\text{apple},\text{Doc1}) = 0.666666\ldots \times 1.000000 = 0.666666\ldots \text{ (≈ 0.666667)}$
 
-// $\text{TF}(\text{banana},\text{Doc1}) = 1/3 = 0.333333\ldots$
+$\text{TF}(\text{banana},\text{Doc1}) = 1/3 = 0.333333\ldots$
 
-// $\text{TF–IDF}(\text{banana},\text{Doc1}) = 0.333333\ldots \times 1.287682072 \approx 0.429227357$
+$\text{TF–IDF}(\text{banana},\text{Doc1}) = 0.333333\ldots \times 1.287682072 \approx 0.429227357$
 
-// ### **Intuition:**
+### **Intuition:**
 
-// 1. **Rare word (low DF):**
-//     - Suppose N = 1000 docs, and word "neural" appears in 10 docs.
+1. **Rare word (low DF):**
+    - Suppose N = 1000 docs, and word "neural" appears in 10 docs.
         
-//         $$\text{IDF}(\text{neural}) = \log\!\left(\frac{1000}{1+10}\right) + 1 \approx \log(90.9) + 1 \approx 5.5$$
+        $$\text{IDF}(\text{neural}) = \log\!\left(\frac{1000}{1+10}\right) + 1 \approx \log(90.9) + 1 \approx 5.5$$
         
-//         High weight → "neural" is informative.
+        High weight → "neural" is informative.
 
-// 2. **Common word (high DF):**
-//     - Suppose word "the" appears in 950 docs.
+2. **Common word (high DF):**
+    - Suppose word "the" appears in 950 docs.
         
-//         $$\text{IDF}(\text{the}) = \log\!\left(\frac{1000}{1+950}\right) + 1 \approx \log(1.05) + 1 \approx 1.05$$
+        $$\text{IDF}(\text{the}) = \log\!\left(\frac{1000}{1+950}\right) + 1 \approx \log(1.05) + 1 \approx 1.05$$
         
-//         Very low weight → "the" is not informative.
+        Very low weight → "the" is not informative.
 
-// **Insert image:** bar chart of TF–IDF weights for Doc1.
+**Insert image:** bar chart of TF–IDF weights for Doc1.
 
-// ### **4. Geometry Intuition**
+### **4. Geometry Intuition**
 
-// - Each document is still a vector in V-dimensional space.
-// - But now, the **axes are re-weighted**: common words become small, rare informative words dominate.
-// - This reshapes the space so that "topic words" decide similarity, not filler words.
+- Each document is still a vector in V-dimensional space.
+- But now, the **axes are re-weighted**: common words become small, rare informative words dominate.
+- This reshapes the space so that "topic words" decide similarity, not filler words.
 
-// ### **Limitations**
+### **Limitations**
 
-// - **No semantics:** "car" and "automobile" are treated as unrelated.
-// - **Still sparse:** dimension = vocab size.
-// - **Ignores order:** "dog bites man" vs "man bites dog" are still identical if word frequencies are same.
-// - **Static weights:** Once computed, TF–IDF values don't adapt dynamically.
+- **No semantics:** "car" and "automobile" are treated as unrelated.
+- **Still sparse:** dimension = vocab size.
+- **Ignores order:** "dog bites man" vs "man bites dog" are still identical if word frequencies are same.
+- **Static weights:** Once computed, TF–IDF values don't adapt dynamically.
 
-// ![Image 4](https://pictures-for-websites.vercel.app/malya/2/image3.png)
+![Image 4](https://pictures-for-websites.vercel.app/malya/2/image3.png)
 
-// ## **4) Similarity math [ Cosine, dot, Euclidean ]**
+## **4) Similarity math [ Cosine, dot, Euclidean ]**
 
-// Common measures between vectors $\mathbf{a}, \mathbf{b}$:
+Common measures between vectors $\mathbf{a}, \mathbf{b}$:
 
-// - **Dot product**: $\mathbf{a}^\top \mathbf{b}$
-// - **Euclidean distance**: $\|\mathbf{a} - \mathbf{b}\|_2 = \sqrt{\sum_i (a_i - b_i)^2}$
-// - **Cosine similarity** (scale-invariant):
+- **Dot product**: $\mathbf{a}^\top \mathbf{b}$
+- **Euclidean distance**: $\|\mathbf{a} - \mathbf{b}\|_2 = \sqrt{\sum_i (a_i - b_i)^2}$
+- **Cosine similarity** (scale-invariant):
 
-// $$\cos(\theta) = \frac{\mathbf{a}^\top \mathbf{b}}{\|\mathbf{a}\| \|\mathbf{b}\|}$$
+$$\cos(\theta) = \frac{\mathbf{a}^\top \mathbf{b}}{\|\mathbf{a}\| \|\mathbf{b}\|}$$
 
-// **Why cosine?**
+**Why cosine?**
 
-// Word/document vectors often have magnitude differences; cosine focuses on direction (semantic similarity).
+Word/document vectors often have magnitude differences; cosine focuses on direction (semantic similarity).
 
-// ![Image 5](https://pictures-for-websites.vercel.app/malya/2/image4.png)
+![Image 5](https://pictures-for-websites.vercel.app/malya/2/image4.png)
 
-// ## **5) Word Embeddings: Word2Vec (CBOW & Skip-Gram)**
+## **5) Word Embeddings: Word2Vec (CBOW & Skip-Gram)**
 
-// One-hot, BoW, and TF–IDF vectors are **sparse**, **high-dimensional**, and **non-semantic**. Therefore we want **dense, low-dimensional vectors** where words with similar meanings (e.g., *king*, *queen*) are **close in space**.
+One-hot, BoW, and TF–IDF vectors are **sparse**, **high-dimensional**, and **non-semantic**. Therefore we want **dense, low-dimensional vectors** where words with similar meanings (e.g., *king*, *queen*) are **close in space**.
 
-// **Word2Vec** achieves this by training a small neural network to predict **context from a center word (Skip-Gram)** or **center from context (CBOW)**.
+**Word2Vec** achieves this by training a small neural network to predict **context from a center word (Skip-Gram)** or **center from context (CBOW)**.
 
-// So the intuition: learn dense vectors such that words appearing in similar contexts have similar vectors.
+So the intuition: learn dense vectors such that words appearing in similar contexts have similar vectors.
 
-// **Skip-Gram:**
+**Skip-Gram:**
 
-// Given sequence of tokens $w_1, w_2, \dots, w_T$. For position t, center word $w_t$, context window size c.
+Given sequence of tokens $w_1, w_2, \dots, w_T$. For position t, center word $w_t$, context window size c.
 
-// Skip-gram maximizes probability of context words given the center word:
+Skip-gram maximizes probability of context words given the center word:
 
-// $$\mathcal{L}_{\text{SG}} = \frac{1}{T}\sum_{t=1}^T \sum_{\substack{-c \leq j \leq c \\ j \neq 0}} \log p(w_{t+j} \mid w_t)$$
+$$\mathcal{L}_{\text{SG}} = \frac{1}{T}\sum_{t=1}^T \sum_{\substack{-c \leq j \leq c \\ j \neq 0}} \log p(w_{t+j} \mid w_t)$$
 
-// Model $p(w_O \mid w_I)$ with softmax:
+Model $p(w_O \mid w_I)$ with softmax:
 
-// $$p(w_O \mid w_I) = \frac{\exp\!\big( \mathbf{u}_{w_O}^\top \mathbf{v}_{w_I} \big)}{\sum_{w=1}^{V} \exp\!\big( \mathbf{u}_{w}^\top \mathbf{v}_{w_I} \big)}$$
+$$p(w_O \mid w_I) = \frac{\exp\!\big( \mathbf{u}_{w_O}^\top \mathbf{v}_{w_I} \big)}{\sum_{w=1}^{V} \exp\!\big( \mathbf{u}_{w}^\top \mathbf{v}_{w_I} \big)}$$
 
-// where:
+where:
 
-// - $\mathbf{v}_w \in \mathbb{R}^d$ is center (input) vector for word w.
-// - $\mathbf{u}_w \in \mathbb{R}^d$ is output/context vector for word w.
+- $\mathbf{v}_w \in \mathbb{R}^d$ is center (input) vector for word w.
+- $\mathbf{u}_w \in \mathbb{R}^d$ is output/context vector for word w.
 
-// **Computational issue**: denominator sums over V (vocab size):: too expensive for large V.
+**Computational issue**: denominator sums over V (vocab size):: too expensive for large V.
 
-// i.e If V = 100,000 or $10^6$, every update requires full vocab scoring implies => **too slow**.
+i.e If V = 100,000 or $10^6$, every update requires full vocab scoring implies => **too slow**.
 
-// ### **Negative sampling (practical approx)**
+### **Negative sampling (practical approx)**
 
-// What is it?
+What is it?
 
-// Instead of predicting all words:
+Instead of predicting all words:
 
-// - For each observed (center, context) pair ⇒ treat it as a **positive example**.
-// - Sample K "fake" context words from a **noise distribution** $P_n(w)$.
+- For each observed (center, context) pair ⇒ treat it as a **positive example**.
+- Sample K "fake" context words from a **noise distribution** $P_n(w)$.
 
-// The new loss:
+The new loss:
 
-// $$\log \sigma(\mathbf{u}_c^\top \mathbf{v}_w) + \sum_{i=1}^K \mathbb{E}_{w_i \sim P_n(w)} \big[ \log \sigma(-\mathbf{u}_{w_i}^\top \mathbf{v}_w) \big]$$
+$$\log \sigma(\mathbf{u}_c^\top \mathbf{v}_w) + \sum_{i=1}^K \mathbb{E}_{w_i \sim P_n(w)} \big[ \log \sigma(-\mathbf{u}_{w_i}^\top \mathbf{v}_w) \big]$$
 
-// - $\sigma(x) = \frac{1}{1+e^{-x}}$
-// - Intuition:
-//     - Positive pairs → push embeddings closer.
-//     - Negative pairs → push embeddings apart.
-// - Noise distribution: usually unigram distribution raised to 3/4:
+- $\sigma(x) = \frac{1}{1+e^{-x}}$
+- Intuition:
+    - Positive pairs → push embeddings closer.
+    - Negative pairs → push embeddings apart.
+- Noise distribution: usually unigram distribution raised to 3/4:
     
-//     $$P_n(w) \propto \text{freq}(w)^{3/4}$$
+    $$P_n(w) \propto \text{freq}(w)^{3/4}$$
     
-//     (balances common vs. rare words).
+    (balances common vs. rare words).
 
-// ### **Why the noise distribution** $P_n(w) \propto \text{freq}(w)^{3/4}$**?**
+### **Why the noise distribution** $P_n(w) \propto \text{freq}(w)^{3/4}$**?**
 
-// 1. If you sample negatives **uniformly**, rare words appear too often as negatives (not realistic).
-// 2. If you sample negatives **purely by frequency**, very common words (like "the", "of") dominate — bad training.
-// 3. Empirically, raising frequency to the power of 3/4 balances it:
-//     - Frequent words still show up as negatives, but not overwhelmingly.
-//     - Rare words still get a chance.
+1. If you sample negatives **uniformly**, rare words appear too often as negatives (not realistic).
+2. If you sample negatives **purely by frequency**, very common words (like "the", "of") dominate — bad training.
+3. Empirically, raising frequency to the power of 3/4 balances it:
+    - Frequent words still show up as negatives, but not overwhelmingly.
+    - Rare words still get a chance.
 
-// This was found by Mikolov et al. to give the best embeddings.
+This was found by Mikolov et al. to give the best embeddings.
 
-// Instead of softmax, reformulate the problem as **binary classification**:
+Instead of softmax, reformulate the problem as **binary classification**:
 
-// - Given a center word w and a context word c,
+- Given a center word w and a context word c,
     
-//     So, train the model to say **"this is a real pair"** (label 1)
+    So, train the model to say **"this is a real pair"** (label 1)
 
-// - At the same time, sample some **fake pairs** (center word with a random "noise" word)
+- At the same time, sample some **fake pairs** (center word with a random "noise" word)
     
-//     So, train the model to say **"this is not a real pair"** (label 0).
+    So, train the model to say **"this is not a real pair"** (label 0).
 
-// So we don't normalize over the entire vocabulary, we just see the difference, **positive pairs vs. negative samples**.
+So we don't normalize over the entire vocabulary, we just see the difference, **positive pairs vs. negative samples**.
 
-// ![Image 6](https://pictures-for-websites.vercel.app/malya/2/image5.png)
+![Image 6](https://pictures-for-websites.vercel.app/malya/2/image5.png)
 
-// For those who don't know what sampling from the distribution means….(others can skip)
+For those who don't know what sampling from the distribution means….(others can skip)
 
-// ### **What does "sampling from a distribution" mean in general?**
+### **What does "sampling from a distribution" mean in general?**
 
-// If you have a discrete probability distribution over words:
+If you have a discrete probability distribution over words:
 
-// $$P_n(w) = \text{Prob(word = }w\text{ as a negative sample)}$$
+$$P_n(w) = \text{Prob(word = }w\text{ as a negative sample)}$$
 
-// then *sampling from it* means:
+then *sampling from it* means:
 
-// - You roll a weighted dice, where each word in the vocabulary has a probability proportional to $P_n(w)$.
-// - If $P_n(\text{the}) = 0.1$, then "the" will be chosen 10% of the time as a negative word.
-// - If $P_n(\text{cat}) = 0.001$, then "cat" will only be chosen 0.1% of the time.
+- You roll a weighted dice, where each word in the vocabulary has a probability proportional to $P_n(w)$.
+- If $P_n(\text{the}) = 0.1$, then "the" will be chosen 10% of the time as a negative word.
+- If $P_n(\text{cat}) = 0.001$, then "cat" will only be chosen 0.1% of the time.
 
-// This is just like drawing words at random according to their probabilities.
+This is just like drawing words at random according to their probabilities.
 
-// ### **What does "sampling from a distribution" mean in this context…**
+### **What does "sampling from a distribution" mean in this context…**
 
-// - You already have a **positive pair**: center word w and context word c.
-// - To train, you also need **K negative words**: fake context words that did **not** occur with w.
-// - Instead of making up random negatives arbitrarily, you *sample them from a noise distribution* $P_n(w)$.
+- You already have a **positive pair**: center word w and context word c.
+- To train, you also need **K negative words**: fake context words that did **not** occur with w.
+- Instead of making up random negatives arbitrarily, you *sample them from a noise distribution* $P_n(w)$.
 
-// So at each training step:
+So at each training step:
 
-// 1. Take the current **(center, context)** positive pair.
-// 2. Sample K "fake" context words $w_1, \dots, w_K$ according to $P_n(w)$.
-// 3. Add loss terms that push these fake pairs away from the center word.
+1. Take the current **(center, context)** positive pair.
+2. Sample K "fake" context words $w_1, \dots, w_K$ according to $P_n(w)$.
+3. Add loss terms that push these fake pairs away from the center word.
 
-// ### **Why the choice of** $P_n(w)$ **matters**
+### **Why the choice of** $P_n(w)$ **matters**
 
-// Let's compare different choices:
+Let's compare different choices:
 
-// - **Uniform distribution**:
+- **Uniform distribution**:
     
-//     Every word has equal probability.
+    Every word has equal probability.
     
-//     The Problem being, Rare words (like "photosynthesis") get sampled just as often as "the".
+    The Problem being, Rare words (like "photosynthesis") get sampled just as often as "the".
     
-//     Unrealistic, model wastes time pushing away rare words.
+    Unrealistic, model wastes time pushing away rare words.
 
-// - **Raw frequency distribution**:
+- **Raw frequency distribution**:
     
-//     $$P_n(w) \propto \text{freq}(w)$$
+    $$P_n(w) \propto \text{freq}(w)$$
     
-//     The Problem is: Very frequent stopwords ("the", "of", "and") dominate as negatives.
+    The Problem is: Very frequent stopwords ("the", "of", "and") dominate as negatives.
     
-//     Model keeps learning "center word is not related to 'the'"… which isn't very useful.
+    Model keeps learning "center word is not related to 'the'"… which isn't very useful.
 
-// - **Smoothed distribution**:
+- **Smoothed distribution**:
     
-//     $$P_n(w) \propto \text{freq}(w)^{3/4}$$
+    $$P_n(w) \propto \text{freq}(w)^{3/4}$$
     
-//     Effect:
+    Effect:
     
-//     1. Frequent words still appear often (so the model learns they are uninformative as context).
-//     2. But their dominance is reduced (since exponent < 1 dampens them).
-//     3. Rare words still get sampled sometimes, making training more balanced.
+    1. Frequent words still appear often (so the model learns they are uninformative as context).
+    2. But their dominance is reduced (since exponent < 1 dampens them).
+    3. Rare words still get sampled sometimes, making training more balanced.
 
-// ### **The loss function**
+### **The loss function**
 
-// For a positive pair (w, c):
+For a positive pair (w, c):
 
-// $$\log \sigma(\mathbf{u}_c^\top \mathbf{v}_w)$$
+$$\log \sigma(\mathbf{u}_c^\top \mathbf{v}_w)$$
 
-// - Here, $\sigma(x) = \frac{1}{1+e^{-x}}$ is the sigmoid.
-// - If $u_c^\top v_w$ is large (dot product big → vectors aligned), then $\sigma \approx 1$.
-// - So we're maximizing probability that real pairs are classified as positive.
+- Here, $\sigma(x) = \frac{1}{1+e^{-x}}$ is the sigmoid.
+- If $u_c^\top v_w$ is large (dot product big → vectors aligned), then $\sigma \approx 1$.
+- So we're maximizing probability that real pairs are classified as positive.
 
-// ---
+---
 
-// For each **negative sample** $w_i \sim P_n(w)$:
+For each **negative sample** $w_i \sim P_n(w)$:
 
-// $$\log \sigma(-\mathbf{u}_{w_i}^\top \mathbf{v}_w)$$
+$$\log \sigma(-\mathbf{u}_{w_i}^\top \mathbf{v}_w)$$
 
-// - The minus sign flips the score.
-// - If $u_{w_i}^\top v_w$ is large (model mistakenly thinks negative pair looks real), this term is small.
-// - Minimizing it forces negative samples to have low similarity.
+- The minus sign flips the score.
+- If $u_{w_i}^\top v_w$ is large (model mistakenly thinks negative pair looks real), this term is small.
+- Minimizing it forces negative samples to have low similarity.
 
-// ---
+---
 
-// So the **full loss per pair** is:
+So the **full loss per pair** is:
 
-// $$\underbrace{\log \sigma(\mathbf{u}_c^\top \mathbf{v}_w)}_{\text{positive pair}} + \sum_{i=1}^K \underbrace{\mathbb{E}_{w_i \sim P_n(w)} \Big[ \log \sigma(-\mathbf{u}_{w_i}^\top \mathbf{v}_w)\Big]}_{\text{K negative samples}}$$
+$$\underbrace{\log \sigma(\mathbf{u}_c^\top \mathbf{v}_w)}_{\text{positive pair}} + \sum_{i=1}^K \underbrace{\mathbb{E}_{w_i \sim P_n(w)} \Big[ \log \sigma(-\mathbf{u}_{w_i}^\top \mathbf{v}_w)\Big]}_{\text{K negative samples}}$$
 
-// Replace softmax with binary logistic objective per (center, context) pair:
+Replace softmax with binary logistic objective per (center, context) pair:
 
-// For observed pair (w, c), maximize:
+For observed pair (w, c), maximize:
 
-// $$\log \sigma(\mathbf{u}_c^\top \mathbf{v}_w) + \sum_{i=1}^K \mathbb{E}_{w_i \sim P_n(w)} \big[ \log \sigma(-\mathbf{u}_{w_i}^\top \mathbf{v}_w) \big]$$
+$$\log \sigma(\mathbf{u}_c^\top \mathbf{v}_w) + \sum_{i=1}^K \mathbb{E}_{w_i \sim P_n(w)} \big[ \log \sigma(-\mathbf{u}_{w_i}^\top \mathbf{v}_w) \big]$$
 
-// where $\sigma(x) = 1/(1+e^{-x})$ is the sigmoid and $P_n(w)$ is a noise distribution (commonly unigram distribution raised to 3/4 power: $P_n(w) \propto \text{freq}(w)^{3/4}$).
+where $\sigma(x) = 1/(1+e^{-x})$ is the sigmoid and $P_n(w)$ is a noise distribution (commonly unigram distribution raised to 3/4 power: $P_n(w) \propto \text{freq}(w)^{3/4}$).
 
-// This transforms the problem into K binary classification problems per positive pair, reducing cost drastically.
+This transforms the problem into K binary classification problems per positive pair, reducing cost drastically.
 
-// **Why arithmetic properties emerge?** Because embedding training approximates ratios of conditional probabilities (co-occurrence statistics) which yield linear relationships between vectors (see GloVe next).
+**Why arithmetic properties emerge?** Because embedding training approximates ratios of conditional probabilities (co-occurrence statistics) which yield linear relationships between vectors (see GloVe next).
 
-// ![Image 7](https://pictures-for-websites.vercel.app/malya/2/image6.png)
+![Image 7](https://pictures-for-websites.vercel.app/malya/2/image6.png)
 
-// ![Image 8](https://pictures-for-websites.vercel.app/malya/2/image7.png)
+![Image 8](https://pictures-for-websites.vercel.app/malya/2/image7.png)
 
-// **Limitations**
+**Limitations**
 
-// ### **1. Computational Issue**
+### **1. Computational Issue**
 
-// - Softmax denominator = sum over **entire vocabulary** V.
-// - If V = 100,000 or $10^6$, every update requires full vocab scoring → **too slow**.
-// - **Context-independent:** "bank" (river vs finance) → same embedding.
-// - **No subword info:** "running" and "runner" learned separately.
-// - **Training still approximate:** negative sampling is heuristic.
-// - These motivate next-gen models: **GloVe, FastText, ELMo, BERT, GPT**.
+- Softmax denominator = sum over **entire vocabulary** V.
+- If V = 100,000 or $10^6$, every update requires full vocab scoring → **too slow**.
+- **Context-independent:** "bank" (river vs finance) → same embedding.
+- **No subword info:** "running" and "runner" learned separately.
+- **Training still approximate:** negative sampling is heuristic.
+- These motivate next-gen models: **GloVe, FastText, ELMo, BERT, GPT**.
 
-// ## **6) CBOW objective (brief)**
+## **6) CBOW objective (brief)**
 
-// # **Intuition Behind CBOW**
+# **Intuition Behind CBOW**
 
-// We saw BoW, now what is CBOW??
+We saw BoW, now what is CBOW??
 
-// - Imagine a sentence:
+- Imagine a sentence:
     
-//     > The **cat sat on the mat**
+    > The **cat sat on the mat**
 
-// - If the context window size c=2, and we want to predict the word "sat", the context is:
+- If the context window size c=2, and we want to predict the word "sat", the context is:
     
-//     > {The, cat, on, the}
+    > {The, cat, on, the}
 
-// - CBOW takes the embeddings of these **context words**, **averages them**, and tries to predict the **center word** ("sat").
+- CBOW takes the embeddings of these **context words**, **averages them**, and tries to predict the **center word** ("sat").
 
-// # **Formal Objective**
+# **Formal Objective**
 
-// The context embedding:
+The context embedding:
 
-// $$\mathbf{v}_{\text{context}} = \frac{1}{2c} \sum_{\substack{-c \le j \le c \\ j \neq 0}} \mathbf{v}_{w_{t+j}}$$
+$$\mathbf{v}_{\text{context}} = \frac{1}{2c} \sum_{\substack{-c \le j \le c \\ j \neq 0}} \mathbf{v}_{w_{t+j}}$$
 
-// Then CBOW maximizes:
+Then CBOW maximizes:
 
-// $$p(w_t \mid \mathbf{v}_{\text{context}})$$
+$$p(w_t \mid \mathbf{v}_{\text{context}})$$
 
-// (using softmax or negative sampling, same as Skip-gram).
+(using softmax or negative sampling, same as Skip-gram).
 
-// ### **Why averaging?**
+### **Why averaging?**
 
-// - Because it creates a single fixed-length vector for the context.
-// - This vector is treated as a "summary" of what words appear around the missing word.
+- Because it creates a single fixed-length vector for the context.
+- This vector is treated as a "summary" of what words appear around the missing word.
 
-// So CBOW is like a **fill-in-the-blank game**:
+So CBOW is like a **fill-in-the-blank game**:
 
-// - Context → guess the missing word.
-// - By training on millions of such blanks, the model learns embeddings that make words in similar contexts have similar vectors.
+- Context → guess the missing word.
+- By training on millions of such blanks, the model learns embeddings that make words in similar contexts have similar vectors.
 
-// ### **Intuition vs Skip-Gram**
+### **Intuition vs Skip-Gram**
 
-// - **Skip-gram**: center → predict each context word.
-// - **CBOW**: context → predict center.
+- **Skip-gram**: center → predict each context word.
+- **CBOW**: context → predict center.
 
-// Think of them as mirror images.
+Think of them as mirror images.
 
-// CBOW (continuous bag of words) predicts center word from averaged context vectors:
+CBOW (continuous bag of words) predicts center word from averaged context vectors:
 
-// $$\mathbf{v}_{\text{context}} = \frac{1}{2c} \sum_{\substack{-c\le j\le c \\ j\ne 0}} \mathbf{v}_{w_{t+j}}$$
+$$\mathbf{v}_{\text{context}} = \frac{1}{2c} \sum_{\substack{-c\le j\le c \\ j\ne 0}} \mathbf{v}_{w_{t+j}}$$
 
-// maximize $p(w_t \mid \mathbf{v}_{\text{context}})$ via softmax or negative sampling.
+maximize $p(w_t \mid \mathbf{v}_{\text{context}})$ via softmax or negative sampling.
 
-// ## **1. What does the sum mean?**
+## **1. What does the sum mean?**
 
-// - We are at position t, with center word $w_t$.
-// - The summation index j runs from -c to +c, skipping j=0 (because that's the center word).
-// - So we are summing over the embeddings of **all context words** in the window.
+- We are at position t, with center word $w_t$.
+- The summation index j runs from -c to +c, skipping j=0 (because that's the center word).
+- So we are summing over the embeddings of **all context words** in the window.
 
-// ## **2. Why divide by 2c?**
+## **2. Why divide by 2c?**
 
-// - The window size c means we take c **words to the left +** c **words to the right**.
-// - That's a total of 2c context words.
-// - By dividing by 2c, we're just **averaging** the embeddings, instead of summing.
+- The window size c means we take c **words to the left +** c **words to the right**.
+- That's a total of 2c context words.
+- By dividing by 2c, we're just **averaging** the embeddings, instead of summing.
 
-// # **Limitations of CBOW**
+# **Limitations of CBOW**
 
-// 1. **Averaging loses order information**
-//     - The sentence "dog bites man" vs "man bites dog" :: contexts look too similar when averaged, though meanings differ.
+1. **Averaging loses order information**
+    - The sentence "dog bites man" vs "man bites dog" :: contexts look too similar when averaged, though meanings differ.
 
-// 2. **Bias toward frequent words**
-//     - High-frequency function words (like "the", "of", "is") dominate context averages, making prediction less informative.
+2. **Bias toward frequent words**
+    - High-frequency function words (like "the", "of", "is") dominate context averages, making prediction less informative.
 
-// 3. **Less effective for rare words**
-//     - Since CBOW predicts the center word from context, rare words don't get enough direct training signal.
-//     - Skip-gram usually handles rare words better.
+3. **Less effective for rare words**
+    - Since CBOW predicts the center word from context, rare words don't get enough direct training signal.
+    - Skip-gram usually handles rare words better.
 
-// 4. **Bag-of-words assumption**
-//     - Context words are treated as a "set," ignoring grammar, syntax, and position.
-//     - This makes embeddings less precise than models that use sequence order (like RNNs, Transformers).
+4. **Bag-of-words assumption**
+    - Context words are treated as a "set," ignoring grammar, syntax, and position.
+    - This makes embeddings less precise than models that use sequence order (like RNNs, Transformers).
 
-// # **Intuition Wrap-up**
+# **Intuition Wrap-up**
 
-// - CBOW = "Guess the missing word from surrounding words."
-// - It's **fast**, because averaging is cheap, and training focuses on **frequent words** (they're predicted often).
-// - But it sacrifices fine-grained word order and is weaker for rare vocabulary.
+- CBOW = "Guess the missing word from surrounding words."
+- It's **fast**, because averaging is cheap, and training focuses on **frequent words** (they're predicted often).
+- But it sacrifices fine-grained word order and is weaker for rare vocabulary.
 
-// ![Image 9](https://pictures-for-websites.vercel.app/malya/2/image8.png)
+![Image 9](https://pictures-for-websites.vercel.app/malya/2/image8.png)
 
-// We will continue with the rest next time. C-ya!`
-//   },
+We will continue with the rest next time. C-ya!`
+  },
 
     'neural-networks-brains-in-silicon': {
   title: 'Neural Networks: Brains in Silicon',
