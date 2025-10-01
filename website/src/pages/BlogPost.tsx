@@ -2,10 +2,11 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import remarkGfm from 'remark-gfm';
-import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
-import { BlockMath, InlineMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
+import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 
 const BlogPost = () => {
   const { slug } = useParams();
