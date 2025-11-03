@@ -104,7 +104,7 @@ const About = () => {
               <ul className="text-primary-gray-300 font-inter space-y-2">
                 <li>• Innovation through collaboration</li>
                 <li>• Ethical AI development</li>
-                <li>• Inclusive learning environment</li>
+                <li>• Inclusive learning environment for all </li>
                 <li>• Project-driven approach</li>
                 <li>• Community impact focus</li>
               </ul>
